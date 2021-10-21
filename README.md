@@ -1,4 +1,4 @@
-# Slovgfdsgdsgyanka School
-Thcdcdcis is a web application for school's
+#Slovyanka School
+This is a web application for school's 
 
 
