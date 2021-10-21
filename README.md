@@ -1,9 +1,4 @@
 # Slovyanka School
-Thcdcdcis is a web application for school's s
-cs
+Thcdcdcis is a web application for school's
 
-sc
-sc
-sc
-sc
-s
+
