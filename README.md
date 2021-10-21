@@ -1,5 +1,5 @@
-# Slovyanka
-This is a web application for school's s
+# Slovyanka School
+Thcdcdcis is a web application for school's s
 cs
 
 sc
