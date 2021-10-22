@@ -1,4 +1,4 @@
 # Slovyanka School
-Thcdcdcis is a web application for school's wesdrwedwf
+This is a web application for school's 
 
 
