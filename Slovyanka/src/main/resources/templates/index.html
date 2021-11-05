@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>Слов'янська гімназія</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	</head>
@@ -30,12 +30,20 @@
 								<img class="arrow" src="/images/arrow.svg">
 							</a>
 						</div>
+
+						<!-- Here I have changed -->
 						<div class="first-header-menu__third-row">
 							<a class="first-header-menu__link first-header-menu__link_gold"
 							href="#">Вступна кампанія 2021</a>
 							<a class="first-header-menu__link first-header-menu__link_gold-and-margin "
-							href="#">Вхід</a>
+							href="#" th:text="${login}">Вхід</a>
+							<form action="/change-language" method="get">
+								<input type="submit" name="ukr" value="ukr">
+								<input type="submit" name="eng" value="eng">
+							</form>
 						</div>
+
+
 					</nav>
 				</div>
 				<div class="header__blue-line"></div>
