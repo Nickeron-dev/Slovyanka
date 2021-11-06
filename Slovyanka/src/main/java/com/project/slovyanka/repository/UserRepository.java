@@ -6,6 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/**
+ * @author Illia Koshkin
+ * Цей інтерфейс поєднує JpaRepository(інтерфейс, що з'єднується з SQL)
+ */
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
     Optional<User> findByEmailUsername(String email);

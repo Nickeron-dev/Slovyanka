@@ -11,6 +11,10 @@ import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Collection;
 
+/**
+ * @author Illia Koshkin
+ * Це сутність користувача.
+ */
 @Data
 @Builder
 @NoArgsConstructor
@@ -52,6 +56,10 @@ public class User implements UserDetails {
     private boolean credentialsNonExpired;
     private boolean enabled;
 
+    /**
+     * Цей метод дає колекцію ролей
+     * @return коллекцію з ралями(найчастіше це масив)
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(role);

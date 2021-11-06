@@ -14,6 +14,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * @author Illia Koshkin
+ * Цей клас є повним підключенням(через нього буде впроваджено взаємодію з веб-застосунком)
+ */
 @AllArgsConstructor
 
 @Service
@@ -40,7 +44,6 @@ public class UserService implements UserDetailsService {
      * @throws DataIntegrityViolationException У разі, якщо не вийшло додати користувача до бази данних
      */
     public void saveNewUser(UserDTO userDTO) throws DataIntegrityViolationException {
-        System.out.println("Saving");
         try {
             User user = User.builder()
                     .emailUsername(userDTO.getEmail())
@@ -65,7 +68,6 @@ public class UserService implements UserDetailsService {
                 throw new DataIntegrityViolationException(View.view.getBundleText(TextsPaths.USER_ALREADY_EXISTS_ERROR));
             }
         }
-        System.out.println("MUst hasve ");
 
     }
 }
