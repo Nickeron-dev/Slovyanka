@@ -17,7 +17,7 @@ import java.util.Collection;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "email")})
+@Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "email_username")})
 public class User implements UserDetails {
 
     @Id
@@ -34,19 +34,20 @@ public class User implements UserDetails {
      * Колонка email буде також username для користувача, оскільки бібліотека налаштована на username, а email у нас
      * має унікальне значення, то пошту будемо використовувати, як і username, а самостійної колонки username у нас не буде
      */
-    @Column(name = "emailUsername", nullable = false)
+    @Column(name = "email_username", nullable = false)
     private String emailUsername;
 
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "firstName", nullable = false)
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "lastName", nullable = false)
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
     private boolean accountNonExpired;
+    @Column(name = "non_locked", nullable = false)
     private boolean accountNonLocked;
     private boolean credentialsNonExpired;
     private boolean enabled;
