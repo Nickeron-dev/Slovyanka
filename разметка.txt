@@ -1,19 +1,20 @@
-<div class="advertisement-and-last-news-container">
+<div class="advertisement-and-schedule-container">
 				<div class="advertisement">
 					<h3 class="title advertisement__title">Оголошення</h3>
-					<div class="advertisement__text">
+					<div class="advertisement__inner">
 						<h5><b>Covid 19:</b></h5>
 						<span>Освітній процес у період карантинних обмежень</span>
 						<div class="advertisement__line advertisement__first-line"></div>
 						<p class="advertisement__paragraph">
 							<span>Послуга «Замовлення електронного учнівського</span> 
 							<span>квитка» доступна за посиланням:</span>
-							<a href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
+							<a class="advertisement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
 						</p>
 						<div class="advertisement__line advertisement__second-line"></div>
 						<a class="advertisement__second-link"><b>Онлайн зно</b></a>
 					</div>
 				</div>
+			</div>
 				<div class="last-news">
 					<h3 class="title"><b>Останні новини</b></h3>
 					<span class="last-news__date"></span>
@@ -31,8 +32,7 @@
 						<a class="last-news__link"> <img src=""></a>
 					</div>
 				</div>
-			</div>
-			<div class="public-info">
+				<div class="public-info">
 				<h3 class="title"></h3>
 				<p class="public-info__paragraph"></p>
 				<form>
@@ -97,8 +97,8 @@
 				<img src="">
 			</div>
 			<div class="contacts">
-				<h3 class="title"></h3>
-				<img src="">
+				<h3 class="title">Контакти</h3>
+				<img src="images/map.png">
 				<div class="gray-background">
 					<div>
 						<b></b>
@@ -108,33 +108,3 @@
 					</div>
 				</div>
 			</div>
-			<footer class="footer">
-				<div class="column">
-					<div></div>
-					<div></div>
-					<span></span>
-					<a href=""> <img src=""></a>
-					<div></div>
-					<form>
-						<button class="button"></button>
-					</form>
-				</div>
-				<div class="column">
-					<nav class="column-menu">
-						<a class=""></a>
-						<a class="link"></a>
-						<a class="link"></a>
-						<a class="link"></a>
-						<a class="link"></a>						
-						<a class="link"></a>
-						<a class="link"></a>
-						<a class="link"></a>
-					</nav>
-					<span></span>
-					<form>
-						<button class="button_without-bc"></button>
-					</form>
-				</div>
-				<img src="">
-				<span></span>
-			</footer>
