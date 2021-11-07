@@ -44,12 +44,8 @@ public class RegistrationController {
      * @return ModelAndView об'єкт з відповідною сторінкою.
      */
     @PostMapping("/register")
-    public ModelAndView result(Model model, @RequestParam("email") String email, @RequestParam("password") String password,
+    public ModelAndView registrationResult(Model model, @RequestParam("email") String email, @RequestParam("password") String password,
                          @RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName) {
-        System.out.println("Email: " + email);
-        System.out.println("password: " + password);
-        System.out.println("firstName: " + firstName);
-        System.out.println("lastName: " + lastName);
         UserDTO newUser = UserDTO.builder()
                 .email(email)
                 .password(password)
@@ -57,10 +53,8 @@ public class RegistrationController {
                 .lastName(lastName)
                 .build();
         try {
-            System.out.println("Trying!!!");
             userService.saveNewUser(newUser);
         } catch (DataIntegrityViolationException exc) {
-            // here should be logger
             if (exc.getMessage().equals(View.view.getBundleText(TextsPaths.USER_ALREADY_EXISTS_ERROR))) {
                 model.addAttribute("resultMessage", View.view.getBundleText(TextsPaths.USER_ALREADY_EXISTS_ERROR));
                 return new ModelAndView("registrationResult");

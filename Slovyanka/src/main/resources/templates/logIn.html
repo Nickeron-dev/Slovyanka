@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Log In</h1>
+<form th:action="@{/login}" method="post">
+    <label>Email</label>
+    <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+           oninvalid="this.setCustomValidity('Email')"
+           oninput="setCustomValidity('')"
+           type="text" required>
+    <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
+    <label>Password</label>
+    <input name="password" pattern="[A-Za-z0-9]{3,30}$"
+           oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
+           oninput="setCustomValidity('')"
+           type="password" required>
+    <!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
+
+    <input type="submit">
+</form>
+</body>
+</html>

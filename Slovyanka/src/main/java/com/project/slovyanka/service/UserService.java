@@ -12,7 +12,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @author Illia Koshkin
@@ -27,6 +29,7 @@ public class UserService implements UserDetailsService {
     /**
      * Завантажувати користувача через його email буде набагото ефективнішим(ніж через username),
      * бо саме колонка email у базі данних має унікальні значення.
+     * Також цей метод авторизую відповідного користувача!!!
      * @param userEmail email користувача
      * @return об'єкт UserDetails
      * @throws UsernameNotFoundException у випадку коли користувача у базі данних не знайдено
@@ -56,18 +59,35 @@ public class UserService implements UserDetailsService {
                     .accountNonLocked(true)
                     .credentialsNonExpired(true)
                     .build();
-            try {
-                loadUserByUsername(user.getEmailUsername());
-            } catch (UsernameNotFoundException e) {
+
+            if (ifExistsByEmailUsername(user.getEmailUsername())) {
+                throw new DataIntegrityViolationException(View.view.getBundleText(TextsPaths.USER_ALREADY_EXISTS_ERROR));
+            } else {
                 userRepository.save(user);
-                return;
             }
-            throw new DataIntegrityViolationException(View.view.getBundleText(TextsPaths.USER_ALREADY_EXISTS_ERROR));
         } catch (DataIntegrityViolationException exc) {
             if (exc.getMessage().equals(View.view.getBundleText(TextsPaths.USER_ALREADY_EXISTS_ERROR))) {
                 throw new DataIntegrityViolationException(View.view.getBundleText(TextsPaths.USER_ALREADY_EXISTS_ERROR));
             }
         }
 
+    }
+
+    /**
+     * Цей метож перевіряє чи вже використовується цей email
+     * @param emailUsername строку(String) email.
+     * @return Булевське занчення, що відповідає на запитання: 'Чи використовується цей email?'
+     */
+    public boolean ifExistsByEmailUsername(String emailUsername) {
+        Optional<User> user = userRepository.findByEmailUsername(emailUsername);
+        return user.isPresent();
+    }
+
+
+    public boolean ifEmailAndPasswordCorrect(String email, String password) {
+        Optional<User> user = userRepository.findByEmailUsername(email);
+        AtomicReference<Boolean> ifCorrect = new AtomicReference<>(false);
+        user.ifPresent((gotUser) -> ifCorrect.set(gotUser.getPassword().equals(password)));
+        return ifCorrect.get();
     }
 }
