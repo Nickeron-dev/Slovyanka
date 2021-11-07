@@ -83,11 +83,4 @@ public class UserService implements UserDetailsService {
         return user.isPresent();
     }
 
-
-    public boolean ifEmailAndPasswordCorrect(String email, String password) {
-        Optional<User> user = userRepository.findByEmailUsername(email);
-        AtomicReference<Boolean> ifCorrect = new AtomicReference<>(false);
-        user.ifPresent((gotUser) -> ifCorrect.set(gotUser.getPassword().equals(password)));
-        return ifCorrect.get();
-    }
 }

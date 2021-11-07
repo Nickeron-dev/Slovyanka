@@ -6,9 +6,9 @@
 </head>
 <body>
 <h1>Log In</h1>
-<form th:action="@{/login}" method="post">
+<form action="/login" method="post">
     <label>Email</label>
-    <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+    <input name="username" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
            oninvalid="this.setCustomValidity('Email')"
            oninput="setCustomValidity('')"
            type="text" required>
