@@ -1,0 +1,110 @@
+<div class="advertisement-and-schedule-container">
+				<div class="advertisement">
+					<h3 class="title advertisement__title">Оголошення</h3>
+					<div class="advertisement__inner">
+						<h5><b>Covid 19:</b></h5>
+						<span>Освітній процес у період карантинних обмежень</span>
+						<div class="advertisement__line advertisement__first-line"></div>
+						<p class="advertisement__paragraph">
+							<span>Послуга «Замовлення електронного учнівського</span> 
+							<span>квитка» доступна за посиланням:</span>
+							<a class="advertisement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
+						</p>
+						<div class="advertisement__line advertisement__second-line"></div>
+						<a class="advertisement__second-link"><b>Онлайн зно</b></a>
+					</div>
+				</div>
+			</div>
+				<div class="last-news">
+					<h3 class="title"><b>Останні новини</b></h3>
+					<span class="last-news__date"></span>
+					<div class="last-news__line"></div>
+					<p class="last-news__first-paragraph"></p>
+					<p class="last-news__second-paragraph"></p>
+					<img src="">
+					<div class="last-news__background">
+						<article class="article">
+							<img src="">
+							<h4 class="article__title"><b></b></h4>
+							<p class="article__paragraph"></p>
+							<a class="article__link"> <img src=""></a>
+						</article>
+						<a class="last-news__link"> <img src=""></a>
+					</div>
+				</div>
+				<div class="public-info">
+				<h3 class="title"></h3>
+				<p class="public-info__paragraph"></p>
+				<form>
+					<button class="button_blue"></button>
+				</form>
+				<span class="public-info__text public-info__text_interactive"></span>
+				<div class="blue-background"></div>
+				<div class="gray-background">
+					<img src="">
+					<h4 class="public-info__title"></h4>
+					<a href=""></a><img src="">
+					<a href=""></a><img src="">
+					<a href=""></a><img src="">
+					<a href=""></a><img src="">
+					<a href=""></a><img src="">
+					<h4 class="public-info__title"></h4>
+				</div>
+				<div class="blue-background">
+					<a><img src="" class="image_shiny-interactive"></a>
+					<a><img src="" class="image_shiny-interactive"></a>
+					<a><img src="" class="image_shiny-interactive"></a>
+					<a><img src="" class="image_shiny-interactive"></a>
+				</div>
+			</div>
+			<div class="useful__links">
+				<h3 class="title"></h3>
+				<ol>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+					<li>
+						<b><a class="link"></a></b><span></span>
+					</li>
+				</ol>
+				<img src="">
+				<img src="">
+				<img src="">
+				<img src="">
+			</div>
+			<div class="contacts">
+				<h3 class="title">Контакти</h3>
+				<img src="images/map.png">
+				<div class="gray-background">
+					<div>
+						<b></b>
+					</div>
+					<div>
+						<b></b>
+					</div>
+				</div>
+			</div>
