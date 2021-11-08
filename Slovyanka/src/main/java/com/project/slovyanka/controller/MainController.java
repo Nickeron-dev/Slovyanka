@@ -1,6 +1,7 @@
 package com.project.slovyanka.controller;
 
 import com.project.slovyanka.entity.Role;
+import com.project.slovyanka.service.NewsService;
 import com.project.slovyanka.view.LocaleNames;
 import com.project.slovyanka.view.TextsPaths;
 import com.project.slovyanka.view.View;
@@ -22,6 +23,8 @@ import java.util.Optional;
 
 @Controller
 public class MainController {
+
+    private NewsService newsService;
 
     /**
      * Цей метод обробляє запит відкриття головної сторінки
@@ -83,6 +86,9 @@ public class MainController {
         model.addAttribute("make_admission_request_message", View.view.getBundleText(TextsPaths.MAKE_ADMISSION_REQUEST_MESSAGE));
         model.addAttribute("make_request", View.view.getBundleText(TextsPaths.MAKE_REQUEST));
         model.addAttribute("contact_us", View.view.getBundleText(TextsPaths.CONTACT_US));
+
+        model.addAttribute("current_language", View.view.getBundleText(TextsPaths.CURRENT_LANGUAGE));
+        model.addAttribute("news_list", newsService.findLatestSevenNews());
 
         return "index";
     }

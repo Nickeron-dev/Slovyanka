@@ -42,6 +42,8 @@ public abstract class TextsPaths {
     public static final String FIRST_SHIFT = "main.page.first.shift";
     public static final String SECOND_SHIFT = "main.page.second.shift";
 
+    public static final String CURRENT_LANGUAGE = "current.language";
+
     public static final String USER_ALREADY_EXISTS_ERROR = "registration.result.user.already.exists";
 
     public static final String ADDRESS_FIRST_TEXT = "footer.address.first.message";
@@ -54,4 +56,5 @@ public abstract class TextsPaths {
     public static final String MAKE_ADMISSION_REQUEST_MESSAGE = "footer.make.admission.request.message";
     public static final String MAKE_REQUEST = "footer.make.request";
     public static final String CONTACT_US = "footer.contact.us";
+
 }

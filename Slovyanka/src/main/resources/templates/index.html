@@ -150,28 +150,142 @@
 						</div>
 					</aside>
 				</div>
-				<div class="last-news">
-					<div class="title" th:text="${latest_news}">Останні новини</div>
-					<div class="last-news__container">
-						<div class="last-news__inner">
-							<div class="last-news__title">
-								<span>Зустріч</span>
-								<span>із представниками ДБР</span>
-							</div>
-							<span class="last-news__date">
+			<div class="last-news">
+				<div class="title"  th:text="${latest_news}">Останні новини</div>
+				<div class="last-news__container">
+					<div class="last-news__inner">
+						<div class="last-news__title">
+							<span th:text="${current_language} == 'ukr' ? ${news_list.get(0).getTitleUkr()} : ${news_list.get(0).getTitleEng()}">Зустріч</span>
+<!--							<span>із представниками ДБР</span>-->
+						</div>
+						<span class="last-news__date" th:text="${news_list.get(0).getDate()}">
 								16:30 28/09/2021
 							</span>
-							<div class="last-news__line"></div>
-							<p class="last-news__first-paragraph">
-								У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.
-							</p>
-							<p class="last-news__second-paragraph">
-								Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!
-							</p>
+						<div class="last-news__line">
+
 						</div>
-						<img src="images/last-news-image.png">
+						<p class="last-news__first-paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(0).getIntroductionUkr()} : ${news_list.get(0).getIntroductionEng()}">
+							У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.
+						</p>
+						<p class="last-news__second-paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(0).getTextUkr()} : ${news_list.get(0).getTextEng()}">
+							Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!
+						</p>
 					</div>
+					<img class="last-news__image" src="images/last-news-image.png">
 				</div>
+			</div>
+			<div class="articles__container">
+				<div class="articles__row articles__first-row">
+					<article class="article">
+						<img src="images/articles-image.png">
+						<div class="articles__inner">
+							<span class="article__date">12:06 20/09/2021</span>
+							<h5 class="article__title">
+								<span>Вітаємо, радіємо</span>
+								<span>і пишаємося!</span>
+							</h5>
+							<p class="article__paragraph">
+								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+							</p>
+							<a class="article__link" href=""><b>Більше</b></a>
+						</div>
+					</article>
+					<article class="article">
+						<img src="images/articles-image.png">
+						<div class="articles__inner">
+							<span class="article__date">12:06 20/09/2021</span>
+							<h5 class="article__title">
+								<span>Вітаємо, радіємо</span>
+								<span>і пишаємося!</span>
+							</h5>
+							<p class="article__paragraph">
+								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+							</p>
+							<a class="article__link" href=""><b>Більше</b></a>
+						</div>
+					</article>
+					<article class="article">
+						<img src="images/articles-image.png">
+						<div class="articles__inner">
+							<span class="article__date">12:06 20/09/2021</span>
+							<h5 class="article__title">
+								<span>Вітаємо, радіємо</span>
+								<span>і пишаємося!</span>
+							</h5>
+							<p class="article__paragraph">
+								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+							</p>
+							<a class="article__link" href=""><b>Більше</b></a>
+						</div>
+					</article>
+				</div>
+				<div class="articles__row">
+					<article class="article">
+						<img src="images/articles-image.png">
+						<div class="articles__inner">
+							<span class="article__date">12:06 20/09/2021</span>
+							<h5 class="article__title">
+								<span>Вітаємо, радіємо</span>
+								<span>і пишаємося!</span>
+							</h5>
+							<p class="article__paragraph">
+								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+							</p>
+							<a class="article__link" href=""><b>Більше</b></a>
+						</div>
+					</article>
+					<article class="article">
+						<img src="images/articles-image.png">
+						<div class="articles__inner">
+							<span class="article__date">12:06 20/09/2021</span>
+							<h5 class="article__title">
+								<span>Вітаємо, радіємо</span>
+								<span>і пишаємося!</span>
+							</h5>
+							<p class="article__paragraph">
+								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+							</p>
+							<a class="article__link" href=""><b>Більше</b></a>
+						</div>
+					</article>
+					<article class="article">
+						<img src="images/articles-image.png">
+						<div class="articles__inner">
+							<span class="article__date">12:06 20/09/2021</span>
+							<h5 class="article__title">
+								<span>Вітаємо, радіємо</span>
+								<span>і пишаємося!</span>
+							</h5>
+							<p class="article__paragraph">
+								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+							</p>
+							<a class="article__link" href=""><b>Більше</b></a>
+						</div>
+					</article>
+				</div>
+			</div>
+<!--				<div class="last-news">-->
+<!--					<div class="title" th:text="${latest_news}">Останні новини</div>-->
+<!--					<div class="last-news__container">-->
+<!--						<div class="last-news__inner">-->
+<!--							<div class="last-news__title">-->
+<!--								<span>Зустріч</span>-->
+<!--								<span>із представниками ДБР</span>-->
+<!--							</div>-->
+<!--							<span class="last-news__date">-->
+<!--								16:30 28/09/2021-->
+<!--							</span>-->
+<!--							<div class="last-news__line"></div>-->
+<!--							<p class="last-news__first-paragraph">-->
+<!--								У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.-->
+<!--							</p>-->
+<!--							<p class="last-news__second-paragraph">-->
+<!--								Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!-->
+<!--							</p>-->
+<!--						</div>-->
+<!--						<img src="images/last-news-image.png">-->
+<!--					</div>-->
+<!--				</div>-->
 				<div class="articles-container">
 					<article class="article">
 						<span class="article__number"></span>
