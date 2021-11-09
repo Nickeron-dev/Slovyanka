@@ -171,48 +171,48 @@
 							Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!
 						</p>
 					</div>
-					<img class="last-news__image" src="images/last-news-image.png">
+					<img class="last-news__image" th:src="${news_list.get(0).getImageReference()}">
 				</div>
 			</div>
 			<div class="articles__container">
 				<div class="articles__row articles__first-row">
 					<article class="article">
-						<img src="images/articles-image.png">
+						<img th:src="${news_list.get(1).getImageReference()}">
 						<div class="articles__inner">
-							<span class="article__date">12:06 20/09/2021</span>
+							<span class="article__date" th:text="${news_list.get(1).getDate()}">12:06 20/09/2021</span>
 							<h5 class="article__title">
-								<span>Вітаємо, радіємо</span>
-								<span>і пишаємося!</span>
+								<span th:text="${current_language} == 'ukr' ? ${news_list.get(1).getTitleUkr()} : ${news_list.get(1).getTitleEng()}">Вітаємо, радіємо</span>
+<!--								<span>і пишаємося!</span>-->
 							</h5>
-							<p class="article__paragraph">
+							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(1).getIntroductionUkr()} : ${news_list.get(1).getIntroductionEng()}">
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
 							</p>
 							<a class="article__link" href=""><b>Більше</b></a>
 						</div>
 					</article>
 					<article class="article">
-						<img src="images/articles-image.png">
+						<img th:src="${news_list.get(2).getImageReference()}">
 						<div class="articles__inner">
-							<span class="article__date">12:06 20/09/2021</span>
+							<span class="article__date" th:text="${news_list.get(2).getDate()}">12:06 20/09/2021</span>
 							<h5 class="article__title">
-								<span>Вітаємо, радіємо</span>
-								<span>і пишаємося!</span>
+								<span th:text="${current_language} == 'ukr' ? ${news_list.get(2).getTitleUkr()} : ${news_list.get(2).getTitleEng()}">Вітаємо, радіємо</span>
+<!--								<span>і пишаємося!</span>-->
 							</h5>
-							<p class="article__paragraph">
+							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(2).getIntroductionUkr()} : ${news_list.get(2).getIntroductionEng()}">
 								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 							</p>
 							<a class="article__link" href=""><b>Більше</b></a>
 						</div>
 					</article>
 					<article class="article">
-						<img src="images/articles-image.png">
+						<img th:src="${news_list.get(3).getImageReference()}">
 						<div class="articles__inner">
-							<span class="article__date">12:06 20/09/2021</span>
+							<span class="article__date" th:text="${news_list.get(3).getDate()}">12:06 20/09/2021</span>
 							<h5 class="article__title">
-								<span>Вітаємо, радіємо</span>
-								<span>і пишаємося!</span>
+								<span th:text="${current_language} == 'ukr' ? ${news_list.get(3).getTitleUkr()} : ${news_list.get(3).getTitleEng()}">Вітаємо, радіємо</span>
+<!--								<span>і пишаємося!</span>-->
 							</h5>
-							<p class="article__paragraph">
+							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(3).getIntroductionUkr()} : ${news_list.get(3).getIntroductionEng()}">
 								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 							</p>
 							<a class="article__link" href=""><b>Більше</b></a>
@@ -221,42 +221,42 @@
 				</div>
 				<div class="articles__row">
 					<article class="article">
-						<img src="images/articles-image.png">
+						<img th:src="${news_list.get(4).getImageReference()}">
 						<div class="articles__inner">
-							<span class="article__date">12:06 20/09/2021</span>
+							<span class="article__date" th:text="${news_list.get(4).getDate()}">12:06 20/09/2021</span>
 							<h5 class="article__title">
-								<span>Вітаємо, радіємо</span>
-								<span>і пишаємося!</span>
+								<span th:text="${current_language} == 'ukr' ? ${news_list.get(4).getTitleUkr()} : ${news_list.get(4).getTitleEng()}">Вітаємо, радіємо</span>
+<!--								<span>і пишаємося!</span>-->
 							</h5>
-							<p class="article__paragraph">
+							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(4).getIntroductionUkr()} : ${news_list.get(4).getIntroductionEng()}">
 								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 							</p>
 							<a class="article__link" href=""><b>Більше</b></a>
 						</div>
 					</article>
 					<article class="article">
-						<img src="images/articles-image.png">
+						<img th:src="${news_list.get(5).getImageReference()}">
 						<div class="articles__inner">
-							<span class="article__date">12:06 20/09/2021</span>
+							<span class="article__date" th:text="${news_list.get(5).getDate()}">12:06 20/09/2021</span>
 							<h5 class="article__title">
-								<span>Вітаємо, радіємо</span>
-								<span>і пишаємося!</span>
+								<span th:text="${current_language} == 'ukr' ? ${news_list.get(5).getTitleUkr()} : ${news_list.get(5).getTitleEng()}">Вітаємо, радіємо</span>
+<!--								<span>і пишаємося!</span>-->
 							</h5>
-							<p class="article__paragraph">
+							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(5).getIntroductionUkr()} : ${news_list.get(5).getIntroductionEng()}">
 								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 							</p>
 							<a class="article__link" href=""><b>Більше</b></a>
 						</div>
 					</article>
 					<article class="article">
-						<img src="images/articles-image.png">
+						<img th:src="${news_list.get(6).getImageReference()}">
 						<div class="articles__inner">
-							<span class="article__date">12:06 20/09/2021</span>
+							<span class="article__date" th:text="${news_list.get(6).getDate()}">12:06 20/09/2021</span>
 							<h5 class="article__title">
-								<span>Вітаємо, радіємо</span>
-								<span>і пишаємося!</span>
+								<span th:text="${current_language} == 'ukr' ? ${news_list.get(6).getTitleUkr()} : ${news_list.get(6).getTitleEng()}">Вітаємо, радіємо</span>
+<!--								<span>і пишаємося!</span>-->
 							</h5>
-							<p class="article__paragraph">
+							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(6).getIntroductionUkr()} : ${news_list.get(6).getIntroductionEng()}">
 								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 							</p>
 							<a class="article__link" href=""><b>Більше</b></a>

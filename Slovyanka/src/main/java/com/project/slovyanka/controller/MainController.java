@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.Optional;
 
@@ -89,6 +90,7 @@ public class MainController {
 
         model.addAttribute("current_language", View.view.getBundleText(TextsPaths.CURRENT_LANGUAGE));
         model.addAttribute("news_list", newsService.findLatestSevenNews());
+        newsService.findLatestSevenNews().forEach((e) -> System.out.println(e.getTitleUkr()));
 
         return "index";
     }
