@@ -478,6 +478,13 @@ body {
   margin: 0 auto;
 }
 
+.article__image {
+  width: 370px; /* width of container */
+  height: 230px; /* height of container */
+  object-fit: cover;
+  object-position: 60% 30%; /* was 70% and 30% */
+}
+
 .article__date {
   margin-top: 29px;
   color: rgba(34, 77, 123, 0.56);

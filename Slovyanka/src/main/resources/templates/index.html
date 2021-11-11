@@ -177,7 +177,7 @@
 			<div class="articles__container">
 				<div class="articles__row articles__first-row">
 					<article class="article">
-						<img th:src="${news_list.get(1).getImageReference()}">
+						<img class="article__image" th:src="${news_list.get(1).getImageReference()}">
 						<div class="articles__inner">
 							<span class="article__date" th:text="${news_list.get(1).getDate()}">12:06 20/09/2021</span>
 							<h5 class="article__title">
