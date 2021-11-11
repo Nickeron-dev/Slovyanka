@@ -50,6 +50,9 @@ public class User implements UserDetails {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
+    @Column(name = "activation_code", nullable = false)
+    private String activationCode;
+
     private boolean accountNonExpired;
     @Column(name = "non_locked", nullable = false)
     private boolean accountNonLocked;

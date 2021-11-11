@@ -36,6 +36,8 @@ public class RegistrationController {
 
     /**
      * Цей метод відповідає за POST запит у реєстраційній формі.
+     * Він створює нового користувача(але спочатку заблокованого), а далі відправляє на пошту сповіщення з посиланням,
+     * яке знімає блокування.
      * @param model цей об'єкт дає можливість передавати значення з backend(Java) до frontend(HTML)
      * @param email приймає параметр "email" з POST запиту
      * @param password приймає параметр "password" з POST запиту
@@ -62,7 +64,7 @@ public class RegistrationController {
             model.addAttribute("resultMessage", "You haven't registered!!!");
             return new ModelAndView("registrationResult");
         }
-        model.addAttribute("resultMessage", "You have successfully!!!");
+        model.addAttribute("resultMessage", "You have registered successfully!!!");
         return new ModelAndView("registrationResult");
     }
 }

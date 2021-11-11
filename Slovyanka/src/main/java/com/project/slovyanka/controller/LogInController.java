@@ -34,7 +34,7 @@ public class LogInController {
      */
     @PostMapping("/login")
     public ModelAndView login(User user) {
-        userService.loadUserByUsername(user.getEmailUsername());
+        //userService.loadUserByUsername(user.getEmailUsername());
         return new ModelAndView("logInResult");
     }
 }
