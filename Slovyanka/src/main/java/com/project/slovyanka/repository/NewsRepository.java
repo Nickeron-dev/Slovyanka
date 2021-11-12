@@ -8,6 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * @author Illia Koshkin
+ * Цей клас під'єднується до бази даних та взаємодіє з нею на низькому рівні.
+ */
 @Repository
 public interface NewsRepository extends JpaRepository<News, Integer> {
     Page<News> findAllByOrderByIdDesc(Pageable pageable);

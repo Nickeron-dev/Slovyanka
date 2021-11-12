@@ -2,6 +2,10 @@ package com.project.slovyanka.configurator;
 
 import java.util.Random;
 
+/**
+ * @author Illia Koshkin
+ * Цей клас генерує коди активації. Він має константи, які налаштовують код.
+ */
 public class ActivationCodeGenerator {
 
     private static final int LENGTH_OF_CODE = 20;
@@ -13,6 +17,11 @@ public class ActivationCodeGenerator {
     private static final int INDEX_OF_LAST_NUMBER_ON_ASCII = 57;
     private static final Random random = new Random();
 
+    /**
+     * Цей метод генерує код, для доступу до нього не треба створювати екземпляр класу,
+     * бо функція - public static
+     * @return код активації, згідно з налаштуваннями у константах. Тип String
+     */
     public static String generate() {
         StringBuilder answer = new StringBuilder();
         for(int i = 0; i < LENGTH_OF_CODE; i++) {

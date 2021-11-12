@@ -19,6 +19,11 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     Optional<User> findByEmailUsername(String email);
     Optional<User> findUserByActivationCode(String activationCode);
 
+    /**
+     * Цей метод буде запускати написаний запит(UPDATE users...) у базу даних.
+     * Він разблоковує користувача за даним id.
+     * @param id ідентифікатор користувача
+     */
     @Transactional
     @Modifying(clearAutomatically = true)
     @Query(value = "UPDATE users SET non_locked = 1 WHERE (id = ?1)", nativeQuery = true)

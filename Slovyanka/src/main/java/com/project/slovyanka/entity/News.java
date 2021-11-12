@@ -5,6 +5,10 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDate;
 
+/**
+ * @author Illia Koshkin
+ * Цей клас - сутність Новини. Він має усі поля, які будут у базі данних.
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
