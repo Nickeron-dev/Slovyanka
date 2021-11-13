@@ -16,7 +16,18 @@ import java.util.Optional;
  */
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
+    /**
+     * Цей метод шукає користувача за його email
+     * @param email пошта користувача
+     * @return Optional з User, тобто сутність може бути не знайденою
+     */
     Optional<User> findByEmailUsername(String email);
+
+    /**
+     * Цей метод шукає користувача за кодом активації
+     * @param activationCode код активації акаунту
+     * @return Optional з User, тобто сутність може бути не знайденою
+     */
     Optional<User> findUserByActivationCode(String activationCode);
 
     /**
@@ -28,4 +39,14 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Modifying(clearAutomatically = true)
     @Query(value = "UPDATE users SET non_locked = 1 WHERE (id = ?1)", nativeQuery = true)
     void unlockAccountById(@Param("id") Integer id);
+
+    /**
+     * Цей метод змінює пароль на новий
+     * @param id ідентифікатор користувача
+     * @param password новий пароль
+     */
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query(value = "UPDATE users SET password = ?2 WHERE (id = ?1)", nativeQuery = true)
+    void changePasswordById(@Param("id") Integer id, @Param("password") String password);
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request</title>
+</head>
+<body>
+<form action="/password-recovery" method="post">
+    <label>Email</label>
+    <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+           oninvalid="this.setCustomValidity('Email')"
+           oninput="setCustomValidity('')"
+           type="text" required>
+    <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
+    <input type="submit">
+</form>
+<p th:text="${emailSent}"></p>
+</body>
+</html>

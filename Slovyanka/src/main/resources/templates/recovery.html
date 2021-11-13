@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recovery</title>
+</head>
+<body>
+<form action="/password-recovery/{code}" method="post">
+    <label>Password</label>
+    <input name="password" pattern="[A-Za-z0-9]{3,30}$"
+           oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
+           oninput="setCustomValidity('')"
+           type="password" required>
+    <!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
+    <input type="hidden" name="code" th:value="${activationCode}">
+    <input type="submit">
+</form>
+</body>
+</html>

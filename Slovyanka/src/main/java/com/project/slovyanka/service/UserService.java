@@ -30,12 +30,12 @@ public class UserService implements UserDetailsService {
     private SendEmailService sendService;
 
     /**
-     * Завантажувати користувача через його email буде набагото ефективнішим(ніж через username),
+     * Завантажувати користувача через його email буде набагато ефективнішим(ніж через username),
      * бо саме колонка email у базі данних має унікальні значення.
      * Також цей метод авторизую відповідного користувача!!!
      * @param userEmail email користувача
      * @return об'єкт UserDetails
-     * @throws UsernameNotFoundException у випадку коли користувача у базі данних не знайдено
+     * @throws UsernameNotFoundException у випадку коли користувача у базі даних не знайдено
      */
     @Override
     public UserDetails loadUserByUsername(String userEmail) throws UsernameNotFoundException {
@@ -47,7 +47,7 @@ public class UserService implements UserDetailsService {
      * Цей метод для зберігання нового користувача(під час реєстрації, наприклад)
      * @param userDTO Приймається об'єкт UserDTO, а не User!!! Це для того, щоб не 'тягнути' ще 4 поля(булевські поля класу User
      *             accountNonEpired, accountNonLocked, enabled та credentialsNonExpired), які можна заповнити і вручну.
-     * @throws DataIntegrityViolationException У разі, якщо не вийшло додати користувача до бази данних
+     * @throws DataIntegrityViolationException У разі, якщо не вийшло додати користувача до бази даних
      */
     public void saveNewUser(UserDTO userDTO) throws DataIntegrityViolationException {
         try {
@@ -80,24 +80,63 @@ public class UserService implements UserDetailsService {
     /**
      * Цей метож перевіряє чи вже використовується цей email
      * @param emailUsername строку(String) email.
-     * @return Булевське занчення, що відповідає на запитання: 'Чи використовується цей email?'
+     * @return Булевське значення, що відповідає на запитання: 'Чи використовується цей email?'
      */
     public boolean ifExistsByEmailUsername(String emailUsername) {
         Optional<User> user = userRepository.findByEmailUsername(emailUsername);
         return user.isPresent();
     }
 
+    /**
+     * Цей метод розблокує користувача за активаційним кодом
+     * @param code код активації
+     * @return булевське значення, що вказує на результат виконання цього методу
+     */
     public boolean unlockUserByActivationCode(String code) {
         Optional<User> user = userRepository.findUserByActivationCode(code);
         if (user.isPresent()) {
-            //user.get().setAccountNonLocked(true);
             userRepository.unlockAccountById(user.get().getId());
-            System.out.println("User found id: " + user.get().getId());
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Цей метод змінює пароль за ключем
+     * @param code ключ активації акаунта, який буде і для відновлення пароля
+     * @param password новий пароль
+     * @return булевське значення що вказує на результат
+     */
+    public boolean changePasswordByActivationCode(String code, String password) {
+        Optional<User> user = userRepository.findUserByActivationCode(code);
+        if (user.isPresent()) {
+            userRepository.changePasswordById(user.get().getId(), password);
+            System.out.println("Password: " + password);
+            System.out.println("Id: " + user.get().getId());
             return true;
         } else {
             System.out.println("User not found");
             return false;
         }
+    }
+
+    /**
+     * Цей метод дає булевське значення, яке відповідає на питання: чи є користувач за даним кодом активації
+     * @param code код активації
+     * @return булевське значення результату
+     */
+    public boolean isUserByActivationCodeExists(String code) {
+        return userRepository.findUserByActivationCode(code).isPresent();
+    }
+
+    /**
+     * Цей метод повертає можливий(через Optional) об'єкт користувача з бази даних за допомогою даного email
+     * @param email пошта користувача, якого треба знайти
+     * @return Optional з User, бо користувач може бути не знайденим
+     */
+    public Optional<User> findByEmailUsername(String email) {
+        return userRepository.findByEmailUsername(email);
     }
 
 }
