@@ -6,6 +6,27 @@
     <link rel="stylesheet" type="text/css" href="/css/for_parents.css">
     <link rel="icon" href="/images/logo.png" type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script>
+        function ScrollToRules(){
+            window.scrollTo(0, 800);
+        }
+
+        function ScrollToPsychologicalService(){
+            window.scrollTo(0, 1200);
+        }
+
+        function ScrollToUsefulPosts(){
+            window.scrollTo(0, 3400);
+        }
+
+        function ScrollToMonitoring(){
+            window.scrollTo(0, 4200);
+        }
+
+        function ScrollToParentsAnnouncer(){
+            window.scrollTo(0, 4600);
+        }
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -13,7 +34,7 @@
         <div class="first-header-menu-container">
             <nav class="first-header-menu">
                 <div class="first-header-menu__first-row">
-                    <img src="/images/home.svg" class="first-header-menu__first-image">
+                    <a href="/"><img src="/images/home.svg" class="first-header-menu__first-image"></a>
                     <img src="/images/Vector.svg" class="first-header-menu__second-image">
                     <span class="first-header-menu__number">38(044)–573–96–30</span>
                 </div>
@@ -33,11 +54,12 @@
                 </div>
 
                 <div class="first-header-menu__third-row">
+
                     <a class="first-header-menu__link first-header-menu__link_gold"
                        href="#" th:text="${entry_campaign}">Вступна кампанія 2021</a>
                     <a class="first-header-menu__link first-header-menu__link_gold-and-margin "
                        th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>
-                    <form action="/change-language" method="get">
+                    <form class="first-header-menu__link first-header-menu__link_gold" action="/change-language" method="get">
                         <input type="submit" name="ukr" value="ukr">
                         <input type="submit" name="eng" value="eng">
                     </form>
@@ -46,8 +68,9 @@
 
             </nav>
         </div>
+
         <div class="header__blue-line"></div>
-        <h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1>
+        <a href="/"><h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1></a>
         <div class="header-main">
             <div class="second-header-menu-container">
                 <nav class="second-header-menu">
@@ -69,8 +92,10 @@
                 </nav>
             </div>
             <img class="header-main__background-image" src="/images/for_parents_main.png">
+
             <h2 class="header-main__title" th:text="${for_parents}"><b>ДЛЯ БАТЬКІВ</b></h2>
         </div>
+        <a class="logo__image" href="/"><img  src="/images/logo.png" alt="logo"></a>
     </header>
     <div class="header__blue-line-down"></div>
 
@@ -87,11 +112,11 @@
         </div>
         <aside class="aside">
             <nav class="aside-menu">
-                <a>правила прийому</a><!-- href="/for-parents#bottom" class="move"*/ -->
-                <a>психологічна служба</a>
-                <a>корисні публікації</a>
-                <a>моніторинг</a>
-                <a>батьківський вісник</a>
+                <a href="javascript:ScrollToRules();">правила прийому</a><!-- href="/for-parents#bottom" class="move"*/ -->
+                <a href="javascript:ScrollToPsychologicalService();">психологічна служба</a>
+                <a href="javascript:ScrollToUsefulPosts();">корисні публікації</a>
+                <a href="javascript:ScrollToMonitoring();">моніторинг</a>
+                <a href="javascript:ScrollToParentsAnnouncer();">батьківський вісник</a>
             </nav>
         </aside>
     </div>
@@ -217,7 +242,7 @@
 
     <div class="parents-announcer">
         <h2>БАТЬКІВСЬКИЙ ВІСНИК</h2>
-
+        <!--additional page(header and footer, menu same but middle part should be different-->
     </div>
 
 
