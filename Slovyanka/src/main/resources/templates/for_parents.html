@@ -34,9 +34,8 @@
         <div class="first-header-menu-container">
             <nav class="first-header-menu">
                 <div class="first-header-menu__first-row">
-                    <a href="/"><img src="/images/home.svg" class="first-header-menu__first-image"></a>
-                    <img src="/images/Vector.svg" class="first-header-menu__second-image">
-                    <span class="first-header-menu__number">38(044)–573–96–30</span>
+                    <a class="first-header-menu__entry-campaign"
+                       href="#" th:text="${entry_campaign}">Вступна кампанія 2021</a>
                 </div>
                 <div class="first-header-menu__second-row">
                     <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" href="/for-parents"
@@ -55,14 +54,16 @@
 
                 <div class="first-header-menu__third-row">
 
-                    <a class="first-header-menu__link first-header-menu__link_gold"
-                       href="#" th:text="${entry_campaign}">Вступна кампанія 2021</a>
+                    <img src="/images/Vector.svg" class="first-header-menu__second-image">
+                    <span class="first-header-menu__link first-header-menu__link_gold">38(044)–573–96–30</span>
+<!--                    <form class="change-lang__form" action="/change-language" method="get">-->
+<!--                        <input type="submit" name="ukr" value="ukr">-->
+<!--                        <input type="submit" name="eng" value="eng">-->
+<!--                    </form>-->
                     <a class="first-header-menu__link first-header-menu__link_gold-and-margin "
                        th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>
-                    <form class="first-header-menu__link first-header-menu__link_gold" action="/change-language" method="get">
-                        <input type="submit" name="ukr" value="ukr">
-                        <input type="submit" name="eng" value="eng">
-                    </form>
+
+
                 </div>
 
 

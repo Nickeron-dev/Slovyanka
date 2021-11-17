@@ -2,25 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Вхід</title> <!-- put localisation -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/logIn.css">
+    <link rel="icon" href="/images/logo.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
+<header>
+    <a href="/"><h2>СЛОВ'ЯНСЬКА ГІМНАЗІЯ</h2></a>
+</header>
 <h1>Log In</h1>
-<form action="/login" method="post">
-    <label>Email</label>
-    <input name="username" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-           oninvalid="this.setCustomValidity('Email')"
-           oninput="setCustomValidity('')"
-           type="text" required>
-    <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
-    <label>Password</label>
-    <input name="password" pattern="[A-Za-z0-9]{3,30}$"
-           oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
-           oninput="setCustomValidity('')"
-           type="password" required>
-    <!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
+<div class="main-content">
+    <form action="/login" method="post">
+        <label>Email</label>
+        <input name="username" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+               oninvalid="this.setCustomValidity('Email')"
+               oninput="setCustomValidity('')"
+               type="text" required>
+        <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
+        <label>Password</label>
+        <input name="password" pattern="[A-Za-z0-9]{3,30}$"
+               oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
+               oninput="setCustomValidity('')"
+               type="password" required>
+        <!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
 
-    <input type="submit">
-</form>
+        <input type="submit">
+    </form>
+</div>
+
 </body>
 </html>

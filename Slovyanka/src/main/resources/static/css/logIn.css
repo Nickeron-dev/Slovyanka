@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #224D7B;
+}
+
+header {
+    background-color: #00366C;
+    font-family: KyivType Titling, serif;
+    text-align: center;
+    height: 70px;
+    border: white 5px;
+}
+
+header h2 {
+    color: #ffffff;
+    padding-top: 20px;
+    margin: 0;
+}
+
+header a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main-content {
+    text-align: center;
+}
+
