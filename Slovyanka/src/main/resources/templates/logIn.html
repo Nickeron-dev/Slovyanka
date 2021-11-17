@@ -12,24 +12,33 @@
 <header>
     <a href="/"><h2>СЛОВ'ЯНСЬКА ГІМНАЗІЯ</h2></a>
 </header>
-<h1>Log In</h1>
 <div class="main-content">
-    <form action="/login" method="post">
-        <label>Email</label>
-        <input name="username" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-               oninvalid="this.setCustomValidity('Email')"
-               oninput="setCustomValidity('')"
-               type="text" required>
-        <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
-        <label>Password</label>
-        <input name="password" pattern="[A-Za-z0-9]{3,30}$"
-               oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
-               oninput="setCustomValidity('')"
-               type="password" required>
-        <!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
+    <img alt="girl" src="/images/girl.png">
+    <div class="form-and-references">
+        <h1>ОСОБИСТИЙ КАБІНЕТ</h1>
+        <form action="/login" method="post">
+            <label>e-mail
+                <input class="input__field" name="username" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                       oninvalid="this.setCustomValidity('Email')"
+                       oninput="setCustomValidity('')"
+                       type="text" required>
+            </label>
+            <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
+            <br>
+            <label>Пароль
+                <input class="input__field input__field-2" name="password" pattern="[A-Za-z0-9]{3,30}$"
+                       oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
+                       oninput="setCustomValidity('')"
+                       type="password" required>
+            </label>
+            <!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
+            <br>
+            <input class="input__button" type="submit" value="ВХІД">
+            <a href="/password-recovery">Забули пароль</a>
+            <a href="/register">Зареєструватися</a>
+        </form>
+    </div>
 
-        <input type="submit">
-    </form>
 </div>
 
 </body>

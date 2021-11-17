@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 body {
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@ header {
     font-family: KyivType Titling, serif;
     text-align: center;
     height: 70px;
-    border: white 5px;
+    border-bottom: 1px solid white;
 }
 
 header h2 {
@@ -24,6 +26,78 @@ header a:link {
 }
 
 .main-content {
-    text-align: center;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 17px;
+    margin-top: 80px;
+    padding: 0;
 }
+
+.main-content img {
+    position: absolute;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.form-and-references {
+    float: right;
+    background-color: white;
+    height: 460px;
+    margin-top: 1px;
+    padding-left: 197px;
+    padding-right: 100px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.form-and-references h1 {
+    font-family: KyivType Titling, serif;
+    font-size: 1.7em;
+    color: #00366C;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.form-and-references form {
+    color: #222222;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.form-and-references input {
+    margin-bottom: 20px;
+}
+
+.input__field {
+    background-color: #e1f1ff;
+    border: 1px solid #0C75E5;                                              /* 20%*/
+    padding-right: 40px;
+    margin-left: 60px;
+}
+
+.input__field-2 {
+    margin-left: 51px;
+}
+
+.input__button {
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+    background-color: #224D7B;
+    border-radius: 5px;
+    margin-top: 120px;
+    padding: 5px 25px;
+}
+
+.form-and-references a {
+    color: #007eff;                             /* 70%*/
+    padding-left: 30px;
+}
+
+.form-and-references a:link {
+    text-decoration: none;
+}
+
+
 
