@@ -17,11 +17,14 @@ public class LogInController {
 
     /**
      * Цей метод опрацьовує GET-запит(відкриває сторінку авторизації)
+     * @param passwordRecoveryResult аргумент, що МОЖЛИВО буде, коли користувач переадресований після зміни пароля
      * @return об'єкт, який може одразу приймати аргументи(для відображення сторінки з обраною мовою)
      */
     @GetMapping("/login")
-    public ModelAndView loginPage() {
-        return new ModelAndView("logIn");
+    public ModelAndView loginPage(@ModelAttribute("passwordRecoveryResult") final String passwordRecoveryResult) {
+        ModelAndView modelAndView = new ModelAndView("logIn");
+        modelAndView.getModel().put("passwordRecoveryResult", passwordRecoveryResult);
+        return modelAndView;
     }
 
     /**

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Optional;
@@ -71,15 +72,20 @@ public class PasswordRecoveryController {
 
     /**
      * Цей метод опрацьовує останній крок - зміну пароля
-     * @param model об'єкт для інтернаціоналізації
+     * @param attributes об'єкт для інтернаціоналізації через redirect
      * @param password пароль(береться з форми)
      * @param code код активації(він автоматично заповнюється у формі)
      * @return переадресовує користувача до сторінки входу в акаунт
      */
     @PostMapping("/password-recovery/{code}")
-    public RedirectView changePassword(Model model, @RequestParam("password") String password, @RequestParam("code") String code) {
-        userService.changePasswordByActivationCode(code, password);
-        model.addAttribute("passwordRecoveryResult", "You've changed your password!");
+    public RedirectView changePassword(RedirectAttributes attributes, @RequestParam("password") String password, @RequestParam("code") String code) {
+        if (userService.changePasswordByActivationCode(code, password)) {
+            attributes.addAttribute("passwordRecoveryResult", "Ви успішно змінили пароль!");
+        } else {
+            attributes.addAttribute("passwordRecoveryResult", "На жаль, пароль не було змінено!");
+        }
+
+
         return new RedirectView("/login");
     }
 }
