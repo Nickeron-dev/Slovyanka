@@ -16,12 +16,14 @@
     <div class="form-and-references">
         <h1>ЗМІНИТИ ПАРОЛЬ</h1>
         <form action="/password-recovery" method="post">
-            <label>Email</label>
-            <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-                   oninvalid="this.setCustomValidity('Email')"
-                   oninput="setCustomValidity('')"
-                   type="text" required>
-            <input type="submit">
+            <label>e-mail
+                <input class="input__field" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                       oninvalid="this.setCustomValidity('Email')"
+                       oninput="setCustomValidity('')"
+                       type="text" required>
+            </label>
+            <br>
+            <input type="submit" class="input__button" value="ПІДТВЕРДИТИ">
         </form>
     </div>
 </div>

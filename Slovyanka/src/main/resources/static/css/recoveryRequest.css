@@ -57,19 +57,15 @@ header a:link {
     font-size: 1.7em;
     color: #00366C;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 90px;
     margin-left: 50px;
 }
 
 .form-and-references form {
     font-family: "Roboto Condensed", serif;
     color: #222222;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 40px;
-}
-
-.form-and-references input {
-    margin-bottom: 15px;
 }
 
 .input__field {
@@ -82,44 +78,12 @@ header a:link {
     border-radius: 5px;
 }
 
-.input__field-email {
-    margin-left: 30px;
-}
-
-.input__field-password {
-    margin-left: 20px;
-}
-
-.input__field-first-name {
-    margin-left: 42px;
-}
-
-.input__field-last-name {
-    margin-left: 4px;
-}
-
 .input__button {
     font-family: "Roboto Condensed", sans-serif;
     color: white;
     background-color: #224D7B;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 5px 25px;
     margin-left: 80px;
 }
-
-.form-and-references p {
-    text-align: center;
-}
-
-.form-and-references a {
-    color: #007eff;
-    padding-left: 10px;
-}
-
-.form-and-references a:link {
-    text-decoration: none;
-}
-
-
-
