@@ -2,18 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Request</title>
+    <title>Змінити пароль</title>
+    <link rel="stylesheet" type="text/css" href="/css/recoveryRequest.css">
+    <link rel="icon" href="/images/logo.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
-<form action="/password-recovery" method="post">
-    <label>Email</label>
-    <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-           oninvalid="this.setCustomValidity('Email')"
-           oninput="setCustomValidity('')"
-           type="text" required>
-    <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
-    <input type="submit">
-</form>
-<p th:text="${emailSent}"></p>
+<header>
+    <a href="/"><h2>СЛОВ'ЯНСЬКА ГІМНАЗІЯ</h2></a>
+</header>
+<div class="main-content">
+    <img alt="girl" src="/images/girl.png">
+    <div class="form-and-references">
+        <h1>ЗМІНИТИ ПАРОЛЬ</h1>
+        <form action="/password-recovery" method="post">
+            <label>Email</label>
+            <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                   oninvalid="this.setCustomValidity('Email')"
+                   oninput="setCustomValidity('')"
+                   type="text" required>
+            <input type="submit">
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
