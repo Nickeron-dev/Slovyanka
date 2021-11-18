@@ -3,34 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="/css/registration.css">
+    <link rel="icon" href="/images/logo.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
-<h1>Registration</h1>
-<form th:action="@{/register}" method="post">
-    <label>Email</label>
-    <input name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-           oninvalid="this.setCustomValidity('Email')"
-           oninput="setCustomValidity('')"
-           type="text" required>
-    <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
-    <label>Password</label>
-    <input name="password" pattern="[A-Za-z0-9]{3,30}$"
-           oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
-           oninput="setCustomValidity('')"
-           type="password" required>
-<!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
+<header>
+    <a href="/"><h2>СЛОВ'ЯНСЬКА ГІМНАЗІЯ</h2></a>
+</header>
+<div class="main-content">
+    <img alt="girl" src="/images/girl.png">
+    <div class="form-and-references">
+        <h1>РЕЄСТРАЦІЯ</h1>
+        <form th:action="@{/register}" method="post">
+            <label>Ім'я
+                <input class="input__field input__field-first-name"name="firstName" pattern="[A-Z][a-z]{1,20}$"
+                       oninvalid="this.setCustomValidity('first')"
+                       oninput="setCustomValidity('')"
+                       type="text" placeholder="Володимир" required>
+            </label>
+            <br>
+            <label>Прізвище
+                <input class="input__field input__field-last-name" name="lastName" pattern="[A-Z][a-z]{1,20}$"
+                       oninvalid="this.setCustomValidity('last')"
+                       oninput="setCustomValidity('')"
+                       type="text" placeholder="Коваленко" required>
+            </label>
+            <br>
+            <label>e-mail
+                <input class="input__field input__field-email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                       oninvalid="this.setCustomValidity('Email')"
+                       oninput="setCustomValidity('')"
+                       type="text" required>
+            </label>
+            <!-- oninvalid="this.setCustomValidity('Email')"  This is the best way to put my custom message-->
 
-    <label>First name</label>
-    <input name="firstName" pattern="[A-Z][a-z]{1,20}$"
-           oninvalid="this.setCustomValidity('first')"
-           oninput="setCustomValidity('')"
-           type="text" required>
-    <label>Last name</label>
-    <input name="lastName" pattern="[A-Z][a-z]{1,20}$"
-           oninvalid="this.setCustomValidity('last')"
-           oninput="setCustomValidity('')"
-           type="text" required>
-    <input type="submit">
-</form>
+            <br>
+            <label>Пароль
+                <input class="input__field input__field-password" name="password" pattern="[A-Za-z0-9]{3,30}$"
+                       oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
+                       oninput="setCustomValidity('')"
+                       type="password" required>
+            </label>
+            <!--    "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"-->
+
+            <br>
+            <label>Пароль
+                <input class="input__field input__field-password" name="passwordRepeat" pattern="[A-Za-z0-9]{3,30}$"
+                       oninvalid="this.setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')"
+                       oninput="setCustomValidity('')"
+                       type="password" required>
+            </label>
+
+            <br>
+            <input class="input__button" type="submit" value="ПІДТВЕРДИТИ">
+            <p>Вже маєте особистий кабінет?<a href="/login">Увійти</a></p>
+
+        </form>
+    </div>
+</div>
 </body>
 </html>

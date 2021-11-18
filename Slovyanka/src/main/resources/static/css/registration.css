@@ -57,31 +57,45 @@ header a:link {
     font-size: 1.7em;
     color: #00366C;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 40px;
+    margin-left: 50px;
 }
 
 .form-and-references form {
+    font-family: "Roboto Condensed", serif;
     color: #222222;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 40px;
 }
 
 .form-and-references input {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .input__field {
     background-color: #e1f1ff;
     border: 1px solid #0C75E5;
     width: 200px;
-    margin-left: 60px;
     padding-top: 7px;
+    padding-left: 20px;
     padding-bottom: 7px;
     border-radius: 5px;
 }
 
-.input__field-2 {
-    margin-left: 51px;
+.input__field-email {
+    margin-left: 30px;
+}
+
+.input__field-password {
+    margin-left: 20px;
+}
+
+.input__field-first-name {
+    margin-left: 42px;
+}
+
+.input__field-last-name {
+    margin-left: 4px;
 }
 
 .input__button {
@@ -89,13 +103,18 @@ header a:link {
     color: white;
     background-color: #224D7B;
     border-radius: 5px;
-    margin-top: 90px;
+    margin-top: 10px;
     padding: 5px 25px;
+    margin-left: 80px;
+}
+
+.form-and-references p {
+    text-align: center;
 }
 
 .form-and-references a {
     color: #007eff;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 .form-and-references a:link {
