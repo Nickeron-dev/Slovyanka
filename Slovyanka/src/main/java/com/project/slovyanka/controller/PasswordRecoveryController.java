@@ -48,7 +48,7 @@ public class PasswordRecoveryController {
                 " your password: http://localhost:8080/password-recovery/" + user.getActivationCode()));
 
         model.addAttribute("emailSent", "Email with message to change password was sent to inserted email");
-        return new ModelAndView("recoveryRequest");
+        return new ModelAndView("recoveryRequestResult");
     }
 
     /**
