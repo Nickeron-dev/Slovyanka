@@ -1,345 +1,745 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Слов'янська гімназія</title>
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
-		<link rel="icon" href="/images/logo.png" type="image/icon type">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	</head>
-	<body>
-		<div class="wrapper">
-			<header class="header">
-				<div class="first-header-menu-container">
-					<nav class="first-header-menu">
-						<div class="first-header-menu__first-row">
-							<img src="/images/home.svg" class="first-header-menu__first-image">
-							<img src="/images/Vector.svg" class="first-header-menu__second-image">
-							<span class="first-header-menu__number">38(044)–573–96–30</span>
-						</div>
-						<div class="first-header-menu__second-row">
-							<a class="first-header-menu__link first-header-menu__link_margin" href="/for-parents"
-							   th:text="${for_parents}">для батьків
-								<img class="arrow" src="/images/arrow.svg">
-							</a>
-							<a class="first-header-menu__link first-header-menu__link_margin" href="#"
-								th:text="${for_students}">для учнів
-								<img class="arrow" src="/images/arrow.svg">
-							</a>						
-							<a class="first-header-menu__link first-header-menu__link_margin" href="#"
-							   th:text="${about}">про гімназію
-								<img class="arrow" src="/images/arrow.svg">
-							</a>
-						</div>
-
-						<div class="first-header-menu__third-row">
-							<a class="first-header-menu__link first-header-menu__link_gold"
-							href="#" th:text="${entry_campaign}">Вступна кампанія 2021</a>
-							<a class="first-header-menu__link first-header-menu__link_gold-and-margin "
-							th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>
-							<form action="/change-language" method="get">
-								<input type="submit" name="ukr" value="ukr">
-								<input type="submit" name="eng" value="eng">
-							</form>
-						</div>
-
-
-					</nav>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<div class="first-header-menu-container">
+			<nav class="first-header-menu">
+				<div class="first-header-menu__first-row">
+					<a class="first-header-menu__link_gold" href="">
+						Вступна кампанія 2021
+					</a>
 				</div>
-				<div class="header__blue-line"></div>
-				<h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1>
-				<div class="header-main">
-					<div class="second-header-menu-container">
-						<nav class="second-header-menu">
-							<a class="second-header-menu__link" href="#" th:text="${educational_activity}">
-								Навчальна діяльність
-								<img class="arrow" src="/images/arrow_black.svg">
-							</a>
-							<a class="second-header-menu__link" href="#" th:text="${project_activity}">
-								Проектна діяльність
-								<img class="arrow" src="/images/arrow_black.svg">
-							</a>
-							<a class="second-header-menu__link" href="#" th:text="${unesco}">
-								Паш юнеско
-								<img class="arrow" src="/images/arrow_black.svg">
-							</a>
-							<a class="second-header-menu__link" href="#" th:text="${news}">Новини</a>
-							<a class="second-header-menu__link second-header-menu__link_margin" href="#"
-							   th:text="${photo_gallery}">Фотогалерея</a>
-			        	</nav>
-			        </div>
-			        <img class="header-main__background-image" src="/images/header-background.png">
-			        <h2 class="header-main__title" th:text="${quote_learning}"><b>Знання-без меж навчнання-без обмежень</b></h2>
-					<button class="header-main__button button" th:text="${timetable}">Розклад уроків</button>
+				<div class="first-header-menu__second-row">
+					<a class="first-header-menu__link first-header-menu__link_margin" href="#">
+						для батьків
+						<img class="arrow" src="images/arrow.svg">
+					</a>
+					<a class="first-header-menu__link first-header-menu__link_margin" href="#">
+						для учнів
+						<img class="arrow" src="images/arrow.svg">
+					</a>
+					<a class="first-header-menu__link first-header-menu__link_margin" href="#">
+						про гімназію
+						<img class="arrow" src="images/arrow.svg">
+					</a>
 				</div>
-			</header>
-
-			<!-- It doesn't exist-->
-<!--			<div class="advertisement-and-last-news-container">-->
-<!--				<div class="advertisement">-->
-<!--					<h3 class="title advertisement__title">Оголошення</h3>-->
-<!--					<div class="advertisement__text">-->
-<!--						<h5><b>Covid 19:</b></h5>-->
-<!--						<span>Освітній процес у період карантинних обмежень</span>-->
-<!--						<div class="advertisement__line advertisement__first-line"></div>-->
-<!--						<p class="advertisement__paragraph">-->
-<!--							<span>Послуга «Замовлення електронного учнівського</span>-->
-<!--							<span>квитка» доступна за посиланням:</span>-->
-<!--							<a class="advertisement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>-->
-<!--						</p>-->
-<!--						<div class="advertisement__line advertisement__second-line"></div>-->
-<!--						<a class="advertisement__second-link"><b>Онлайн зно</b></a>-->
-<!--					</div>-->
-<!--				</div>-->
-
-
-
-				<div class="advertisement-and-schedule-and-last-news-container">
-					<div class="advertisement">
-						<h3 class="title advertisement__title">Оголошення</h3>
-						<div class="advertisement__inner">
-							<h5 th:text="${covid}"><b>Covid 19:</b></h5>
-							<span th:text="${studying_during_quarantine}">Освітній процес у період карантинних обмежень</span>
-							<div class="advertisement__line advertisement__first-line"></div>
-							<p class="advertisement__paragraph">
-								<span th:text="${get_student_id_first}">Послуга «Замовлення електронного учнівського</span>
-								<span th:text="${get_student_id_second}">квитка» доступна за посиланням:</span>
-								<a class="advertisement__first-link" href="#" th:text="${web_portal_reference}">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
-							</p>
-							<div class="advertisement__line advertisement__second-line"></div>
-							<a class="advertisement__second-link" th:text="${online_zno}"><b>Онлайн зно</b></a>
-						</div>
+				<div class="first-header-menu__third-row">
+							<span class="first-header-menu__number">
+								<img class="" src="images/Vector3.svg">
+								38(044)–573–96–30
+							</span>
+					<span class="">
+								Ukr
+								<img src="images/UA-Ukraine-Flag.png">
+							</span>
+					<a class="first-header-menu__link first-header-menu__link_gold-and-margin "
+					   href="#">Вхід</a>
+				</div>
+			</nav>
+		</div>
+		<div class="header__blue-line"></div>
+		<h1 class="main-title"><b>Слов'янська гімназія</b></h1>
+		<div class="header-main">
+			<div class="second-header-menu-container">
+				<nav class="second-header-menu">
+					<a class="second-header-menu__link" href="#">
+						Навчальна діяльність
+						<img class="arrow" src="images/arrow_black.svg">
+					</a>
+					<a class="second-header-menu__link" href="#">
+						Проектна діяльність
+						<img class="arrow" src="images/arrow_black.svg">
+					</a>
+					<a class="second-header-menu__link" href="#">
+						Паш юнеско
+						<img class="arrow" src="images/arrow_black.svg">
+					</a>
+					<a class="second-header-menu__link" href="#">Галерея</a>
+					<a class="second-header-menu__link second-header-menu__link_margin" href="#">Фотогалерея</a>
+				</nav>
+			</div>
+			<img class="header-main__background-image" src="images/header-background.png">
+			<h2 class="header-main__title"><b>Знання-без меж навчнання-без обмежень</b></h2>
+			<button class="button header-main__button">Розклад уроків</button>
+		</div>
+	</header>
+	<div class="advertisement-and-schedule-and-last-news-container">
+		<div class="advertisement">
+			<h3 class="title advertisement__title">Оголошення</h3>
+			<div class="advertisement__inner">
+				<h5><b>Covid 19:</b></h5>
+				<span>Освітній процес у період карантинних обмежень</span>
+				<div class="advertisement__line advertisement__first-line"></div>
+				<p class="advertisement__paragraph">
+					<span>Послуга «Замовлення електронного учнівського</span>
+					<span>квитка» доступна за посиланням:</span>
+					<a class="advertisement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
+				</p>
+				<div class="advertisement__line advertisement__second-line"></div>
+				<a class="advertisement__second-link"><b>Онлайн зно</b></a>
+			</div>
+		</div>
+		<aside class="aside">
+			<nav class="aside-menu">
+				<a>Останні новини</a>
+				<a>Публічна інформація</a>
+				<a>Корисні посилання</a>
+				<a>контакти</a>
+			</nav>
+			<div class="schedule">
+				<h4 class="schedule__title">Розклад уроків</h4>
+				<div class="schedule__inner">
+					<div class="schedule__column schedule__first-column">
+						<span><b>1-й</b></span>
+						<span><b>2-й</b></span>
+						<span><b>3-й</b></span>
+						<span><b>4-й</b></span>
+						<span><b>5-й</b></span>
+						<span><b>6-й</b></span>
 					</div>
-					<aside class="aside">
-						<nav class="aside-menu">
-							<a th:text="${latest_news}">Останні новини</a>
-							<a th:text="${public_information}">Публічна інформація</a>
-							<a th:text="${useful_links}">Корисні посилання</a>
-							<a th:text="${contacts}">контакти</a>
-						</nav>
-						<div class="schedule">
-							<h4 class="schedule__title" th:text="${timetable}">Розклад уроків</h4>
-							<div class="schedule__inner">
-								<div class="schedule__column">
-									<span th:text="${first_lesson}"><b>1-й</b></span>
-									<span th:text="${second_lesson}"><b>2-й</b></span>
-									<span th:text="${third_lesson}"><b>3-й</b></span>
-									<span th:text="${fourth_lesson}"><b>4-й</b></span>
-									<span th:text="${fifth_lesson}"><b>5-й</b></span>
-									<span th:text="${sixth_lesson}"><b>6-й</b></span>
-								</div>
-								<div class="schedule__column">
-									<h6 class="schedule__subtitle"><span th:text="${first_shift}"><b>I зміна</b></span></h6>
-									<span><b>08:30–09:15</b></span>
-									<span><b>09:20–10:05</b></span>
-									<span><b>10:15–11:00</b></span>
-									<span><b>10:15–11:00</b></span>
-									<span><b>10:15–11:00</b></span>
-									<span><b>10:15–11:00</b></span>
-								</div>
-								<div class="schedule__column">
-									<h6><span  th:text="${second_shift}"><b>II зміна</b></span></h6>
-									<span><b>08:30–09:15</b></span>
-									<span><b>09:20–10:05</b></span>
-									<span><b>10:15–11:00</b></span>
-									<span><b>10:15–11:00</b></span>
-									<span><b>10:15–11:00</b></span>
-									<span><b>10:15–11:00</b></span>
-								</div>
-							</div>
-						</div>
-					</aside>
+					<div class="schedule__column">
+						<h6 class="schedule__subtitle"><b>I зміна</b></h6>
+						<span><b>08:30–09:15</b></span>
+						<span><b>09:20–10:05</b></span>
+						<span><b>10:15–11:00</b></span>
+						<span><b>10:15–11:00</b></span>
+						<span><b>10:15–11:00</b></span>
+						<span><b>10:15–11:00</b></span>
+					</div>
+					<div class="schedule__column">
+						<h6 class="schedule__subtitle"><b>II зміна</b></h6>
+						<span><b>08:30–09:15</b></span>
+						<span><b>09:20–10:05</b></span>
+						<span><b>10:15–11:00</b></span>
+						<span><b>10:15–11:00</b></span>
+						<span><b>10:15–11:00</b></span>
+						<span><b>10:15–11:00</b></span>
+					</div>
 				</div>
-			<div class="last-news">
-				<div class="title"  th:text="${latest_news}">Останні новини</div>
-				<div class="last-news__container">
-					<div class="last-news__inner">
-						<div class="last-news__title">
-							<span th:text="${current_language} == 'ukr' ? ${news_list.get(0).getTitleUkr()} : ${news_list.get(0).getTitleEng()}">Зустріч</span>
-<!--							<span>із представниками ДБР</span>-->
-						</div>
-						<span class="last-news__date" th:text="${news_list.get(0).getDate()}">
+			</div>
+		</aside>
+	</div>
+	<div class="last-news">
+		<div class="title">Останні новини</div>
+		<div class="last-news__container">
+			<div class="last-news__inner">
+				<div class="last-news__title">
+					<span>Зустріч</span>
+					<span>із представниками ДБР</span>
+				</div>
+				<span class="last-news__date">
 								16:30 28/09/2021
 							</span>
-						<div class="last-news__line">
+				<div class="last-news__line">
 
-						</div>
-						<p class="last-news__first-paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(0).getIntroductionUkr()} : ${news_list.get(0).getIntroductionEng()}">
-							У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.
-						</p>
-						<p class="last-news__second-paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(0).getTextUkr()} : ${news_list.get(0).getTextEng()}">
-							Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!
-						</p>
-					</div>
-					<img class="last-news__image" th:src="${news_list.get(0).getImageReference()}">
 				</div>
+				<p class="last-news__first-paragraph">
+					У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.
+				</p>
+				<p class="last-news__second-paragraph">
+					Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!
+				</p>
 			</div>
-			<div class="articles__container">
-				<div class="articles__row articles__first-row">
-					<article class="article">
-						<img class="article__image" th:src="${news_list.get(1).getImageReference()}">
-						<div class="articles__inner">
-							<span class="article__date" th:text="${news_list.get(1).getDate()}">12:06 20/09/2021</span>
-							<h5 class="article__title">
-								<span th:text="${current_language} == 'ukr' ? ${news_list.get(1).getTitleUkr()} : ${news_list.get(1).getTitleEng()}">Вітаємо, радіємо</span>
-<!--								<span>і пишаємося!</span>-->
-							</h5>
-							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(1).getIntroductionUkr()} : ${news_list.get(1).getIntroductionEng()}">
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
-							</p>
-							<a class="article__link" href=""><b>Більше</b></a>
-						</div>
-					</article>
-					<article class="article">
-						<img th:src="${news_list.get(2).getImageReference()}">
-						<div class="articles__inner">
-							<span class="article__date" th:text="${news_list.get(2).getDate()}">12:06 20/09/2021</span>
-							<h5 class="article__title">
-								<span th:text="${current_language} == 'ukr' ? ${news_list.get(2).getTitleUkr()} : ${news_list.get(2).getTitleEng()}">Вітаємо, радіємо</span>
-<!--								<span>і пишаємося!</span>-->
-							</h5>
-							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(2).getIntroductionUkr()} : ${news_list.get(2).getIntroductionEng()}">
-								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
-							</p>
-							<a class="article__link" href=""><b>Більше</b></a>
-						</div>
-					</article>
-					<article class="article">
-						<img th:src="${news_list.get(3).getImageReference()}">
-						<div class="articles__inner">
-							<span class="article__date" th:text="${news_list.get(3).getDate()}">12:06 20/09/2021</span>
-							<h5 class="article__title">
-								<span th:text="${current_language} == 'ukr' ? ${news_list.get(3).getTitleUkr()} : ${news_list.get(3).getTitleEng()}">Вітаємо, радіємо</span>
-<!--								<span>і пишаємося!</span>-->
-							</h5>
-							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(3).getIntroductionUkr()} : ${news_list.get(3).getIntroductionEng()}">
-								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
-							</p>
-							<a class="article__link" href=""><b>Більше</b></a>
-						</div>
-					</article>
+			<img class="last-news__image" src="images/last-news-image.png">
+		</div>
+	</div>
+	<div class="articles">
+		<div class="articles__container">
+			<article class="article">
+				<img class="article__image" src="images/articles-image.png">
+				<div class="articles__inner">
+					<span class="article__date">12:06 20/09/2021</span>
+					<h5 class="article__title">
+						<span>Вітаємо, радіємо</span>
+						<span>і пишаємося!</span>
+					</h5>
+					<p class="article__paragraph">
+						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+					</p>
+					<a class="article__link" href=""><b>Більше</b></a>
 				</div>
-				<div class="articles__row">
-					<article class="article">
-						<img th:src="${news_list.get(4).getImageReference()}">
-						<div class="articles__inner">
-							<span class="article__date" th:text="${news_list.get(4).getDate()}">12:06 20/09/2021</span>
-							<h5 class="article__title">
-								<span th:text="${current_language} == 'ukr' ? ${news_list.get(4).getTitleUkr()} : ${news_list.get(4).getTitleEng()}">Вітаємо, радіємо</span>
-<!--								<span>і пишаємося!</span>-->
-							</h5>
-							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(4).getIntroductionUkr()} : ${news_list.get(4).getIntroductionEng()}">
-								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
-							</p>
-							<a class="article__link" href=""><b>Більше</b></a>
-						</div>
-					</article>
-					<article class="article">
-						<img th:src="${news_list.get(5).getImageReference()}">
-						<div class="articles__inner">
-							<span class="article__date" th:text="${news_list.get(5).getDate()}">12:06 20/09/2021</span>
-							<h5 class="article__title">
-								<span th:text="${current_language} == 'ukr' ? ${news_list.get(5).getTitleUkr()} : ${news_list.get(5).getTitleEng()}">Вітаємо, радіємо</span>
-<!--								<span>і пишаємося!</span>-->
-							</h5>
-							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(5).getIntroductionUkr()} : ${news_list.get(5).getIntroductionEng()}">
-								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
-							</p>
-							<a class="article__link" href=""><b>Більше</b></a>
-						</div>
-					</article>
-					<article class="article">
-						<img th:src="${news_list.get(6).getImageReference()}">
-						<div class="articles__inner">
-							<span class="article__date" th:text="${news_list.get(6).getDate()}">12:06 20/09/2021</span>
-							<h5 class="article__title">
-								<span th:text="${current_language} == 'ukr' ? ${news_list.get(6).getTitleUkr()} : ${news_list.get(6).getTitleEng()}">Вітаємо, радіємо</span>
-<!--								<span>і пишаємося!</span>-->
-							</h5>
-							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(6).getIntroductionUkr()} : ${news_list.get(6).getIntroductionEng()}">
-								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
-							</p>
-							<a class="article__link" href=""><b>Більше</b></a>
-						</div>
-					</article>
+			</article>
+			<article class="article">
+				<img class="article__image" src="images/articles-image.png">
+				<div class="articles__inner">
+					<span class="article__date">12:06 20/09/2021</span>
+					<h5 class="article__title">
+						<span>Вітаємо, радіємо</span>
+						<span>і пишаємося!</span>
+					</h5>
+					<p class="article__paragraph">
+						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+					</p>
+					<a class="article__link" href=""><b>Більше</b></a>
 				</div>
+			</article>
+			<article class="article">
+				<img class="article__image" src="images/articles-image.png">
+				<div class="articles__inner">
+					<span class="article__date">12:06 20/09/2021</span>
+					<h5 class="article__title">
+						<span>Вітаємо, радіємо</span>
+						<span>і пишаємося!</span>
+					</h5>
+					<p class="article__paragraph">
+						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+					</p>
+					<a class="article__link" href=""><b>Більше</b></a>
+				</div>
+			</article>
+			<article class="article">
+				<img class="article__image" src="images/articles-image.png">
+				<div class="articles__inner">
+					<span class="article__date">12:06 20/09/2021</span>
+					<h5 class="article__title">
+						<span>Вітаємо, радіємо</span>
+						<span>і пишаємося!</span>
+					</h5>
+					<p class="article__paragraph">
+						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+					</p>
+					<a class="article__link" href=""><b>Більше</b></a>
+				</div>
+			</article>
+			<article class="article">
+				<img class="article__image" src="images/articles-image.png">
+				<div class="articles__inner">
+					<span class="article__date">12:06 20/09/2021</span>
+					<h5 class="article__title">
+						<span>Вітаємо, радіємо</span>
+						<span>і пишаємося!</span>
+					</h5>
+					<p class="article__paragraph">
+						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+					</p>
+					<a class="article__link" href=""><b>Більше</b></a>
+				</div>
+			</article>
+			<article class="article">
+				<img class="article__image" src="images/articles-image.png">
+				<div class="articles__inner">
+					<span class="article__date">12:06 20/09/2021</span>
+					<h5 class="article__title">
+						<span>Вітаємо, радіємо</span>
+						<span>і пишаємося!</span>
+					</h5>
+					<p class="article__paragraph">
+						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
+					</p>
+					<a class="article__link" href=""><b>Більше</b></a>
+				</div>
+			</article>
+		</div>
+	</div>
+	<div class="public-info">
+		<div class="title">Публічна інформація</div>
+		<div class="public-info__inner">
+			<h6><b>запит для отримання  публічної інформації в електорнному вигляді</b></h6>
+			<button class="button public-info__button_blue">Зробити запит</button>
+			<div class="public-info__show-text">
+				<span>показати/</span>
+				<span>сховати текст</span>
 			</div>
-<!--				<div class="last-news">-->
-<!--					<div class="title" th:text="${latest_news}">Останні новини</div>-->
-<!--					<div class="last-news__container">-->
-<!--						<div class="last-news__inner">-->
-<!--							<div class="last-news__title">-->
-<!--								<span>Зустріч</span>-->
-<!--								<span>із представниками ДБР</span>-->
+		</div>
+		<div class="slider">
+			<div class="slider__element"></div>
+			<img id="rightButton" src="">
+			<img id="leftButton" src="">
+		</div>
+	</div>
+	<div class="useful-links">
+		<h3 class="title">Корисні посилання</h3>
+		<div class="useful-links__inner">
+			<div class="useful-links__links">
+				<div>
+					<a class="useful-links__link" href="#"><b class="useful-links__link">01. Міністерство освіти і науки України:</b></a>
+					<span>01135, м.Київ, проспект Перемоги, 10</span>
+				</div>
+				<div>
+					<a class="useful-links__link" href="#"><b class="useful-links__link">02. Департамент освіти і науки:</b></a>
+					<span>01004, м.Київ, бульвар Тараса Шевченка, 3</span>
+				</div>
+				<div>
+					<a class="useful-links__link" href="#"><b class="useful-links__link">03. Управління освіти Дарницької районної в місті Києві державної адміністрації:</b></a>
+					<span>02091, м.Київ, вул. Харківське шосе, 168К</span>
+				</div>
+				<div>
+					<a class="useful-links__link" href="#"><b class="useful-links__link">04. Дарницький районний науково-методичний центр:</b></a>
+					<span>02091, м.Київ, вул. Архітектора Вербицького, 9І</span>
+				</div>
+				<div>
+					<a class="useful-links__link" href="#"><b class="useful-links__link">05. Український центр оцінювання якості освіти:</b></a>
+					<span>01135, м.Київ, вул. Чорновола,</span>
+				</div>
+				<a href=""><b class="useful-links__link">07. Освіта.ua</b></a>
+				<a href=""><b class="useful-links__link">08. Освітній шкільний інтернет-портал "Острів знань"</b></a>
+				<a href=""><b class="useful-links__link">09. Тест-портал "Справедливе оцінювання"</b></a>
+				<a href=""><b class="useful-links__link">10. Київський регіональний центр оцінювання якості освіти</b></a>
+			</div>
+			<div class="useful-links__images">
+				<img class="useful-links__first-image" src="/images/useful-links-first-image.png">
+				<img class="useful-links__second-image" src="images/useful-links-second-image.png">
+				<img class="useful-links__third-image" src="images/useful-links-third-image.png">
+				<img class="useful-links__third-image" src="images/useful-links-fourth-image.png">
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__first-column">
+			<div class="footer__adress">
+				02068, м.Київ,
+				вул.Драгоманова, 10в
+			</div>
+			<div class="footer__numbers">
+				<span>+380–44–573–96–30— тел./факс:</span>
+				<span>+380–44–570–88–24— приймальна коміссія</span>
+				<span>+380–44–570–87–55 — завуч !!!!! наприклад</span>
+			</div>
+			<span class="footer__first-span">Проспект інформаційний</span>
+			<a class="footer__link" href="">Завантажити pdf<img src=""></a>
+			<div class="footer__second-span">
+				Запит на вступ у 1 клас 2021 р.
+			</div>
+			<button class="button footer__button">Зробити запит</button>
+		</div>
+		<nav class="footer-menu">
+			<a>Для батьків</a>
+			<a>Для учнів</a>
+			<a>Про гімназію </a>
+			<a>Навчальна діяльність </a>
+			<a>Проектна діяльність</a>
+			<a>Паш юнеско</a>
+			<a>Галерея</a>
+			<a>Фотогалерея</a>
+			<a>Новини</a>
+			<span class="footer__third-span">e-mail: 5739630@ukr.net</span>
+			<span class="footer__fourth-span">
+						© 2009 - 2010 Слов'янська гімназія
+					</span>
+			<button class="button button_without-bc">Напишіть нам</button>
+		</nav>
+	</footer>
+</div>
+<script type="text/javascript" src="slider.js"></script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org" lang="en">-->
+<!--	<head>-->
+<!--		<meta charset="UTF-8">-->
+<!--		<title>Слов'янська гімназія</title>-->
+<!--		<link rel="stylesheet" type="text/css" href="/css/style.css">-->
+<!--		<link rel="icon" href="/images/logo.png" type="image/icon type">-->
+<!--		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
+<!--	</head>-->
+<!--	<body>-->
+<!--		<div class="wrapper">-->
+<!--			<header class="header">-->
+<!--				<div class="first-header-menu-container">-->
+<!--					<nav class="first-header-menu">-->
+<!--						<div class="first-header-menu__first-row">-->
+<!--							<a class="first-header-menu__link_gold" href="">-->
+<!--								Вступна кампанія 2021-->
+<!--							</a>-->
+<!--						</div>-->
+<!--						<div class="first-header-menu__second-row">-->
+<!--							<a class="first-header-menu__link first-header-menu__link_margin" href="#">-->
+<!--								для батьків-->
+<!--								<img class="arrow" src="images/arrow.svg">-->
+<!--							</a>-->
+<!--							<a class="first-header-menu__link first-header-menu__link_margin" href="#">-->
+<!--								для учнів-->
+<!--								<img class="arrow" src="images/arrow.svg">-->
+<!--							</a>-->
+<!--							<a class="first-header-menu__link first-header-menu__link_margin" href="#">-->
+<!--								про гімназію-->
+<!--								<img class="arrow" src="images/arrow.svg">-->
+<!--							</a>-->
+<!--						</div>-->
+<!--						<div class="first-header-menu__third-row">-->
+<!--							<span class="first-header-menu__number">-->
+<!--								<img class="" src="/images/Vector.svg">-->
+<!--								38(044)–573–96–30-->
+<!--							</span>-->
+<!--							<span class="">-->
+<!--								Ukr-->
+<!--								<img src="/images/UA-Ukraine-Flag.png">-->
+<!--							</span>-->
+<!--							<a class="first-header-menu__link first-header-menu__link_gold-and-margin "-->
+<!--							   href="#">Вхід</a>-->
+<!--						</div>-->
+<!--					</nav>-->
+<!--				</div>-->
+<!--				<div class="header__blue-line"></div>-->
+<!--				<h1 class="main-title"><b>Слов'янська гімназія</b></h1>-->
+<!--				<div class="header-main">-->
+<!--					<div class="second-header-menu-container">-->
+<!--						<nav class="second-header-menu">-->
+<!--							<a class="second-header-menu__link" href="#">-->
+<!--								Навчальна діяльність-->
+<!--								<img class="arrow" src="images/arrow_black.svg">-->
+<!--							</a>-->
+<!--							<a class="second-header-menu__link" href="#">-->
+<!--								Проектна діяльність-->
+<!--								<img class="arrow" src="images/arrow_black.svg">-->
+<!--							</a>-->
+<!--							<a class="second-header-menu__link" href="#">-->
+<!--								Паш юнеско-->
+<!--								<img class="arrow" src="images/arrow_black.svg">-->
+<!--							</a>-->
+<!--							<a class="second-header-menu__link" href="#">Галерея</a>-->
+<!--							<a class="second-header-menu__link second-header-menu__link_margin" href="#">Фотогалерея</a>-->
+<!--						</nav>-->
+<!--					</div>-->
+<!--					<img class="header-main__background-image" src="images/header-background.png">-->
+<!--					<h2 class="header-main__title"><b>Знання-без меж навчання-без обмежень</b></h2>-->
+<!--					<button class="button header-main__button">Розклад уроків</button>-->
+<!--				</div>-->
+<!--			</header>-->
+<!--&lt;!&ndash;			<header class="header">&ndash;&gt;-->
+<!--&lt;!&ndash;				<div class="first-header-menu-container">&ndash;&gt;-->
+<!--&lt;!&ndash;					<nav class="first-header-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="first-header-menu__first-row">&ndash;&gt;-->
+<!--&lt;!&ndash;							<img src="/images/home.svg" class="first-header-menu__first-image">&ndash;&gt;-->
+<!--&lt;!&ndash;							<img src="/images/Vector.svg" class="first-header-menu__second-image">&ndash;&gt;-->
+<!--&lt;!&ndash;							<span class="first-header-menu__number">38(044)–573–96–30</span>&ndash;&gt;-->
+<!--&lt;!&ndash;						</div>&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="first-header-menu__second-row">&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="first-header-menu__link first-header-menu__link_margin" href="/for-parents"&ndash;&gt;-->
+<!--&lt;!&ndash;							   th:text="${for_parents}">для батьків&ndash;&gt;-->
+<!--&lt;!&ndash;								<img class="arrow" src="/images/arrow.svg">&ndash;&gt;-->
+<!--&lt;!&ndash;							</a>&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="first-header-menu__link first-header-menu__link_margin" href="#"&ndash;&gt;-->
+<!--&lt;!&ndash;								th:text="${for_students}">для учнів&ndash;&gt;-->
+<!--&lt;!&ndash;								<img class="arrow" src="/images/arrow.svg">&ndash;&gt;-->
+<!--&lt;!&ndash;							</a>						&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="first-header-menu__link first-header-menu__link_margin" href="#"&ndash;&gt;-->
+<!--&lt;!&ndash;							   th:text="${about}">про гімназію&ndash;&gt;-->
+<!--&lt;!&ndash;								<img class="arrow" src="/images/arrow.svg">&ndash;&gt;-->
+<!--&lt;!&ndash;							</a>&ndash;&gt;-->
+<!--&lt;!&ndash;						</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;						<div class="first-header-menu__third-row">&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="first-header-menu__link first-header-menu__link_gold"&ndash;&gt;-->
+<!--&lt;!&ndash;							href="#" th:text="${entry_campaign}">Вступна кампанія 2021</a>&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="first-header-menu__link first-header-menu__link_gold-and-margin "&ndash;&gt;-->
+<!--&lt;!&ndash;							th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>&ndash;&gt;-->
+<!--&lt;!&ndash;							<form action="/change-language" method="get">&ndash;&gt;-->
+<!--&lt;!&ndash;								<input type="submit" name="ukr" value="ukr">&ndash;&gt;-->
+<!--&lt;!&ndash;								<input type="submit" name="eng" value="eng">&ndash;&gt;-->
+<!--&lt;!&ndash;							</form>&ndash;&gt;-->
+<!--&lt;!&ndash;						</div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;					</nav>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<div class="header__blue-line"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1>&ndash;&gt;-->
+<!--&lt;!&ndash;				<div class="header-main">&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="second-header-menu-container">&ndash;&gt;-->
+<!--&lt;!&ndash;						<nav class="second-header-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="second-header-menu__link" href="#" th:text="${educational_activity}">&ndash;&gt;-->
+<!--&lt;!&ndash;								Навчальна діяльність&ndash;&gt;-->
+<!--&lt;!&ndash;								<img class="arrow" src="/images/arrow_black.svg">&ndash;&gt;-->
+<!--&lt;!&ndash;							</a>&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="second-header-menu__link" href="#" th:text="${project_activity}">&ndash;&gt;-->
+<!--&lt;!&ndash;								Проектна діяльність&ndash;&gt;-->
+<!--&lt;!&ndash;								<img class="arrow" src="/images/arrow_black.svg">&ndash;&gt;-->
+<!--&lt;!&ndash;							</a>&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="second-header-menu__link" href="#" th:text="${unesco}">&ndash;&gt;-->
+<!--&lt;!&ndash;								Паш юнеско&ndash;&gt;-->
+<!--&lt;!&ndash;								<img class="arrow" src="/images/arrow_black.svg">&ndash;&gt;-->
+<!--&lt;!&ndash;							</a>&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="second-header-menu__link" href="#" th:text="${news}">Новини</a>&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="second-header-menu__link second-header-menu__link_margin" href="#"&ndash;&gt;-->
+<!--&lt;!&ndash;							   th:text="${photo_gallery}">Фотогалерея</a>&ndash;&gt;-->
+<!--&lt;!&ndash;			        	</nav>&ndash;&gt;-->
+<!--&lt;!&ndash;			        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;			        <img class="header-main__background-image" src="/images/header-background.png">&ndash;&gt;-->
+<!--&lt;!&ndash;			        <h2 class="header-main__title" th:text="${quote_learning}"><b>Знання-без меж навчнання-без обмежень</b></h2>&ndash;&gt;-->
+<!--&lt;!&ndash;					<button class="header-main__button button" th:text="${timetable}">Розклад уроків</button>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;			</header>&ndash;&gt;-->
+
+<!--			&lt;!&ndash; It doesn't exist&ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="advertisement-and-last-news-container">&ndash;&gt;-->
+<!--&lt;!&ndash;				<div class="advertisement">&ndash;&gt;-->
+<!--&lt;!&ndash;					<h3 class="title advertisement__title">Оголошення</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="advertisement__text">&ndash;&gt;-->
+<!--&lt;!&ndash;						<h5><b>Covid 19:</b></h5>&ndash;&gt;-->
+<!--&lt;!&ndash;						<span>Освітній процес у період карантинних обмежень</span>&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="advertisement__line advertisement__first-line"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;						<p class="advertisement__paragraph">&ndash;&gt;-->
+<!--&lt;!&ndash;							<span>Послуга «Замовлення електронного учнівського</span>&ndash;&gt;-->
+<!--&lt;!&ndash;							<span>квитка» доступна за посиланням:</span>&ndash;&gt;-->
+<!--&lt;!&ndash;							<a class="advertisement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>&ndash;&gt;-->
+<!--&lt;!&ndash;						</p>&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="advertisement__line advertisement__second-line"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;						<a class="advertisement__second-link"><b>Онлайн зно</b></a>&ndash;&gt;-->
+<!--&lt;!&ndash;					</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+
+
+
+<!--				<div class="advertisement-and-schedule-and-last-news-container">-->
+<!--					<div class="advertisement">-->
+<!--						<h3 class="title advertisement__title">Оголошення</h3>-->
+<!--						<div class="advertisement__inner">-->
+<!--							<h5 th:text="${covid}"><b>Covid 19:</b></h5>-->
+<!--							<span th:text="${studying_during_quarantine}">Освітній процес у період карантинних обмежень</span>-->
+<!--							<div class="advertisement__line advertisement__first-line"></div>-->
+<!--							<p class="advertisement__paragraph">-->
+<!--								<span th:text="${get_student_id_first}">Послуга «Замовлення електронного учнівського</span>-->
+<!--								<span th:text="${get_student_id_second}">квитка» доступна за посиланням:</span>-->
+<!--								<a class="advertisement__first-link" href="#" th:text="${web_portal_reference}">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>-->
+<!--							</p>-->
+<!--							<div class="advertisement__line advertisement__second-line"></div>-->
+<!--							<a class="advertisement__second-link" th:text="${online_zno}"><b>Онлайн зно</b></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<aside class="aside">-->
+<!--						<nav class="aside-menu">-->
+<!--							<a th:text="${latest_news}">Останні новини</a>-->
+<!--							<a th:text="${public_information}">Публічна інформація</a>-->
+<!--							<a th:text="${useful_links}">Корисні посилання</a>-->
+<!--							<a th:text="${contacts}">контакти</a>-->
+<!--						</nav>-->
+<!--						<div class="schedule">-->
+<!--							<h4 class="schedule__title" th:text="${timetable}">Розклад уроків</h4>-->
+<!--							<div class="schedule__inner">-->
+<!--								<div class="schedule__column">-->
+<!--									<span th:text="${first_lesson}"><b>1-й</b></span>-->
+<!--									<span th:text="${second_lesson}"><b>2-й</b></span>-->
+<!--									<span th:text="${third_lesson}"><b>3-й</b></span>-->
+<!--									<span th:text="${fourth_lesson}"><b>4-й</b></span>-->
+<!--									<span th:text="${fifth_lesson}"><b>5-й</b></span>-->
+<!--									<span th:text="${sixth_lesson}"><b>6-й</b></span>-->
+<!--								</div>-->
+<!--								<div class="schedule__column">-->
+<!--									<h6 class="schedule__subtitle"><span th:text="${first_shift}"><b>I зміна</b></span></h6>-->
+<!--									<span><b>08:30–09:15</b></span>-->
+<!--									<span><b>09:20–10:05</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--								</div>-->
+<!--								<div class="schedule__column">-->
+<!--									<h6><span  th:text="${second_shift}"><b>II зміна</b></span></h6>-->
+<!--									<span><b>08:30–09:15</b></span>-->
+<!--									<span><b>09:20–10:05</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--									<span><b>10:15–11:00</b></span>-->
+<!--								</div>-->
 <!--							</div>-->
-<!--							<span class="last-news__date">-->
+<!--						</div>-->
+<!--					</aside>-->
+<!--				</div>-->
+<!--			<div class="last-news">-->
+<!--				<div class="title"  th:text="${latest_news}">Останні новини</div>-->
+<!--				<div class="last-news__container">-->
+<!--					<div class="last-news__inner">-->
+<!--						<div class="last-news__title">-->
+<!--							<span th:text="${current_language} == 'ukr' ? ${news_list.get(0).getTitleUkr()} : ${news_list.get(0).getTitleEng()}">Зустріч</span>-->
+<!--&lt;!&ndash;							<span>із представниками ДБР</span>&ndash;&gt;-->
+<!--						</div>-->
+<!--						<span class="last-news__date" th:text="${news_list.get(0).getDate()}">-->
 <!--								16:30 28/09/2021-->
 <!--							</span>-->
-<!--							<div class="last-news__line"></div>-->
-<!--							<p class="last-news__first-paragraph">-->
-<!--								У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.-->
-<!--							</p>-->
-<!--							<p class="last-news__second-paragraph">-->
-<!--								Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!-->
-<!--							</p>-->
+<!--						<div class="last-news__line">-->
+
 <!--						</div>-->
-<!--						<img src="images/last-news-image.png">-->
+<!--						<p class="last-news__first-paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(0).getIntroductionUkr()} : ${news_list.get(0).getIntroductionEng()}">-->
+<!--							У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.-->
+<!--						</p>-->
+<!--						<p class="last-news__second-paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(0).getTextUkr()} : ${news_list.get(0).getTextEng()}">-->
+<!--							Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!-->
+<!--						</p>-->
+<!--					</div>-->
+<!--					<img class="last-news__image" th:src="${news_list.get(0).getImageReference()}">-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="articles__container">-->
+<!--				<div class="articles__row articles__first-row">-->
+<!--					<article class="article">-->
+<!--						<img class="article__image" th:src="${news_list.get(1).getImageReference()}">-->
+<!--						<div class="articles__inner">-->
+<!--							<span class="article__date" th:text="${news_list.get(1).getDate()}">12:06 20/09/2021</span>-->
+<!--							<h5 class="article__title">-->
+<!--								<span th:text="${current_language} == 'ukr' ? ${news_list.get(1).getTitleUkr()} : ${news_list.get(1).getTitleEng()}">Вітаємо, радіємо</span>-->
+<!--&lt;!&ndash;								<span>і пишаємося!</span>&ndash;&gt;-->
+<!--							</h5>-->
+<!--							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(1).getIntroductionUkr()} : ${news_list.get(1).getIntroductionEng()}">-->
+<!--								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu-->
+<!--							</p>-->
+<!--							<a class="article__link" href=""><b>Більше</b></a>-->
+<!--						</div>-->
+<!--					</article>-->
+<!--					<article class="article">-->
+<!--						<img th:src="${news_list.get(2).getImageReference()}">-->
+<!--						<div class="articles__inner">-->
+<!--							<span class="article__date" th:text="${news_list.get(2).getDate()}">12:06 20/09/2021</span>-->
+<!--							<h5 class="article__title">-->
+<!--								<span th:text="${current_language} == 'ukr' ? ${news_list.get(2).getTitleUkr()} : ${news_list.get(2).getTitleEng()}">Вітаємо, радіємо</span>-->
+<!--&lt;!&ndash;								<span>і пишаємося!</span>&ndash;&gt;-->
+<!--							</h5>-->
+<!--							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(2).getIntroductionUkr()} : ${news_list.get(2).getIntroductionEng()}">-->
+<!--								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!-->
+<!--							</p>-->
+<!--							<a class="article__link" href=""><b>Більше</b></a>-->
+<!--						</div>-->
+<!--					</article>-->
+<!--					<article class="article">-->
+<!--						<img th:src="${news_list.get(3).getImageReference()}">-->
+<!--						<div class="articles__inner">-->
+<!--							<span class="article__date" th:text="${news_list.get(3).getDate()}">12:06 20/09/2021</span>-->
+<!--							<h5 class="article__title">-->
+<!--								<span th:text="${current_language} == 'ukr' ? ${news_list.get(3).getTitleUkr()} : ${news_list.get(3).getTitleEng()}">Вітаємо, радіємо</span>-->
+<!--&lt;!&ndash;								<span>і пишаємося!</span>&ndash;&gt;-->
+<!--							</h5>-->
+<!--							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(3).getIntroductionUkr()} : ${news_list.get(3).getIntroductionEng()}">-->
+<!--								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!-->
+<!--							</p>-->
+<!--							<a class="article__link" href=""><b>Більше</b></a>-->
+<!--						</div>-->
+<!--					</article>-->
+<!--				</div>-->
+<!--				<div class="articles__row">-->
+<!--					<article class="article">-->
+<!--						<img th:src="${news_list.get(4).getImageReference()}">-->
+<!--						<div class="articles__inner">-->
+<!--							<span class="article__date" th:text="${news_list.get(4).getDate()}">12:06 20/09/2021</span>-->
+<!--							<h5 class="article__title">-->
+<!--								<span th:text="${current_language} == 'ukr' ? ${news_list.get(4).getTitleUkr()} : ${news_list.get(4).getTitleEng()}">Вітаємо, радіємо</span>-->
+<!--&lt;!&ndash;								<span>і пишаємося!</span>&ndash;&gt;-->
+<!--							</h5>-->
+<!--							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(4).getIntroductionUkr()} : ${news_list.get(4).getIntroductionEng()}">-->
+<!--								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!-->
+<!--							</p>-->
+<!--							<a class="article__link" href=""><b>Більше</b></a>-->
+<!--						</div>-->
+<!--					</article>-->
+<!--					<article class="article">-->
+<!--						<img th:src="${news_list.get(5).getImageReference()}">-->
+<!--						<div class="articles__inner">-->
+<!--							<span class="article__date" th:text="${news_list.get(5).getDate()}">12:06 20/09/2021</span>-->
+<!--							<h5 class="article__title">-->
+<!--								<span th:text="${current_language} == 'ukr' ? ${news_list.get(5).getTitleUkr()} : ${news_list.get(5).getTitleEng()}">Вітаємо, радіємо</span>-->
+<!--&lt;!&ndash;								<span>і пишаємося!</span>&ndash;&gt;-->
+<!--							</h5>-->
+<!--							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(5).getIntroductionUkr()} : ${news_list.get(5).getIntroductionEng()}">-->
+<!--								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!-->
+<!--							</p>-->
+<!--							<a class="article__link" href=""><b>Більше</b></a>-->
+<!--						</div>-->
+<!--					</article>-->
+<!--					<article class="article">-->
+<!--						<img th:src="${news_list.get(6).getImageReference()}">-->
+<!--						<div class="articles__inner">-->
+<!--							<span class="article__date" th:text="${news_list.get(6).getDate()}">12:06 20/09/2021</span>-->
+<!--							<h5 class="article__title">-->
+<!--								<span th:text="${current_language} == 'ukr' ? ${news_list.get(6).getTitleUkr()} : ${news_list.get(6).getTitleEng()}">Вітаємо, радіємо</span>-->
+<!--&lt;!&ndash;								<span>і пишаємося!</span>&ndash;&gt;-->
+<!--							</h5>-->
+<!--							<p class="article__paragraph" th:text="${current_language} == 'ukr' ? ${news_list.get(6).getIntroductionUkr()} : ${news_list.get(6).getIntroductionEng()}">-->
+<!--								Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!-->
+<!--							</p>-->
+<!--							<a class="article__link" href=""><b>Більше</b></a>-->
+<!--						</div>-->
+<!--					</article>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--&lt;!&ndash;				<div class="last-news">&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="title" th:text="${latest_news}">Останні новини</div>&ndash;&gt;-->
+<!--&lt;!&ndash;					<div class="last-news__container">&ndash;&gt;-->
+<!--&lt;!&ndash;						<div class="last-news__inner">&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="last-news__title">&ndash;&gt;-->
+<!--&lt;!&ndash;								<span>Зустріч</span>&ndash;&gt;-->
+<!--&lt;!&ndash;								<span>із представниками ДБР</span>&ndash;&gt;-->
+<!--&lt;!&ndash;							</div>&ndash;&gt;-->
+<!--&lt;!&ndash;							<span class="last-news__date">&ndash;&gt;-->
+<!--&lt;!&ndash;								16:30 28/09/2021&ndash;&gt;-->
+<!--&lt;!&ndash;							</span>&ndash;&gt;-->
+<!--&lt;!&ndash;							<div class="last-news__line"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;							<p class="last-news__first-paragraph">&ndash;&gt;-->
+<!--&lt;!&ndash;								У рамках популяризації роботи та створення позитивного іміджу Державного бюро розслідувань 14 вересня учні 8-11-х класів мали змогу поспілкуватися із представниками ДБР на відкритих уроках.&ndash;&gt;-->
+<!--&lt;!&ndash;							</p>&ndash;&gt;-->
+<!--&lt;!&ndash;							<p class="last-news__second-paragraph">&ndash;&gt;-->
+<!--&lt;!&ndash;								Представники ДБР розповіли дітям про роботу ДБР як правоохоронного органу, а саме про основні обов’язки роботи слідчого, криміналіста, поліграфолога тощо. Учні також протестували на собі роботу поліграфу, відповідаючи на запитання співробітників. Зустріч минула у теплій і дружній атмосфері. Сподіваємося, щотакі уроки відбуватимуться частіше, а інтерес учнів пізнавати нове не вгасатиме!&ndash;&gt;-->
+<!--&lt;!&ndash;							</p>&ndash;&gt;-->
+<!--&lt;!&ndash;						</div>&ndash;&gt;-->
+<!--&lt;!&ndash;						<img src="images/last-news-image.png">&ndash;&gt;-->
+<!--&lt;!&ndash;					</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--				<div class="articles-container">-->
+<!--					<article class="article">-->
+<!--						<span class="article__number"></span>-->
+<!--						<h5 class="article__title"></h5>-->
+<!--						<p class="article__paragraph"></p>-->
+<!--						<a class="article__link" href=""><b></b></a>-->
+<!--					</article>-->
+<!--				</div>-->
+<!--				<div class="contacts">-->
+<!--					<h3 class="contacts-title title" th:text="${contacts}">Контакти</h3>-->
+<!--					<img class="contacts-map" src="images/map.png">-->
+<!--					<img class="contacts-background" src="images/contacts-background.jpg">-->
+<!--					<div>-->
+<!--						<b></b>-->
+<!--					</div>-->
+<!--					<div>-->
+<!--						<b></b>-->
 <!--					</div>-->
 <!--				</div>-->
-				<div class="articles-container">
-					<article class="article">
-						<span class="article__number"></span>
-						<h5 class="article__title"></h5>
-						<p class="article__paragraph"></p>
-						<a class="article__link" href=""><b></b></a>
-					</article>
-				</div>
-				<div class="contacts">
-					<h3 class="contacts-title title" th:text="${contacts}">Контакти</h3>
-					<img class="contacts-map" src="images/map.png">
-					<img class="contacts-background" src="images/contacts-background.jpg">
-					<div>
-						<b></b>
-					</div>
-					<div>
-						<b></b>
-					</div>
-				</div>
-			<footer class="footer">
-				<div class="footer__first-column">
-					<div class="footer__adress">
-						<p th:text="${address_first}">02068, м.Київ,</p>
-						<p th:text="${address_second}">вул.Драгоманова, 10в</p>
-					</div>
-					<div class="footer__numbers">
-						<span>+380–44–573–96–30 — <span th:text="${phone_fax}">тел./факс:</span></span>
-						<span>+380–44–570–88–24 — <span th:text="${entrance_commission}">приймальна коміссія</span></span>
-						<span>+380–44–570–87–55 — <span th:text="${head_teacher}">завуч !!!!! наприклад</span></span>
-					</div>
-					<span class="footer__first-span" th:text="${information_document}">Проспект інформаційний</span>
-					<a class="footer__link" href="" th:text="${download_pdf}">Завантажити pdf<img src=""></a>
-					<div class="footer__second-span" th:text="${make_admission_request_message}">
-						Запит на вступ у 1 клас 2021 р.
-					</div>
-					<button class="button footer__button" th:text="${make_request}">Зробити запит</button>
-				</div>
-				<nav class="footer-menu">
-					<a th:text="${for_parents}">Для батьків</a>
-					<a th:text="${for_students}">Для учнів</a>
-					<a th:text="${about}">Про гімназію </a>
-					<a th:text="${educational_activity}">Навчальна діяльність </a>
-					<a th:text="${project_activity}">Проектна діяльність</a>
-					<a th:text="${unesco}">Паш юнеско</a>
-					<a th:text="${news}">Новини</a>
-					<a th:text="${photo_gallery}">Фотогалерея</a>
-					<span class="footer__third-span">e-mail: 5739630@ukr.net</span>
-					<button class="button button_without-bc" th:text="${contact_us}">Напишіть нам</button>
-				</nav>
-				<span class="footer__fourth-span">
-					© 2009 - 2021 <span th:text="${slavonic_gymnasium}"></span>
-				</span>
-			</footer>
+<!--			<footer class="footer">-->
+<!--				<div class="footer__first-column">-->
+<!--					<div class="footer__adress">-->
+<!--						<p th:text="${address_first}">02068, м.Київ,</p>-->
+<!--						<p th:text="${address_second}">вул.Драгоманова, 10в</p>-->
+<!--					</div>-->
+<!--					<div class="footer__numbers">-->
+<!--						<span>+380–44–573–96–30 — <span th:text="${phone_fax}">тел./факс:</span></span>-->
+<!--						<span>+380–44–570–88–24 — <span th:text="${entrance_commission}">приймальна коміссія</span></span>-->
+<!--						<span>+380–44–570–87–55 — <span th:text="${head_teacher}">завуч !!!!! наприклад</span></span>-->
+<!--					</div>-->
+<!--					<span class="footer__first-span" th:text="${information_document}">Проспект інформаційний</span>-->
+<!--					<a class="footer__link" href="" th:text="${download_pdf}">Завантажити pdf<img src=""></a>-->
+<!--					<div class="footer__second-span" th:text="${make_admission_request_message}">-->
+<!--						Запит на вступ у 1 клас 2021 р.-->
+<!--					</div>-->
+<!--					<button class="button footer__button" th:text="${make_request}">Зробити запит</button>-->
+<!--				</div>-->
+<!--				<nav class="footer-menu">-->
+<!--					<a th:text="${for_parents}">Для батьків</a>-->
+<!--					<a th:text="${for_students}">Для учнів</a>-->
+<!--					<a th:text="${about}">Про гімназію </a>-->
+<!--					<a th:text="${educational_activity}">Навчальна діяльність </a>-->
+<!--					<a th:text="${project_activity}">Проектна діяльність</a>-->
+<!--					<a th:text="${unesco}">Паш юнеско</a>-->
+<!--					<a th:text="${news}">Новини</a>-->
+<!--					<a th:text="${photo_gallery}">Фотогалерея</a>-->
+<!--					<span class="footer__third-span">e-mail: 5739630@ukr.net</span>-->
+<!--					<button class="button button_without-bc" th:text="${contact_us}">Напишіть нам</button>-->
+<!--				</nav>-->
+<!--				<span class="footer__fourth-span">-->
+<!--					© 2009 - 2021 <span th:text="${slavonic_gymnasium}"></span>-->
+<!--				</span>-->
+<!--			</footer>-->
 
-		</div>
-	</body>
-</html>
+<!--		</div>-->
+<!--	</body>-->
+<!--</html>-->
+
