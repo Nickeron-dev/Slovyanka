@@ -749,6 +749,19 @@ fade {
     padding-bottom: 50px;
 }
 
+.parents-announcer__content {
+    background-color: #DCDCDC;
+    height: 537px;
+}
+
+.parents-announcer__content img {
+    float: left;
+    width: 400px;
+}
+
+.parents-announcer__content a {
+
+}
 
 
 
