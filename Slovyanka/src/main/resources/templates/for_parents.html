@@ -34,70 +34,134 @@
         <div class="first-header-menu-container">
             <nav class="first-header-menu">
                 <div class="first-header-menu__first-row">
-                    <a class="first-header-menu__entry-campaign"
-                       href="#" th:text="${entry_campaign}">Вступна кампанія 2021</a>
+                    <a class="first-header-menu__link_gold" href="" th:text="${entry_campaign}">
+                        Вступна кампанія 2021
+                    </a>
                 </div>
                 <div class="first-header-menu__second-row">
-                    <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" href="/for-parents"
-                       th:text="${for_parents}">для батьків
-                        <img class="arrow" src="/images/arrow.svg">
+                    <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" href="#">
+                        <strong>для батьків</strong>
+<!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
-                    <a class="first-header-menu__link first-header-menu__link_margin" href="#"
-                       th:text="${for_students}">для учнів
-                        <img class="arrow" src="/images/arrow.svg">
+                    <a class="first-header-menu__link first-header-menu__link_margin" href="#">
+                        для учнів
+<!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
-                    <a class="first-header-menu__link first-header-menu__link_margin" href="#"
-                       th:text="${about}">про гімназію
-                        <img class="arrow" src="/images/arrow.svg">
+                    <a class="first-header-menu__link first-header-menu__link_margin" href="#">
+                        про гімназію
+<!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
                 </div>
-
                 <div class="first-header-menu__third-row">
-
-                    <img src="/images/Vector.svg" class="first-header-menu__second-image">
-                    <span class="first-header-menu__link first-header-menu__link_gold">38(044)–573–96–30</span>
-<!--                    <form class="change-lang__form" action="/change-language" method="get">-->
-<!--                        <input type="submit" name="ukr" value="ukr">-->
-<!--                        <input type="submit" name="eng" value="eng">-->
-<!--                    </form>-->
+							<span class="first-header-menu__number">
+								<img class="" src="images/Vector3.svg">
+								38(044)–573–96–30
+							</span>
+                    <span class="language-switcher">
+                        <img src="images/UA-Ukraine-Flag.png">
+                        Ukr
+                        <img class="arrow" src="images/arrow.svg">
+                    </span>
                     <a class="first-header-menu__link first-header-menu__link_gold-and-margin "
-                       th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>
-
-
+                       href="#">Вхід</a>
                 </div>
-
-
             </nav>
         </div>
-
         <div class="header__blue-line"></div>
-        <a href="/"><h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1></a>
+        <h1 class="main-title"><b>Слов'янська гімназія</b></h1>
         <div class="header-main">
             <div class="second-header-menu-container">
                 <nav class="second-header-menu">
-                    <a class="second-header-menu__link" href="#" th:text="${educational_activity}">
+                    <a class="second-header-menu__link" href="#">
                         Навчальна діяльність
-                        <img class="arrow" src="/images/arrow_black.svg">
+<!--                        <img class="arrow" src="images/arrow_black.svg">-->
                     </a>
-                    <a class="second-header-menu__link" href="#" th:text="${project_activity}">
+                    <a class="second-header-menu__link" href="#">
                         Проектна діяльність
-                        <img class="arrow" src="/images/arrow_black.svg">
+<!--                        <img class="arrow" src="images/arrow_black.svg">-->
                     </a>
-                    <a class="second-header-menu__link" href="#" th:text="${unesco}">
+                    <a class="second-header-menu__link" href="#">
                         Паш юнеско
-                        <img class="arrow" src="/images/arrow_black.svg">
+<!--                        <img class="arrow" src="images/arrow_black.svg">-->
                     </a>
-                    <a class="second-header-menu__link" href="#" th:text="${news}">Новини</a>
-                    <a class="second-header-menu__link second-header-menu__link_margin" href="#"
-                       th:text="${photo_gallery}">Фотогалерея</a>
+                    <a class="second-header-menu__link" href="#">Галерея</a>
+                    <a class="second-header-menu__link second-header-menu__link_margin" href="#">Фотогалерея</a>
                 </nav>
             </div>
-            <img class="header-main__background-image" src="/images/for_parents_main.png">
+            <img class="header-main__background-image" src="/images/for_parents_main.png">-->
 
             <h2 class="header-main__title" th:text="${for_parents}"><b>ДЛЯ БАТЬКІВ</b></h2>
         </div>
         <a class="logo__image" href="/"><img  src="/images/logo.png" alt="logo"></a>
     </header>
+<!--    <header class="header">-->
+<!--        <div class="first-header-menu-container">-->
+<!--            <nav class="first-header-menu">-->
+<!--                <div class="first-header-menu__first-row">-->
+<!--                    <a class="first-header-menu__entry-campaign"-->
+<!--                       href="#" th:text="${entry_campaign}">Вступна кампанія 2021</a>-->
+<!--                </div>-->
+<!--                <div class="first-header-menu__second-row">-->
+<!--                    <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" href="/for-parents"-->
+<!--                       th:text="${for_parents}">для батьків-->
+<!--                        <img class="arrow" src="/images/arrow.svg">-->
+<!--                    </a>-->
+<!--                    <a class="first-header-menu__link first-header-menu__link_margin" href="#"-->
+<!--                       th:text="${for_students}">для учнів-->
+<!--                        <img class="arrow" src="/images/arrow.svg">-->
+<!--                    </a>-->
+<!--                    <a class="first-header-menu__link first-header-menu__link_margin" href="#"-->
+<!--                       th:text="${about}">про гімназію-->
+<!--                        <img class="arrow" src="/images/arrow.svg">-->
+<!--                    </a>-->
+<!--                </div>-->
+
+<!--                <div class="first-header-menu__third-row">-->
+
+<!--                    <img src="/images/Vector.svg" class="first-header-menu__second-image">-->
+<!--                    <span class="first-header-menu__link first-header-menu__link_gold">38(044)–573–96–30</span>-->
+<!--&lt;!&ndash;                    <form class="change-lang__form" action="/change-language" method="get">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input type="submit" name="ukr" value="ukr">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input type="submit" name="eng" value="eng">&ndash;&gt;-->
+<!--&lt;!&ndash;                    </form>&ndash;&gt;-->
+<!--                    <a class="first-header-menu__link first-header-menu__link_gold-and-margin "-->
+<!--                       th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>-->
+
+
+<!--                </div>-->
+
+
+<!--            </nav>-->
+<!--        </div>-->
+
+<!--        <div class="header__blue-line"></div>-->
+<!--        <a href="/"><h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1></a>-->
+<!--        <div class="header-main">-->
+<!--            <div class="second-header-menu-container">-->
+<!--                <nav class="second-header-menu">-->
+<!--                    <a class="second-header-menu__link" href="#" th:text="${educational_activity}">-->
+<!--                        Навчальна діяльність-->
+<!--                        <img class="arrow" src="/images/arrow_black.svg">-->
+<!--                    </a>-->
+<!--                    <a class="second-header-menu__link" href="#" th:text="${project_activity}">-->
+<!--                        Проектна діяльність-->
+<!--                        <img class="arrow" src="/images/arrow_black.svg">-->
+<!--                    </a>-->
+<!--                    <a class="second-header-menu__link" href="#" th:text="${unesco}">-->
+<!--                        Паш юнеско-->
+<!--                        <img class="arrow" src="/images/arrow_black.svg">-->
+<!--                    </a>-->
+<!--                    <a class="second-header-menu__link" href="#" th:text="${news}">Новини</a>-->
+<!--                    <a class="second-header-menu__link second-header-menu__link_margin" href="#"-->
+<!--                       th:text="${photo_gallery}">Фотогалерея</a>-->
+<!--                </nav>-->
+<!--            </div>-->
+<!--            <img class="header-main__background-image" src="/images/for_parents_main.png">-->
+
+<!--            <h2 class="header-main__title" th:text="${for_parents}"><b>ДЛЯ БАТЬКІВ</b></h2>-->
+<!--        </div>-->
+<!--        <a class="logo__image" href="/"><img  src="/images/logo.png" alt="logo"></a>-->
+<!--    </header>-->
     <div class="header__blue-line-down"></div>
 
 
@@ -246,7 +310,20 @@
         <!--additional page(header and footer, menu same but middle part should be different-->
         <div class="parents-announcer__content">
             <img src="/images/girl_and_apple.png" alt="girl with apple">
-            <a href="/in-progress">Some text</a>
+            <div class="parents-announcer__content__links">
+                <a href="/in-progress">Організаційна структура</a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="/in-progress">Локальна нормативна база</a>
+                <br>
+                <a href="/in-progress">Положення про батьківські комітети</a>
+                <br>
+                <a href="/in-progress">Підтримка освітнього процесу</a>
+                <br>
+                <a href="/in-progress">Замовлення підручників</a>
+            </div>
 
         </div>
     </div>
