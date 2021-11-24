@@ -179,6 +179,24 @@ body {
     margin-left: 20px;
 }
 
+.content__switcher {
+    display: none;
+    position: absolute;
+    background-color: #292F3D;
+    border: 2px #ffffff solid;
+    margin-left: 170px;
+    width: 60px;
+    height: 40px;
+}
+
+.language-switcher:hover .content__switcher {
+    display: block;
+}
+
+.flag__switcher {
+    width: 20px;
+}
+
 
 .first-header-menu__link_gold-and-margin {
     margin-left: 20px;
