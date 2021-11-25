@@ -39,15 +39,15 @@
                     </a>
                 </div>
                 <div class="first-header-menu__second-row">
-                    <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" href="#">
-                        <strong>для батьків</strong>
+                    <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" th:text="${for_parents}" href="/for-parents">
+                        для батьків
 <!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
-                    <a class="first-header-menu__link first-header-menu__link_margin" href="#">
+                    <a class="first-header-menu__link first-header-menu__link_margin" th:text="${for_students}" href="#">
                         для учнів
 <!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
-                    <a class="first-header-menu__link first-header-menu__link_margin" href="#">
+                    <a class="first-header-menu__link first-header-menu__link_margin" th:text="${about}" href="#">
                         про гімназію
 <!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
@@ -73,32 +73,32 @@
                                 <img class="flag__switcher" src="images/united-kingdom.svg">
                                 <input type="submit" name="eng" value="ENG">
                             </form>
-                                                        </div>
-                                                    </span>
-                                                    <a class="first-header-menu__link first-header-menu__link_gold-and-margin "
-                                                       href="#">Вхід</a>
-                                                </div>
-                                            </nav>
-                                        </div>
-                                        <div class="header__blue-line"></div>
-                                        <h1 class="main-title"><b>Слов'янська гімназія</b></h1>
-                                        <div class="header-main">
-                                            <div class="second-header-menu-container">
-                                                <nav class="second-header-menu">
-                                                    <a class="second-header-menu__link" href="#">
-                                                        Навчальна діяльність
-                                <!--                        <img class="arrow" src="images/arrow_black.svg">-->
+                        </div>
+                    </span>
+                    <a class="first-header-menu__link first-header-menu__link_gold-and-margin "
+                       th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header__blue-line"></div>
+        <h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1>
+        <div class="header-main">
+            <div class="second-header-menu-container">
+                <nav class="second-header-menu">
+                    <a class="second-header-menu__link" th:text="${educational_activity}" href="#">
+                        Навчальна діяльність
+                        <!--                        <img class="arrow" src="images/arrow_black.svg">-->
                     </a>
-                    <a class="second-header-menu__link" href="#">
+                    <a class="second-header-menu__link" th:text="${project_activity}" href="#">
                         Проектна діяльність
 <!--                        <img class="arrow" src="images/arrow_black.svg">-->
                     </a>
-                    <a class="second-header-menu__link" href="#">
+                    <a class="second-header-menu__link" th:text="${unesco}" href="#">
                         Паш юнеско
 <!--                        <img class="arrow" src="images/arrow_black.svg">-->
                     </a>
-                    <a class="second-header-menu__link" href="#">Галерея</a>
-                    <a class="second-header-menu__link second-header-menu__link_margin" href="#">Фотогалерея</a>
+                    <a class="second-header-menu__link" th:text="${news}" href="#">Новини</a>
+                    <a class="second-header-menu__link second-header-menu__link_margin" th:text="${photo_gallery}" href="#">Фотогалерея</a>
                 </nav>
             </div>
             <img class="header-main__background-image" src="/images/for_parents_main.png">-->
