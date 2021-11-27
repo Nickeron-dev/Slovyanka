@@ -39,32 +39,30 @@ public class ForParentsPageController {
         model.addAttribute("slavonic_gymnasium", View.view.getBundleText(TextsPaths.SLAVONIC_GYMNASIUM));
         model.addAttribute("entry_campaign", View.view.getBundleText(TextsPaths.ENTRY_CAMPAIGN));
 
-        model.addAttribute("timetable", View.view.getBundleText(TextsPaths.TIMETABLE));
-        model.addAttribute("quote_learning", View.view.getBundleText(TextsPaths.QUOTE_LEARNING));
-        model.addAttribute("covid", View.view.getBundleText(TextsPaths.COVID));
-        model.addAttribute("studying_during_quarantine", View.view.getBundleText(TextsPaths.STUDYING_DURING_QUARANTINE));
-        model.addAttribute("get_student_id_first", View.view.getBundleText(TextsPaths.GET_STUDENT_ID_FIRST));
-        model.addAttribute("get_student_id_second", View.view.getBundleText(TextsPaths.GET_STUDENT_ID_SECOND));
-        model.addAttribute("web_portal_reference", View.view.getBundleText(TextsPaths.WEB_PORTAL_REFERENCE));
-        model.addAttribute("online_zno", View.view.getBundleText(TextsPaths.ONLINE_ZNO));
 
-        model.addAttribute("latest_news", View.view.getBundleText(TextsPaths.LATEST_NEWS));
-        model.addAttribute("public_information", View.view.getBundleText(TextsPaths.PUBLIC_INFORMATION));
-        model.addAttribute("useful_links", View.view.getBundleText(TextsPaths.USEFUL_LINKS));
-        model.addAttribute("contacts", View.view.getBundleText(TextsPaths.CONTACTS));
-        model.addAttribute("first_lesson", View.view.getBundleText(TextsPaths.FIRST_LESSON));
-        model.addAttribute("second_lesson", View.view.getBundleText(TextsPaths.SECOND_LESSON));
-        model.addAttribute("third_lesson", View.view.getBundleText(TextsPaths.THIRD_LESSON));
-        model.addAttribute("fourth_lesson", View.view.getBundleText(TextsPaths.FOURTH_LESSON));
-        model.addAttribute("fifth_lesson", View.view.getBundleText(TextsPaths.FIFTH_LESSON));
-        model.addAttribute("sixth_lesson", View.view.getBundleText(TextsPaths.SIXTH_LESSON));
-        model.addAttribute("first_shift", View.view.getBundleText(TextsPaths.FIRST_SHIFT));
-        model.addAttribute("second_shift", View.view.getBundleText(TextsPaths.SECOND_SHIFT));
+
+
+
+        model.addAttribute("rules_of_application", View.view.getBundleText(TextsPaths.RULES_OF_APPLICATION));
+        model.addAttribute("rules_of_application_to_gymnasium", View.view.getBundleText(TextsPaths.RULES_OF_APPLICATION_TO_GYMNASIUM));
+        model.addAttribute("information_about_free_places", View.view.getBundleText(TextsPaths.INFORMATION_ABOUT_FREE_PLACES));
+        model.addAttribute("psychological_service", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE));
+        model.addAttribute("useful_posts", View.view.getBundleText(TextsPaths.USEFUL_POSTS));
+        model.addAttribute("monitoring", View.view.getBundleText(TextsPaths.MONITORING));
+        model.addAttribute("parents_announcer", View.view.getBundleText(TextsPaths.PARENTS_ANNOUNCER));
+
+        model.addAttribute("psychological_service_message", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_MESSAGE));
+
+
+
+
+
+
 
         model.addAttribute("address_first", View.view.getBundleText(TextsPaths.ADDRESS_FIRST_TEXT));
         model.addAttribute("address_second", View.view.getBundleText(TextsPaths.ADDRESS_SECOND_TEXT));
         model.addAttribute("phone_fax", View.view.getBundleText(TextsPaths.PHONE_FAX));
-        model.addAttribute("entrance_commission", View.view.getBundleText(TextsPaths.ENTRANCE_COMMISION));
+        model.addAttribute("entrance_commission", View.view.getBundleText(TextsPaths.ENTRANCE_COMMISSION));
         model.addAttribute("head_teacher", View.view.getBundleText(TextsPaths.HEAD_TEACHER));
         model.addAttribute("information_document", View.view.getBundleText(TextsPaths.INFORMATION_DOCUMENT));
         model.addAttribute("download_pdf", View.view.getBundleText(TextsPaths.DOWNLOAD_INFORMATION_DOCUMENT));

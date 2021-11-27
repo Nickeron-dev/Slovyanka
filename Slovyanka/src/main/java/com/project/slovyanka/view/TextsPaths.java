@@ -21,6 +21,7 @@ public abstract class TextsPaths {
     public static final String SLAVONIC_GYMNASIUM = "header.slavonic.gymnasium";
     public static final String ENTRY_CAMPAIGN = "header.entry.campaign";
 
+    // main page
     public static final String TIMETABLE = "main.page.timetable";
     public static final String QUOTE_LEARNING = "main.page.quote.learning";
     public static final String COVID = "main.page.covid";
@@ -46,15 +47,28 @@ public abstract class TextsPaths {
 
     public static final String USER_ALREADY_EXISTS_ERROR = "registration.result.user.already.exists";
 
+    // for parents
+    public static final String RULES_OF_APPLICATION = "for.parents.rules.of.application";
+    public static final String RULES_OF_APPLICATION_TO_GYMNASIUM = "for.parents.rules.of.application.to.gymnasium";
+    public static final String INFORMATION_ABOUT_FREE_PLACES = "for.parents.information.about.free.places";
+    public static final String PSYCHOLOGICAL_SERVICE = "for.parents.psychological.service";
+    public static final String USEFUL_POSTS = "for.parents.useful.posts";
+    public static final String MONITORING = "for.parents.monitoring.title";
+    public static final String PARENTS_ANNOUNCER = "for.parents.parents.announcer.title";
+    public static final String PSYCHOLOGICAL_SERVICE_MESSAGE = "for.parents.psychological.service.message";
+
+
+
     public static final String ADDRESS_FIRST_TEXT = "footer.address.first.message";
     public static final String ADDRESS_SECOND_TEXT = "footer.address.second.message";
     public static final String PHONE_FAX = "footer.phone.fax";
-    public static final String ENTRANCE_COMMISION = "footer.entrance.commission";
+    public static final String ENTRANCE_COMMISSION = "footer.entrance.commission";
     public static final String HEAD_TEACHER = "footer.head.teacher";
     public static final String INFORMATION_DOCUMENT = "footer.information.document";
     public static final String DOWNLOAD_INFORMATION_DOCUMENT = "footer.download.information.document";
     public static final String MAKE_ADMISSION_REQUEST_MESSAGE = "footer.make.admission.request.message";
     public static final String MAKE_REQUEST = "footer.make.request";
     public static final String CONTACT_US = "footer.contact.us";
+
 
 }
