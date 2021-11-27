@@ -52,11 +52,52 @@ public abstract class TextsPaths {
     public static final String RULES_OF_APPLICATION_TO_GYMNASIUM = "for.parents.rules.of.application.to.gymnasium";
     public static final String INFORMATION_ABOUT_FREE_PLACES = "for.parents.information.about.free.places";
     public static final String PSYCHOLOGICAL_SERVICE = "for.parents.psychological.service";
+    public static final String PSYCHOLOGICAL_SERVICE_DEGREE = "for.parents.psychological.service.degree";
+    public static final String PSYCHOLOGICAL_SERVICE_ADDITIONAL = "for.parents.psychological.service.additional";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_NAME = "for.parents.psychological.service.employee.one.name";
+    public static final String PSYCHOLOGICAL_SERVICE_POSITION = "for.parents.psychological.service.position";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_POSITION = "for.parents.psychological.service.employee.one.position";
+    public static final String PSYCHOLOGICAL_SERVICE_LEVEL = "for.parents.psychological.service.level";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_CATEGORY = "for.parents.psychological.service.employee.one.category";
+    public static final String PSYCHOLOGICAL_SERVICE_EXPERIENCE = "for.parents.psychological.service.experience";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_YEARS = "for.parents.psychological.service.employee.one.years";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_DEGREE = "for.parents.psychological.service.employee.one.degree";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_QUALIFICATION_IMPROVER = "for.parents.psychological.service.employee.one.qualification.improver";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_NAME = "for.parents.psychological.service.employee.two.name";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_POSITION = "for.parents.psychological.service.employee.two.position";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_CATEGORY = "for.parents.psychological.service.employee.two.category";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_YEARS = "for.parents.psychological.service.employee.two.years";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_DEGREE = "for.parents.psychological.service.employee.two.degree";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_QUALIFICATION_IMPROVER = "for.parents.psychological.service.employee.two.qualification.improver";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_NAME = "for.parents.psychological.service.employee.three.name";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_POSITION = "for.parents.psychological.service.employee.three.position";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_CATEGORY = "for.parents.psychological.service.employee.three.category";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_YEARS = "for.parents.psychological.service.employee.three.years";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_DEGREE = "for.parents.psychological.service.employee.three.degree";
+    public static final String PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_QUALIFICATION_IMPROVER = "for.parents.psychological.service.employee.three.qualification.improver";
     public static final String USEFUL_POSTS = "for.parents.useful.posts";
     public static final String MONITORING = "for.parents.monitoring.title";
     public static final String PARENTS_ANNOUNCER = "for.parents.parents.announcer.title";
     public static final String PSYCHOLOGICAL_SERVICE_MESSAGE = "for.parents.psychological.service.message";
-
+    public static final String USEFUL_POSTS_PSYCHOLOGISTS_THOUGHT = "for.parents.useful.posts.psychologists.thought";
+    public static final String USEFUL_POSTS_ATTENTION_METHODS = "for.parents.useful.posts.attention.methods";
+    public static final String USEFUL_POSTS_HYPERACTIVE_CHILD = "for.parents.useful.posts.hyperactive.child";
+    public static final String USEFUL_POSTS_HOW_TO_IMPROVE_ATTENTION = "for.parents.useful.posts.how.to.improve.attention";
+    public static final String USEFUL_POSTS_MICHELE_BORBA = "for.parents.useful.posts.michele.borba";
+    public static final String USEFUL_POSTS_HOURS_FOR_HOMEWORK = "for.parents.useful.posts.hours.for.homework";
+    public static final String USEFUL_POSTS_HOW_TO_UNDERSTAND_THAT_YOUR_CHILD_HAS_BURNED_OUT = "for.parents.useful.posts.how.to.understand.that.your.child.has.burned.out";
+    public static final String USEFUL_POSTS_READY_FOR_SCHOOL = "for.parents.useful.posts.ready.for.school";
+    public static final String USEFUL_POSTS_WORKSHOP_FOR_PARENTS = "for.parents.useful.posts.workshop.for.parents";
+    public static final String USEFUL_POSTS_ENERGY_SAVING_MANUAL = "for.parents.useful.posts.energy.saving.manual";
+    public static final String USEFUL_POSTS_DANGEROUS_CONDITIONS_MANUAL = "for.parents.useful.posts.dangerous.conditions.manual";
+    public static final String USEFUL_POSTS_CYBERSECURITY_FOR_CHILDREN = "for.parents.useful.posts.cybersecurity.for.children";
+    public static final String USEFUL_POSTS_HOW_TO_TEACH_SAFETY = "for.parents.useful.posts.how.to.teach.safety";
+    public static final String MONITORING_MESSAGE = "for.parents.monitoring.message";
+    public static final String PARENTS_ANNOUNCER_ORGANISATIONAL_STRUCTURE = "for.parents.parents.announcer.organisational.structure";
+    public static final String PARENTS_ANNOUNCER_LOCAL_BASE = "for.parents.parents.announcer.local.base";
+    public static final String PARENTS_ANNOUNCER_PARENTS_COMMITTEE = "for.parents.parents.announcer.parents.committee";
+    public static final String PARENTS_ANNOUNCER_SUPPORT = "for.parents.parents.announcer.support";
+    public static final String PARENTS_ANNOUNCER_BOOKS_ORDER = "for.parents.parents.announcer.books.order";
 
 
     public static final String ADDRESS_FIRST_TEXT = "footer.address.first.message";
@@ -69,6 +110,5 @@ public abstract class TextsPaths {
     public static final String MAKE_ADMISSION_REQUEST_MESSAGE = "footer.make.admission.request.message";
     public static final String MAKE_REQUEST = "footer.make.request";
     public static final String CONTACT_US = "footer.contact.us";
-
 
 }

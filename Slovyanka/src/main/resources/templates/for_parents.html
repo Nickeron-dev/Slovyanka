@@ -58,8 +58,8 @@
 								38(044)–573–96–30
 							</span>
                     <span class="language-switcher">
-                        <img src="images/UA-Ukraine-Flag.png">
-                        Ukr
+                        <img class="flag__switcher__top" th:src="${current_language} == 'ukr' ? 'images/UA-Ukraine-Flag.png' : 'images/united-kingdom.svg'">
+                        <span th:text="${current_language} == 'ukr' ? 'UKR' : 'ENG'"></span>
                         <img class="arrow" src="images/arrow.svg">
                         <div class="content__switcher">
 
@@ -70,8 +70,10 @@
                                     <input type="submit" name="ukr" value="UKR">
                                 </label>
                                 <br>
-                                <img class="flag__switcher" src="images/united-kingdom.svg">
-                                <input type="submit" name="eng" value="ENG">
+                                <label>
+                                    <img class="flag__switcher" src="images/united-kingdom.svg">
+                                    <input type="submit" name="eng" value="ENG">
+                                </label>
                             </form>
                         </div>
                     </span>
@@ -136,10 +138,7 @@
         <div class="psychological-service">
             <h2 th:text="${psychological_service}">ПСИХОЛОГІЧНА СЛУЖБА</h2>
             <div class="blue-rectangle-under-picture">
-                <p class="blue-rectangle__first-line">Мета професійної діяльності</p>
-                <p class="blue-rectangle__second-line">педагога і психолога в школі єдина.</p>
-                <p class="blue-rectangle__third-line">Це — дитина, умови її повноцінного</p>
-                <p class="blue-rectangle__fourth-line">навчання й розвитку.</p>
+                <p class="blue-rectangle__text" th:text="${psychological_service_message}">Мета професійної діяльності...</p>
             </div>
             <img alt="psychology-picture" src="/images/psychology-picture.png">
         </div>
@@ -155,54 +154,54 @@
         <div class="first-employee">
             <img alt="first-employee__photo" src="/images/first-employee__photo.png">
             <div class="first-employee__first-line-info">
-                <h3 class="employee-name">KІСІЛЮК<br>ОКСАНА<br>ІВАНІВНА</h3>
-                <p><strong>Посада:</strong> практичний психолог<br>У Слов’я нській гімназії з 2008 року.</p>
-                <p><strong>Кваліфікаційний рівень:</strong> І категорія.</p>
-                <p><strong>Досвід роботи:</strong> <strong class="employee__years">13 років</strong></p>
+                <h3 th:text="${psychological_service_employee_one_name}" class="employee-name">KІСІЛЮК<br>ОКСАНА<br>ІВАНІВНА</h3>
+                <p><strong th:text="${psychological_service_position}">Посада:</strong> <span th:text="${psychological_service_employee_one_position}">практичний психолог<br>У Слов’я нській гімназії з 2008 року.</span></p>
+                <p><strong th:text="${psychological_service_level}">Кваліфікаційний рівень:</strong> <span th:text="${psychological_service_employee_one_category}">І категорія.</span></p>
+                <p><strong th:text="${psychological_service_experience}">Досвід роботи:</strong> <strong th:text="${psychological_service_employee_one_years}" class="employee__years">13 років</strong></p>
             </div>
             <div class="first-employee__second-line-info">
-                <p><strong>Освіта:</strong> Південноукраїнський державний педагогічний<br>
+                <p><strong th:text="${psychological_service_degree}">Освіта:</strong> <span th:text="${psychological_service_employee_one_degree}">Південноукраїнський державний педагогічний<br>
                     університет імені К.Д. Ушинського<br>у 2001 році та Київський національний університет<br>
-                    внутрішніх справ у 2013 році.</p>
-                <p class="first-employee__additional"><strong>Додаткові курси підвищення кваліфікації:</strong>
-                    <br>«Молодь на роздоріжжі»,<br>
-                    «Використання метафоричних асоціативних зображень<br> у проективній діагностиці».
+                    внутрішніх справ у 2013 році.</span></p>
+                <p class="first-employee__additional"><strong th:text="${psychological_service_additional}">Додаткові курси підвищення кваліфікації:</strong><br>
+                    <span th:text="${psychological_service_employee_one_qualification_improvement}"><br>«Молодь на роздоріжжі»,<br>
+                    «Використання метафоричних асоціативних зображень<br> у проективній діагностиці».</span>
                 </p>
             </div>
         </div>
         <div class="second-employee">
             <img alt="second-employee__photo" src="/images/second-employee__photo.png">
             <div class="second-employee__first-line-info">
-                <h3 class="employee-name">ГОЛОВКО<br>ТЕТЯНА<br>МИХАЙЛІВНА</h3>
-                <p><strong>Посада:</strong> практичний психолог<br>У Слов’я нській гімназії з 2018 року.</p>
-                <p><strong>Кваліфікаційний рівень:</strong> ІІ категорія.</p>
-                <p><strong>Досвід роботи:</strong> <strong class="employee__years">3 роки</strong></p>
+                <h3 th:text="${psychological_service_employee_two_name}" class="employee-name">ГОЛОВКО<br>ТЕТЯНА<br>МИХАЙЛІВНА</h3>
+                <p><strong th:text="${psychological_service_position}">Посада:</strong> <span th:text="${psychological_service_employee_two_position}">практичний психолог<br>У Слов’я нській гімназії з 2018 року.</span></p>
+                <p><strong th:text="${psychological_service_level}">Кваліфікаційний рівень:</strong> <span th:text="${psychological_service_employee_two_category}">ІІ категорія.</span></p>
+                <p><strong th:text="${psychological_service_experience}">Досвід роботи:</strong> <strong th:text="${psychological_service_employee_two_years}" class="employee__years">3 роки</strong></p>
             </div>
             <div class="second-employee__second-line-info">
-                <p><strong>Освіта:</strong> Національний педагогічний університет<br>
+                <p><strong th:text="${psychological_service_degree}">Освіта:</strong> <span th:text="${psychological_service_employee_two_degree}">Національний педагогічний університет<br>
                     імені М. Драгоманова (2018). Київський національний<br>
                     університет імені Тараса Шевченка. (2010)<br>
-                    та Дніпропетровський національний університет (2002).</p>
-                <p class="second-employee__additional"><strong>Додаткові курси підвищення кваліфікації:</strong>
-                    <br>«Дитяча психокорекція, психотерапія та консультування»,<br>
-                    «Групова робота з підлітками», у ГО «Київський інститут<br>раціонально інтуїтивної психотерапії «Я».
+                    та Дніпропетровський національний університет (2002).</span></p>
+                <p class="second-employee__additional"><strong th:text="${psychological_service_additional}">Додаткові курси підвищення кваліфікації:</strong><br>
+                    <span th:text="${psychological_service_employee_two_qualification_improvement}"><br>«Дитяча психокорекція, психотерапія та консультування»,<br>
+                    «Групова робота з підлітками», у ГО «Київський інститут<br>раціонально інтуїтивної психотерапії «Я».</span>
                 </p>
             </div>
         </div>
         <div class="third-employee">
             <img alt="third-employee__photo" src="/images/third-employee__photo.png">
             <div class="third-employee__first-line-info">
-                <h3 class="employee-name">ЄСИК<br>НАТАЛІЯ<br>ВОЛОДИМИРІВНА</h3>
-                <p><strong>Посада:</strong> практичний психолог<br>У Слов’я нській гімназії з 2018 року.</p>
-                <p><strong>Кваліфікаційний рівень:</strong> ІІ категорія.</p>
-                <p><strong>Досвід роботи:</strong> <strong class="employee__years">3 роки</strong></p>
+                <h3 th:text="${psychological_service_employee_three_name}" class="employee-name">ЄСИК<br>НАТАЛІЯ<br>ВОЛОДИМИРІВНА</h3>
+                <p><strong th:text="${psychological_service_position}">Посада:</strong> <span th:text="${psychological_service_employee_three_position}">практичний психолог<br>У Слов’я нській гімназії з 2018 року.</span></p>
+                <p><strong th:text="${psychological_service_level}">Кваліфікаційний рівень:</strong> <span th:text="${psychological_service_employee_three_category}">ІІ категорія.</span></p>
+                <p><strong th:text="${psychological_service_experience}">Досвід роботи:</strong> <strong  th:text="${psychological_service_employee_three_years}" class="employee__years">3 роки</strong></p>
             </div>
             <div class="third-employee__second-line-info">
-                <p><strong>Освіта:</strong> Національний педагогічний університет<br>
+                <p><strong th:text="${psychological_service_degree}">Освіта:</strong> <span th:text="${psychological_service_employee_three_degree}">Національний педагогічний університет<br>
                     імені М. Драгоманова (2018). Академія<br>
                     муніципального управління (2008) та Київський<br>
-                    національний університет імені Тараса Шевченка (2005).</p>
-                <p class="third-employee__additional">
+                    національний університет імені Тараса Шевченка (2005).</span></p>
+                <p class="third-employee__additional" th:text="${psychological_service_employee_three_qualification_improvement}">
                     Постійно підвищує свої профільні знання участю<br>
                     у науково-практичних конференціях, відвідуванням<br>
                     семінарів з психології, навчанням.
@@ -218,20 +217,19 @@
         <div class="useful-posts">
             <h2 th:text="${useful_posts}">КОРИСНІ ПУБЛІКАЦІЇ</h2>
 
-            <a>Думка психолога</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Методики на увагу</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Гіперактивна дитина</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Як покращити увагу дитині</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Мишель Борба «Нет плохому поведению»</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Скільки годин на уроки?</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Як зрозуміти, що ваша дитина виснажилась?</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Взаємозв’язок психомоторики і самооцінки молодших школярів</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Презентація «Готовність дитини до школи: складові успішного навчання»</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>ПРАКТИКУМ  ДЛЯ  БАТЬКІВ</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Посібник по енергозбереженню</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>Посібник «Дії людей в умовах небезпечних подій»</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>БЕЗПЕКА ДІТЕЙ В ІНТЕРНЕТІ</a><img alt="sign_of_download" src="images/file_sign.png"><br>
-            <a>як навчити безпеці у віртуальному світі</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a href="/in-progress" th:text="${useful_posts_psychologists_thought}">Думка психолога</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/attention_methods.doc" href="" th:text="${useful_posts_attention_methods}">Методики на увагу</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/hyperactive_child.doc" href="" th:text="${useful_posts_hyperactive_child}">Гіперактивна дитина</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/how_to_improve_attention.doc" href="" th:text="${useful_posts_how_to_improve_attention}">Як покращити увагу дитині</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/michele_borba.doc" href="" th:text="${useful_posts_michele_borba}">Мишель Борба «Нет плохому поведению»</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/sklki-godin-na-uroki.doc" href="" th:text="${useful_posts_hours_for_homework}">Скільки годин на уроки?</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/yak-zrozumti.doc" href="" th:text="${useful_posts_how_to_understand_that_your_child_has_burned_out}">Як зрозуміти, що ваша дитина виснажилась?</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/!!!!!!!!!!!!!!!!!" href="" th:text="${useful_posts_ready_for_school}">Презентація «Готовність дитини до школи: складові успішного навчання»</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/praktikum-dlya-batkv.pdf" href="" th:text="${useful_posts_workshop_for_parents}">ПРАКТИКУМ  ДЛЯ  БАТЬКІВ</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/2-posibnyk_ener.pdf" href="" th:text="${useful_posts_energy_saving_manual}">Посібник по енергозбереженню</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/plugin-posibnyk.pdf" href="" th:text="${useful_posts_dangerous_conditions_manual}">Посібник «Дії людей в умовах небезпечних подій»</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a href="https://mon.gov.ua/ua/osvita/pozashkilna-osvita/vihovna-robota-ta-zahist-prav-ditini/bezpeka-ditej-v-interneti" th:text="${useful_posts_cybersecurity_for_children}">БЕЗПЕКА ДІТЕЙ В ІНТЕРНЕТІ</a><img alt="sign_of_download" src="images/file_sign.png"><br>
+            <a download="/files_to_download/posbnik.pdf" href="" th:text="${useful_posts_how_to_teach_safety}">як навчити безпеці у віртуальному світі</a><img alt="sign_of_download" src="images/file_sign.png"><br>
 
         </div>
     </div>
@@ -239,7 +237,7 @@
 
     <div class="monitoring">
         <h2 th:text="${monitoring}">МОНІТОРИНГ</h2>
-        <p>
+        <p th:text="${monitoring_message}">
             Відповідно до наказу Департаменту освіти і науки, молоді та спорту від<br>
             09.03.2016 року №185 «Про організацію та проведення моніторингового<br>
             дослідження «Стан позашкільної та позакласної роботи в загальноосвітніх<br>
@@ -251,22 +249,18 @@
 
     <div class="parents-announcer">
         <h2 th:text="${parents_announcer}">БАТЬКІВСЬКИЙ ВІСНИК</h2>
-        <!--additional page(header and footer, menu same but middle part should be different-->
         <div class="parents-announcer__content">
             <img src="/images/girl_and_apple.png" alt="girl with apple">
             <div class="parents-announcer__content__links">
-                <a href="/in-progress">Організаційна структура</a>
+                <a th:text="${parents_announcer_organisational_structure}" href="/in-progress">Організаційна структура</a>
                 <br>
+                <a th:text="${parents_announcer_local_base}" href="/in-progress">Локальна нормативна база</a>
                 <br>
+                <a th:text="${parents_announcer_parents_committee}" href="/in-progress">Положення про батьківські комітети</a>
                 <br>
+                <a th:text="${parents_announcer_support}" href="/in-progress">Підтримка освітнього процесу</a>
                 <br>
-                <a href="/in-progress">Локальна нормативна база</a>
-                <br>
-                <a href="/in-progress">Положення про батьківські комітети</a>
-                <br>
-                <a href="/in-progress">Підтримка освітнього процесу</a>
-                <br>
-                <a href="/in-progress">Замовлення підручників</a>
+                <a th:text="${parents_announcer_books_order}" href="/in-progress">Замовлення підручників</a>
             </div>
 
         </div>
@@ -312,7 +306,8 @@
             <button class="button button_without-bc" th:text="${contact_us}">Напишіть нам</button>
         </nav>
         <span class="footer__fourth-span">
-            © 2009 - 2021 <span th:text="${slavonic_gymnasium}"></span>
+            <img src="/images/boat_footer.png" alt="boat">
+            <p>© 2009 - 2021 <span th:text="${slavonic_gymnasium}"></span></p>
         </span>
     </footer>
     </div>
