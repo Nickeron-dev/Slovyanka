@@ -68,6 +68,10 @@ img {
   vertical-align: top;
 }
 
+title {
+  text-transform: uppercase;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
@@ -147,6 +151,10 @@ body {
   letter-spacing: 1px;
 }
 
+.first-header-menu__link_gold {
+  color: #fce90a;
+}
+
 .first-header-menu__first-image {
   width: 18px;
   height: 18px;
@@ -166,9 +174,32 @@ body {
   margin-right: 10px;
 }
 
-.first-header-menu__link_gold {
-  color: #fce90a;
+.language-switcher {
+  margin-left: 20px;
 }
+
+.flag__switcher__top {
+  width: 13px;
+}
+
+.content__switcher {
+  display: none;
+  position: absolute;
+  background-color: #292F3D;
+  border: 2px #ffffff solid;
+  margin-left: 170px;
+  width: 60px;
+  height: 40px;
+}
+
+.language-switcher:hover .content__switcher {
+  display: block;
+}
+
+.flag__switcher {
+  width: 20px;
+}
+
 
 .first-header-menu__link_gold-and-margin {
   margin-left: 20px;
@@ -183,11 +214,13 @@ body {
   width: 100%;
 }
 
+
 .main-title {
   width: 100%;
   height: 82px;
   background-color: #00366C;
-  font-size: 3.5em;
+  font-size: 3.1em;
+  font-family: KyivType Titling, serif;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
@@ -230,8 +263,15 @@ body {
 }
 
 .header-main__background-image {
+  width: 1439px;
   max-width: 100%;
   position: absolute;
+}
+
+.logo__image {
+  position: absolute;
+  margin-top: -300px;
+  margin-left: 40px;
 }
 
 .button {
@@ -246,26 +286,30 @@ body {
 
 .header-main__button {
   position: relative;
-  top: 100px;
+  top: 220px;
   left: 100px;
 }
 
 .header-main__title {
-  width: 600px;
-  font-size: 3em;
+  width: 700px;
+  font-size: 3.2em;
+  font-family: KyivType Titling, serif;
   color: #fff;
   text-align: left;
   text-transform: uppercase;
   position: relative;
+  line-height: 1.5em;
   top: 280px;
   left: 100px;
 }
 
-.header__blue-line_margin {
+.header__blue-line-down {
   width: 1438px;
-  position: absolute;
-  top: 700px;
+  height: 50px;
+  background-color: #224D7B;
+  margin-top: 300px;
 }
+
 
 .advertisement-and-schedule-and-last-news-container {
   width: 100%;
@@ -1168,10 +1212,6 @@ body {
 
 /*input::-ms-clear {*/
 /*  display: none;*/
-/*}*/
-
-/*button {*/
-/*  cursor: pointer;*/
 /*}*/
 
 /*button::-moz-focus-inner {*/

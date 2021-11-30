@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Слов'янська гімназія</title>
+    <title th:text="${slavonic_gymnasium}">Слов'янська гімназія</title>
     <link rel="stylesheet" type="text/css" href="/css/for_parents.css">
     <link rel="icon" href="/images/logo.png" type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -83,7 +83,7 @@
             </nav>
         </div>
         <div class="header__blue-line"></div>
-        <h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1>
+        <a href="/"><h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1></a>
         <div class="header-main">
             <div class="second-header-menu-container">
                 <nav class="second-header-menu">
