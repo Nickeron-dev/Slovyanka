@@ -928,10 +928,18 @@ body {
 
 .footer__fourth-span {
   position: relative;
-  top: 370px;
-  left: 300px;
+  top: 300px;
+  left: 500px;
+  height: 100px;
   text-transform: none;
 }
+
+.footer__fourth-span img {
+  margin-left: 80px;
+  padding-bottom: 20px;
+  width: 50px;
+}
+
 
 @media (max-width: 1200px) {
   .first-header-menu-container {
