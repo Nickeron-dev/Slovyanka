@@ -150,7 +150,7 @@
 
 	<div class="advertisement-and-schedule-and-last-news-container">
 		<div class="advertisement">
-			<h3  class="title advertisement__title">Оголошення</h3>
+			<h3 th:text="${announcement}" class="title advertisement__title">Оголошення</h3>
 			<div class="advertisement__inner">
 				<h5 th:text="${covid}"><b>Covid 19:</b></h5>
 				<span th:text="${studying_during_quarantine}">Освітній процес у період карантинних обмежень</span>
@@ -230,98 +230,98 @@
 	<div class="articles-container">
 		<div class="articles__row articles__first-row">
 			<article class="article">
-				<img class="article__image" src="images/articles-image.png">
+				<img th:src="${news_list.get(1).getImageReference()}" class="article__image" src="images/articles-image.png">
 				<div class="articles__inner">
-					<span class="article__date">12:06 20/09/2021</span>
-					<h5 class="article__title">
+					<span th:text="${news_list.get(1).getDate()}" class="article__date">12:06 20/09/2021</span>
+					<h5 th:text="${current_language} == 'ukr' ? ${news_list.get(1).getTitleUkr()} : ${news_list.get(1).getTitleEng()}"  class="article__title">
 						<span>Вітаємо, радіємо</span>
 						<span>і пишаємося!</span>
 					</h5>
-					<p class="article__paragraph">
+					<p th:text="${current_language} == 'ukr' ? ${news_list.get(1).getIntroductionUkr()} : ${news_list.get(1).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною sdgsfdgfdsgsdfgsfdgfdfgsdfgsdfgsdfgdfsgdsfgfsdgsdfgsdfgsdfggdfgsdfgdfgs	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a class="article__link" href=""><b>Більше</b></a>
+					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
 			</article>
 			<article class="article">
 				<img class="article__image" src="images/articles-image.png">
 				<div class="articles__inner">
-					<span class="article__date">12:06 20/09/2021</span>
-					<h5 class="article__title">
+					<span th:text="${news_list.get(2).getDate()}" class="article__date">12:06 20/09/2021</span>
+					<h5 th:text="${current_language} == 'ukr' ? ${news_list.get(2).getTitleUkr()} : ${news_list.get(2).getTitleEng()}" class="article__title">
 						<span>Вітаємо, радіємо</span>
 						<span>і пишаємося!</span>
 					</h5>
-					<p class="article__paragraph">
+					<p th:text="${current_language} == 'ukr' ? ${news_list.get(2).getIntroductionUkr()} : ${news_list.get(2).getIntroductionEng()}" class="article__paragraph">
 						Учен блискавичних шахів серед дівчаток!
 					</p>
-					<a class="article__link" href=""><b>Більше</b></a>
+					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
 			</article>
 			<article class="article">
-				<img class="article__image" src="images/articles-image.png">
+				<img th:src="${news_list.get(3).getImageReference()}" class="article__image" src="images/articles-image.png">
 				<div class="articles__inner">
-					<span class="article__date">12:06 20/09/2021</span>
-					<h5 class="article__title">
+					<span th:text="${news_list.get(3).getDate()}" class="article__date">12:06 20/09/2021</span>
+					<h5 th:text="${current_language} == 'ukr' ? ${news_list.get(3).getTitleUkr()} : ${news_list.get(3).getTitleEng()}" class="article__title">
 						<span>Вітаємо, радіємо</span>
 						<span>і пишаємося!</span>
 					</h5>
-					<p class="article__paragraph">
+					<p th:text="${current_language} == 'ukr' ? ${news_list.get(3).getIntroductionUkr()} : ${news_list.get(3).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a class="article__link" href=""><b>Більше</b></a>
+					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
 			</article>
 		</div>
 		<div class="articles__row">
 			<article class="article">
-				<img class="article__image" src="images/articles-image.png">
+				<img th:src="${news_list.get(4).getImageReference()}" class="article__image" src="images/articles-image.png">
 				<div class="articles__inner">
-					<span class="article__date">12:06 20/09/2021</span>
-					<h5 class="article__title">
+					<span th:text="${news_list.get(4).getDate()}" class="article__date">12:06 20/09/2021</span>
+					<h5 th:text="${current_language} == 'ukr' ? ${news_list.get(4).getTitleUkr()} : ${news_list.get(4).getTitleEng()}" class="article__title">
 						<span>Вітаємо, радіємо</span>
 						<span>і пишаємося!</span>
 					</h5>
-					<p class="article__paragraph">
+					<p th:text="${current_language} == 'ukr' ? ${news_list.get(4).getIntroductionUkr()} : ${news_list.get(4).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a class="article__link" href=""><b>Більше</b></a>
+					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
 			</article>
 			<article class="article">
-				<img class="article__image" src="images/articles-image.png">
+				<img th:src="${news_list.get(5).getImageReference()}" class="article__image" src="images/articles-image.png">
 				<div class="articles__inner">
-					<span class="article__date">12:06 20/09/2021</span>
-					<h5 class="article__title">
+					<span th:text="${news_list.get(5).getDate()}" class="article__date">12:06 20/09/2021</span>
+					<h5 th:text="${current_language} == 'ukr' ? ${news_list.get(5).getTitleUkr()} : ${news_list.get(5).getTitleEng()}" class="article__title">
 						<span>Вітаємо, радіємо</span>
 						<span>і пишаємося!</span>
 					</h5>
-					<p class="article__paragraph">
+					<p th:text="${current_language} == 'ukr' ? ${news_list.get(5).getIntroductionUkr()} : ${news_list.get(5).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a class="article__link" href=""><b>Більше</b></a>
+					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
 			</article>
 			<article class="article">
-				<img class="article__image" src="images/articles-image.png">
+				<img th:src="${news_list.get(6).getImageReference()}" class="article__image" src="images/articles-image.png">
 				<div class="articles__inner">
-					<span class="article__date">12:06 20/09/2021</span>
-					<h5 class="article__title">
+					<span th:text="${news_list.get(6).getDate()}" class="article__date">12:06 20/09/2021</span>
+					<h5 th:text="${current_language} == 'ukr' ? ${news_list.get(6).getTitleUkr()} : ${news_list.get(6).getTitleEng()}" class="article__title">
 						<span>Вітаємо, радіємо</span>
 						<span>і пишаємося!</span>
 					</h5>
-					<p class="article__paragraph">
+					<p th:text="${current_language} == 'ukr' ? ${news_list.get(6).getTextUkr()} : ${news_list.get(6).getTextEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a class="article__link" href=""><b>Більше</b></a>
+					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
 			</article>
 		</div>
 	</div>
 	<div class="public-info">
-		<div class="title">Публічна інформація</div>
+		<div th:text="${public_information}" class="title">Публічна інформація</div>
 		<div class="public-info__inner">
-			<h6><b>запит для отримання  публічної інформації в електорнному вигляді</b></h6>
-			<button class="button public-info__button_blue">Зробити запит</button>
+			<h6 th:text="${public_information_request_title}"><b>запит для отримання  публічної інформації в електорнному вигляді</b></h6>
+			<button th:text="${public_information_request_button}" class="button public-info__button_blue">Зробити запит</button>
 			<div class="public-info__show-text">
 				<span>показати/</span>
 				<span>сховати текст</span>
@@ -336,16 +336,16 @@
 			<div class="public-info-documents__inner">
 				<img class="public-info-documents__image" src="images/public-info-documents.png">
 				<div class="public-info-documents__text">
-					<h5 class="public-info__title">Документи за посиланням</h5>
+					<h5 th:text="${documents_by_reference}" class="public-info__title">Документи за посиланням</h5>
 					<div class="public-info__links">
-						<a href=""><b class="public-info__link_bold">Статут гімназії</b></a>
-						<a href=""><b class="public-info__link_bold">СТРАТЕГІЯ РОЗВИТКУ СЗЗ «Слов’янська гімназія» на 2020-2025</b></a>
-						<a href=""><b class="public-info__link_bold"> ПОЛОЖЕННЯ про внутрішню систему забезпечення якості освіти</b></a>
-						<a href=""><b class="public-info__link_bold"> ПОЛОЖЕННЯ про академічну доброчесність учасників освітнього процесу</b></a>
-						<a href=""><b class="public-info__link_bold"> Оцінювання навчальних досягнень учнів</b></a>
+						<a th:text="${documents_by_reference_statute}" class="public-info__link_bold" href=""><b>Статут гімназії</b></a>
+						<a th:text="${documents_by_reference_development_strategy}" class="public-info__link_bold" href=""><b>СТРАТЕГІЯ РОЗВИТКУ СЗЗ «Слов’янська гімназія» на 2020-2025</b></a>
+						<a th:text="${documents_by_reference_system_provision}" class="public-info__link_bold" href=""><b>ПОЛОЖЕННЯ про внутрішню систему забезпечення якості освіти</b></a>
+						<a th:text="${documents_by_reference_academical_provision}" class="public-info__link_bold" href=""><b>ПОЛОЖЕННЯ про академічну доброчесність учасників освітнього процесу</b></a>
+						<a th:text="${documents_by_reference_evaluation}" class="public-info__link_bold" href=""><b>Оцінювання навчальних досягнень учнів</b></a>
 					</div>
 				</div>
-				<h5 class="public-info__title public-info__title_margin">Освітні програми на  2021-2022 навчальний рік</h5>
+				<h5 th:text="${educational_programs}" class="public-info__title public-info__title_margin">Освітні програми на  2021-2022 навчальний рік</h5>
 			</div>
 		</div>
 		<div class="education-programs">
@@ -357,33 +357,33 @@
 		</div>
 	</div>
 	<div class="useful-links">
-		<h3 class="title">Корисні посилання</h3>
+		<h3 th:text="${useful_links}" class="title">Корисні посилання</h3>
 		<div class="useful-links__inner">
 			<div class="useful-links__links">
 				<div>
-					<a class="useful-links__link" href="#"><b class="useful-links__link">01. Міністерство освіти і науки України:</b></a>
-					<span>01135, м.Київ, проспект Перемоги, 10</span>
+					<a th:text="${useful_links_first_link}" class="useful-links__link" href="https://mon.gov.ua/ua"><b>01. Міністерство освіти і науки України:</b></a>
+					<span th:text="${useful_links_first_link_address}">01135, м.Київ, проспект Перемоги, 10</span>
 				</div>
 				<div>
-					<a class="useful-links__link" href="#"><b class="useful-links__link">02. Департамент освіти і науки:</b></a>
-					<span>01004, м.Київ, бульвар Тараса Шевченка, 3</span>
+					<a th:text="${useful_links_second_link}" class="useful-links__link" href="http://www.guon.kiev.ua/"><b>02. Департамент освіти і науки:</b></a>
+					<span th:text="${useful_links_second_link_address}">01004, м.Київ, бульвар Тараса Шевченка, 3</span>
 				</div>
 				<div>
-					<a class="useful-links__link" href="#"><b class="useful-links__link">03. Управління освіти Дарницької районної в місті Києві державної адміністрації:</b></a>
-					<span>02091, м.Київ, вул. Харківське шосе, 168К</span>
+					<a th:text="${useful_links_third_link}" class="useful-links__link" href="http://druo.inet.ua/"><b>03. Управління освіти Дарницької районної в місті Києві державної адміністрації:</b></a>
+					<span th:text="${useful_links_third_link_address}">02091, м.Київ, вул. Харківське шосе, 168К</span>
 				</div>
 				<div>
-					<a class="useful-links__link" href="#"><b class="useful-links__link">04. Дарницький районний науково-методичний центр:</b></a>
-					<span>02091, м.Київ, вул. Архітектора Вербицького, 9І</span>
+					<a th:text="${useful_links_fourth_link}" class="useful-links__link" href="http://drnmc.inet.ua/"><b>04. Дарницький районний науково-методичний центр:</b></a>
+					<span th:text="${useful_links_fourth_link_address}">02091, м.Київ, вул. Архітектора Вербицького, 9І</span>
 				</div>
 				<div>
-					<a class="useful-links__link" href="#"><b class="useful-links__link">05. Український центр оцінювання якості освіти:</b></a>
-					<span>01135, м.Київ, вул. Чорновола,</span>
+					<a th:text="${useful_links_fifth_link}" class="useful-links__link" href="https://testportal.gov.ua/"><b>05. Український центр оцінювання якості освіти:</b></a>
+					<span th:text="${useful_links_fifth_link_address}">01135, м.Київ, вул. Чорновола,</span>
 				</div>
-				<a href=""><b class="useful-links__link">07. Освіта.ua</b></a>
-				<a href=""><b class="useful-links__link">08. Освітній шкільний інтернет-портал "Острів знань"</b></a>
-				<a href=""><b class="useful-links__link">09. Тест-портал "Справедливе оцінювання"</b></a>
-				<a href=""><b class="useful-links__link">10. Київський регіональний центр оцінювання якості освіти</b></a>
+				<a th:text="${useful_links_sixth_link}" class="useful-links__link" href="https://osvita.ua/"><b>06. Освіта.ua</b></a>
+				<a th:text="${useful_links_seventh_link}"  class="useful-links__link" href="http://www.ostriv.in.ua/"><b>07. Освітній шкільний інтернет-портал "Острів знань"</b></a>
+				<a th:text="${useful_links_eighth_link}"  class="useful-links__link" href="http://testportal.org.ua/"><b>08. Тест-портал "Справедливе оцінювання"</b></a>
+				<a th:text="${useful_links_ninth_link}"  class="useful-links__link" href="https://kyivtest.org.ua/"><b>09. Київський регіональний центр оцінювання якості освіти</b></a>
 			</div>
 			<div class="useful-links__images">
 				<img class="useful-links__first-image" src="images/useful-links-first-image.png">
