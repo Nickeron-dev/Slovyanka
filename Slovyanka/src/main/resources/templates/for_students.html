@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${slavonic_gymnasium}">Слов'янська гімназія</title>
+    <link rel="stylesheet" type="text/css" href="/css/for_parents.css">
+    <link rel="icon" href="/images/logo.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script>
+        function ScrollToRules(){
+            window.scrollTo(0, 800);
+        }
+
+        function ScrollToPsychologicalService(){
+            window.scrollTo(0, 1200);
+        }
+
+        function ScrollToUsefulPosts(){
+            window.scrollTo(0, 3400);
+        }
+
+        function ScrollToMonitoring(){
+            window.scrollTo(0, 4200);
+        }
+
+        function ScrollToParentsAnnouncer(){
+            window.scrollTo(0, 4600);
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="first-header-menu-container">
+            <nav class="first-header-menu">
+                <div class="first-header-menu__first-row">
+                    <a class="first-header-menu__link_gold" href="" th:text="${entry_campaign}">
+                        Вступна кампанія 2021
+                    </a>
+                </div>
+                <div class="first-header-menu__second-row">
+                    <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" th:text="${for_parents}" href="/for-parents">
+                        для батьків
+                        <!--                        <img class="arrow" src="images/arrow.svg">-->
+                    </a>
+                    <a class="first-header-menu__link first-header-menu__link_margin" th:text="${for_students}" href="#">
+                        для учнів
+                        <!--                        <img class="arrow" src="images/arrow.svg">-->
+                    </a>
+                    <a class="first-header-menu__link first-header-menu__link_margin" th:text="${about}" href="#">
+                        про гімназію
+                        <!--                        <img class="arrow" src="images/arrow.svg">-->
+                    </a>
+                </div>
+                <div class="first-header-menu__third-row">
+							<span class="first-header-menu__number">
+								<img class="" src="images/Vector3.svg">
+								38(044)–573–96–30
+							</span>
+                    <span class="language-switcher">
+                        <img class="flag__switcher__top" th:src="${current_language} == 'ukr' ? 'images/UA-Ukraine-Flag.png' : 'images/united-kingdom.svg'">
+                        <span th:text="${current_language} == 'ukr' ? 'UKR' : 'ENG'"></span>
+                        <img class="arrow" src="images/arrow.svg">
+                        <div class="content__switcher">
+
+                            <form class="change-lang__form" action="/change-language" method="get">
+
+                                <label>
+                                    <img class="flag__switcher" src="images/UA-Ukraine-Flag.png">
+                                    <input type="submit" name="ukr" value="UKR">
+                                </label>
+                                <br>
+                                <label>
+                                    <img class="flag__switcher" src="images/united-kingdom.svg">
+                                    <input type="submit" name="eng" value="ENG">
+                                </label>
+                            </form>
+                        </div>
+                    </span>
+                    <a class="first-header-menu__link first-header-menu__link_gold-and-margin "
+                       th:href="${login_logout_reference}" th:text="${login_logout}">Вхід</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header__blue-line"></div>
+        <a href="/"><h1 class="main-title" th:text="${slavonic_gymnasium}"><b>Слов'янська гімназія</b></h1></a>
+        <div class="header-main">
+            <div class="second-header-menu-container">
+                <nav class="second-header-menu">
+                    <a class="second-header-menu__link" th:text="${educational_activity}" href="#">
+                        Навчальна діяльність
+                        <!--                        <img class="arrow" src="images/arrow_black.svg">-->
+                    </a>
+                    <a class="second-header-menu__link" th:text="${project_activity}" href="#">
+                        Проектна діяльність
+                        <!--                        <img class="arrow" src="images/arrow_black.svg">-->
+                    </a>
+                    <a class="second-header-menu__link" th:text="${unesco}" href="#">
+                        Паш юнеско
+                        <!--                        <img class="arrow" src="images/arrow_black.svg">-->
+                    </a>
+                    <a class="second-header-menu__link" th:text="${news}" href="#">Новини</a>
+                    <a class="second-header-menu__link second-header-menu__link_margin" th:text="${photo_gallery}" href="#">Фотогалерея</a>
+                </nav>
+            </div>
+            <img class="header-main__background-image" src="/images/for_parents_main.png">-->
+
+            <h2 class="header-main__title" th:text="${for_parents}"><b>ДЛЯ БАТЬКІВ</b></h2>
+        </div>
+        <a class="logo__image" href="/"><img  src="/images/logo.png" alt="logo"></a>
+    </header>
+    <div class="header__blue-line-down"></div>
+
+    <footer class="footer">
+        <div class="footer__first-column">
+            <div class="footer__adress">
+                <p th:text="${address_first}">02068, м.Київ,</p>
+                <p th:text="${address_second}">вул.Драгоманова, 10в</p>
+            </div>
+            <div class="footer__numbers">
+                <span>+380–44–573–96–30 — <span th:text="${phone_fax}">тел./факс:</span></span>
+                <span>+380–44–570–88–24 — <span th:text="${entrance_commission}">приймальна коміссія</span></span>
+                <span>+380–44–570–87–55 — <span th:text="${head_teacher}">завуч !!!!! наприклад</span></span>
+            </div>
+            <span class="footer__first-span" th:text="${information_document}">Проспект інформаційний</span>
+            <a class="footer__link" href="" th:text="${download_pdf}">Завантажити pdf<img src=""></a>
+            <div class="footer__second-span" th:text="${make_admission_request_message}">
+                Запит на вступ у 1 клас 2021 р.
+            </div>
+            <button class="button footer__button" th:text="${make_request}">Зробити запит</button>
+        </div>
+        <nav class="footer-menu">
+            <a th:text="${for_parents}">Для батьків</a>
+            <a th:text="${for_students}">Для учнів</a>
+            <a th:text="${about}">Про гімназію </a>
+            <a th:text="${educational_activity}">Навчальна діяльність </a>
+            <a th:text="${project_activity}">Проектна діяльність</a>
+            <a th:text="${unesco}">Паш юнеско</a>
+            <a th:text="${news}">Новини</a>
+            <a th:text="${photo_gallery}">Фотогалерея</a>
+            <span class="footer__third-span">e-mail: 5739630@ukr.net</span>
+            <button class="button button_without-bc" th:text="${contact_us}">Напишіть нам</button>
+        </nav>
+        <span class="footer__fourth-span">
+            <img src="/images/boat_footer.png" alt="boat">
+            <p>© 2009 - 2021 <span th:text="${slavonic_gymnasium}"></span></p>
+        </span>
+    </footer>
+</div>
+</body>
+</html>
