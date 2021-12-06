@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="${slavonic_gymnasium}">Слов'янська гімназія</title>
-    <link rel="stylesheet" type="text/css" href="/css/for_parents.css">
+    <link rel="stylesheet" type="text/css" href="/css/for_students.css">
     <link rel="icon" href="/images/logo.png" type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <script>
@@ -39,11 +39,11 @@
                     </a>
                 </div>
                 <div class="first-header-menu__second-row">
-                    <a class="first-header-menu__link first-header-menu__link_margin for-parents__link" th:text="${for_parents}" href="/for-parents">
+                    <a class="first-header-menu__link first-header-menu__link_margin" th:text="${for_parents}" href="/for-parents">
                         для батьків
                         <!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
-                    <a class="first-header-menu__link first-header-menu__link_margin" th:text="${for_students}" href="#">
+                    <a class="first-header-menu__link first-header-menu__link_margin for-students__link" th:text="${for_students}" href="/for-students">
                         для учнів
                         <!--                        <img class="arrow" src="images/arrow.svg">-->
                     </a>
@@ -103,9 +103,9 @@
                     <a class="second-header-menu__link second-header-menu__link_margin" th:text="${photo_gallery}" href="#">Фотогалерея</a>
                 </nav>
             </div>
-            <img class="header-main__background-image" src="/images/for_parents_main.png">-->
-
-            <h2 class="header-main__title" th:text="${for_parents}"><b>ДЛЯ БАТЬКІВ</b></h2>
+            <img class="header-main__background-image" src="/images/for_students_main.png">-->
+            <button th:text="${timetable}" class="button header-main__button">Розклад уроків</button>
+            <h2 class="header-main__title" th:text="${for_students}"><b>ДЛЯ УЧНІВ</b></h2>
         </div>
         <a class="logo__image" href="/"><img  src="/images/logo.png" alt="logo"></a>
     </header>

@@ -38,6 +38,7 @@ public class ForStudentsPageController {
         model.addAttribute("photo_gallery", View.view.getBundleText(TextsPaths.PHOTO_GALLERY));
         model.addAttribute("slavonic_gymnasium", View.view.getBundleText(TextsPaths.SLAVONIC_GYMNASIUM));
         model.addAttribute("entry_campaign", View.view.getBundleText(TextsPaths.ENTRY_CAMPAIGN));
+        model.addAttribute("timetable", View.view.getBundleText(TextsPaths.TIMETABLE));
 
 
 
