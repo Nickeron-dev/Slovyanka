@@ -41,60 +41,7 @@ public class ForStudentsPageController {
         model.addAttribute("timetable", View.view.getBundleText(TextsPaths.TIMETABLE));
 
 
-
-
-
-        model.addAttribute("rules_of_application", View.view.getBundleText(TextsPaths.RULES_OF_APPLICATION));
-        model.addAttribute("rules_of_application_to_gymnasium", View.view.getBundleText(TextsPaths.RULES_OF_APPLICATION_TO_GYMNASIUM));
-        model.addAttribute("information_about_free_places", View.view.getBundleText(TextsPaths.INFORMATION_ABOUT_FREE_PLACES));
-        model.addAttribute("psychological_service", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE));
-        model.addAttribute("psychological_service_degree", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_DEGREE));
-        model.addAttribute("psychological_service_additional", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_ADDITIONAL));
-        model.addAttribute("psychological_service_employee_one_name", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_NAME));
-        model.addAttribute("psychological_service_position", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_POSITION));
-        model.addAttribute("psychological_service_employee_one_position", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_POSITION));
-        model.addAttribute("psychological_service_level", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_LEVEL));
-        model.addAttribute("psychological_service_employee_one_category", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_CATEGORY));
-        model.addAttribute("psychological_service_experience", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EXPERIENCE));
-        model.addAttribute("psychological_service_employee_one_years", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_YEARS));
-        model.addAttribute("psychological_service_employee_one_degree", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_DEGREE));
-        model.addAttribute("psychological_service_employee_one_qualification_improvement", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_ONE_QUALIFICATION_IMPROVER));
-        model.addAttribute("psychological_service_employee_two_name", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_NAME));
-        model.addAttribute("psychological_service_employee_two_position", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_POSITION));
-        model.addAttribute("psychological_service_employee_two_category", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_CATEGORY));
-        model.addAttribute("psychological_service_employee_two_years", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_YEARS));
-        model.addAttribute("psychological_service_employee_two_degree", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_DEGREE));
-        model.addAttribute("psychological_service_employee_two_qualification_improvement", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_TWO_QUALIFICATION_IMPROVER));
-        model.addAttribute("psychological_service_employee_three_name", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_NAME));
-        model.addAttribute("psychological_service_employee_three_position", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_POSITION));
-        model.addAttribute("psychological_service_employee_three_category", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_CATEGORY));
-        model.addAttribute("psychological_service_employee_three_years", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_YEARS));
-        model.addAttribute("psychological_service_employee_three_degree", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_DEGREE));
-        model.addAttribute("psychological_service_employee_three_qualification_improvement", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_EMPLOYEE_THREE_QUALIFICATION_IMPROVER));
-        model.addAttribute("useful_posts", View.view.getBundleText(TextsPaths.USEFUL_POSTS));
-        model.addAttribute("useful_posts_psychologists_thought", View.view.getBundleText(TextsPaths.USEFUL_POSTS_PSYCHOLOGISTS_THOUGHT));
-        model.addAttribute("useful_posts_attention_methods", View.view.getBundleText(TextsPaths.USEFUL_POSTS_ATTENTION_METHODS));
-        model.addAttribute("useful_posts_hyperactive_child", View.view.getBundleText(TextsPaths.USEFUL_POSTS_HYPERACTIVE_CHILD));
-        model.addAttribute("useful_posts_how_to_improve_attention", View.view.getBundleText(TextsPaths.USEFUL_POSTS_HOW_TO_IMPROVE_ATTENTION));
-        model.addAttribute("useful_posts_michele_borba", View.view.getBundleText(TextsPaths.USEFUL_POSTS_MICHELE_BORBA));
-        model.addAttribute("useful_posts_hours_for_homework", View.view.getBundleText(TextsPaths.USEFUL_POSTS_HOURS_FOR_HOMEWORK));
-        model.addAttribute("useful_posts_how_to_understand_that_your_child_has_burned_out", View.view.getBundleText(TextsPaths.USEFUL_POSTS_HOW_TO_UNDERSTAND_THAT_YOUR_CHILD_HAS_BURNED_OUT));
-        model.addAttribute("useful_posts_ready_for_school", View.view.getBundleText(TextsPaths.USEFUL_POSTS_READY_FOR_SCHOOL));
-        model.addAttribute("useful_posts_workshop_for_parents", View.view.getBundleText(TextsPaths.USEFUL_POSTS_WORKSHOP_FOR_PARENTS));
-        model.addAttribute("useful_posts_energy_saving_manual", View.view.getBundleText(TextsPaths.USEFUL_POSTS_ENERGY_SAVING_MANUAL));
-        model.addAttribute("useful_posts_dangerous_conditions_manual", View.view.getBundleText(TextsPaths.USEFUL_POSTS_DANGEROUS_CONDITIONS_MANUAL));
-        model.addAttribute("useful_posts_cybersecurity_for_children", View.view.getBundleText(TextsPaths.USEFUL_POSTS_CYBERSECURITY_FOR_CHILDREN));
-        model.addAttribute("useful_posts_how_to_teach_safety", View.view.getBundleText(TextsPaths.USEFUL_POSTS_HOW_TO_TEACH_SAFETY));
-        model.addAttribute("monitoring", View.view.getBundleText(TextsPaths.MONITORING));
-        model.addAttribute("monitoring_message", View.view.getBundleText(TextsPaths.MONITORING_MESSAGE));
-        model.addAttribute("parents_announcer", View.view.getBundleText(TextsPaths.PARENTS_ANNOUNCER));
-
-        model.addAttribute("psychological_service_message", View.view.getBundleText(TextsPaths.PSYCHOLOGICAL_SERVICE_MESSAGE));
-        model.addAttribute("parents_announcer_organisational_structure", View.view.getBundleText(TextsPaths.PARENTS_ANNOUNCER_ORGANISATIONAL_STRUCTURE));
-        model.addAttribute("parents_announcer_local_base", View.view.getBundleText(TextsPaths.PARENTS_ANNOUNCER_LOCAL_BASE));
-        model.addAttribute("parents_announcer_parents_committee", View.view.getBundleText(TextsPaths.PARENTS_ANNOUNCER_PARENTS_COMMITTEE));
-        model.addAttribute("parents_announcer_support", View.view.getBundleText(TextsPaths.PARENTS_ANNOUNCER_SUPPORT));
-        model.addAttribute("parents_announcer_books_order", View.view.getBundleText(TextsPaths.PARENTS_ANNOUNCER_BOOKS_ORDER));
+        model.addAttribute("studying_during_quarantine", View.view.getBundleText(TextsPaths.STUDYING_DURING_QUARANTINE));
 
 
 

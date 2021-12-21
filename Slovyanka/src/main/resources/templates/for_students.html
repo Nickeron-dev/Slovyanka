@@ -111,21 +111,33 @@
     </header>
     <div class="header__blue-line-down"></div>
 
-    <div class="advertisement">
-        <h3 th:text="${announcement}" class="title advertisement__title">Оголошення</h3>
-        <div class="advertisement__inner">
-            <h5 th:text="${covid}"><b>Covid 19:</b></h5>
-            <span th:text="${studying_during_quarantine}">Освітній процес у період карантинних обмежень</span>
-            <div class="advertisement__line advertisement__first-line"></div>
-            <p class="advertisement__paragraph">
-                <span th:text="${get_student_id_first}">Послуга «Замовлення електронного учнівського</span>
-                <span th:text="${get_student_id_second}">квитка» доступна за посиланням:</span>
-                <a th:text="${web_portal_reference}" class="advertisement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
-            </p>
-            <div class="advertisement__line advertisement__second-line"></div>
-            <a th:text="${online_zno}" class="advertisement__second-link"><b>Онлайн зно</b></a>
+    <div class="rules-of-application-and-right-menu">
+        <div class="rules-of-application">
+            <h2 th:text="${timetable}">РОЗКЛАД УРОКІВ</h2>
+            <div class="advertisement__inner">
+                <h3 th:text="${rules_of_application_to_gymnasium}">ПРАВИЛА ЗАРАХУВАННЯ ДО ГІМНАЗІЇ<img alt="sign_of_download" src="images/file_sign.png"></h3>
+                <hr>
+                <h3 th:text="${information_about_free_places}">ІНФОРМАЦІЯ ПРО ВІЛЬНІ МІСЦЯ<img alt="sign_of_download" src="images/file_sign.png"></h3>
+            </div>
         </div>
+        <aside class="aside">
+            <nav class="aside-menu">
+                <a th:text="${rules_of_application}" href="javascript:ScrollToRules();">правила прийому</a><!-- href="/for-parents#bottom" class="move"*/ -->
+                <a th:text="${psychological_service}" href="javascript:ScrollToPsychologicalService();">психологічна служба</a>
+                <a th:text="${useful_posts}" href="javascript:ScrollToUsefulPosts();">корисні публікації</a>
+                <a th:text="${monitoring}" href="javascript:ScrollToMonitoring();">моніторинг</a>
+                <a th:text="${parents_announcer}" href="javascript:ScrollToParentsAnnouncer();">батьківський вісник</a>
+            </nav>
+        </aside>
     </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br>
+
+
 
     <footer class="footer">
         <div class="footer__first-column">
