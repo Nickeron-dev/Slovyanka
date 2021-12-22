@@ -115,27 +115,97 @@
         <div class="rules-of-application">
             <h2 th:text="${timetable}">РОЗКЛАД УРОКІВ</h2>
             <div class="advertisement__inner">
-                <h3 th:text="${rules_of_application_to_gymnasium}">ПРАВИЛА ЗАРАХУВАННЯ ДО ГІМНАЗІЇ<img alt="sign_of_download" src="images/file_sign.png"></h3>
+                <p>Освітній процес, у період карантинних обмежень, здійснюється у відповідності до розміщеного нижче розкладу занять.</p>
+                <h4>Локальна нормативна основа<img alt="sign_of_download" src="images/file_sign.png"></h4>
                 <hr>
-                <h3 th:text="${information_about_free_places}">ІНФОРМАЦІЯ ПРО ВІЛЬНІ МІСЦЯ<img alt="sign_of_download" src="images/file_sign.png"></h3>
+                <h3>розклад на ІІ семестр 5–11 класи
+                    <img alt="sign_of_download" src="images/file_sign.png"></h3>
+                <h3>розклад на ІІ семестр &nbsp;1–4 &nbsp;класи
+                    <img alt="sign_of_download" src="images/file_sign.png"></h3>
+            </div>
+            <div class="books_and_requirements">
+                <div class="e-books">
+                    <img src="images/e-books.png" alt="E-Books">
+                    <h3>Електронні підручники</h3>
+                </div>
+                <div class="requirements">
+                    <img src="images/requirements_for_students.png" alt="Requirements for students">
+                    <h3>Єдині вимоги до учнів</h3>
+                </div>
+
             </div>
         </div>
+
         <aside class="aside">
             <nav class="aside-menu">
-                <a th:text="${rules_of_application}" href="javascript:ScrollToRules();">правила прийому</a><!-- href="/for-parents#bottom" class="move"*/ -->
-                <a th:text="${psychological_service}" href="javascript:ScrollToPsychologicalService();">психологічна служба</a>
-                <a th:text="${useful_posts}" href="javascript:ScrollToUsefulPosts();">корисні публікації</a>
-                <a th:text="${monitoring}" href="javascript:ScrollToMonitoring();">моніторинг</a>
-                <a th:text="${parents_announcer}" href="javascript:ScrollToParentsAnnouncer();">батьківський вісник</a>
+                <a th:text="${timetable}">РОЗКЛАД УРОКІВ</a>
+                <a>ЗНО</a>
+                <a>ДПА</a>
+                <a>гуртки та секції</a>
             </nav>
+
+            <fade>
+            <div class="bells-timetable">
+
+                <h3>Розклад дзвінків</h3>
+                <hr>
+                <p>1–3 класи<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <hr>
+                <p>2–4 класи<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <hr>
+                <p>5–7, 11 класи<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <hr>
+                <p>8–10 класи (ІІ зміна)<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <hr>
+            </div>
+            </fade>
         </aside>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br><br><br><br><br><br><br><br><br>
+<!--    <div class="books_and_requirements">-->
+<!--        <div class="e-books">-->
+<!--            <img src="images/e-books.png" alt="E-Books">-->
+<!--            <h2>Електронні підручники</h2>-->
+<!--        </div>-->
+<!--        <div class="requirements">-->
+<!--            <img src="images/requirements_for_students.png" alt="Requirements for students">-->
+<!--            <h2>Єдині вимоги до учнів</h2>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+    <div class="useful-links">
+        <h3 th:text="${useful_links}" class="title">Корисні посилання</h3>
+        <div class="useful-links__inner">
+            <div class="useful-links__links">
+                <div>
+                    <a th:text="${useful_links_first_link}" class="useful-links__link" href="https://mon.gov.ua/ua"><b>01. Міністерство освіти і науки України:</b></a>
+                    <span th:text="${useful_links_first_link_address}">01135, м.Київ, проспект Перемоги, 10</span>
+                </div>
+                <div>
+                    <a th:text="${useful_links_second_link}" class="useful-links__link" href="http://www.guon.kiev.ua/"><b>02. Департамент освіти і науки:</b></a>
+                    <span th:text="${useful_links_second_link_address}">01004, м.Київ, бульвар Тараса Шевченка, 3</span>
+                </div>
+                <div>
+                    <a th:text="${useful_links_third_link}" class="useful-links__link" href="http://druo.inet.ua/"><b>03. Управління освіти Дарницької районної в місті Києві державної адміністрації:</b></a>
+                    <span th:text="${useful_links_third_link_address}">02091, м.Київ, вул. Харківське шосе, 168К</span>
+                </div>
+                <div>
+                    <a th:text="${useful_links_fourth_link}" class="useful-links__link" href="http://drnmc.inet.ua/"><b>04. Дарницький районний науково-методичний центр:</b></a>
+                    <span th:text="${useful_links_fourth_link_address}">02091, м.Київ, вул. Архітектора Вербицького, 9І</span>
+                </div>
+                <div>
+                    <a th:text="${useful_links_fifth_link}" class="useful-links__link" href="https://testportal.gov.ua/"><b>05. Український центр оцінювання якості освіти:</b></a>
+                    <span th:text="${useful_links_fifth_link_address}">01135, м.Київ, вул. Чорновола,</span>
+                </div>
+                <a th:text="${useful_links_sixth_link}" class="useful-links__link" href="https://osvita.ua/"><b>06. Освіта.ua</b></a>
+                <a th:text="${useful_links_seventh_link}"  class="useful-links__link" href="http://www.ostriv.in.ua/"><b>07. Освітній шкільний інтернет-портал "Острів знань"</b></a>
+                <a th:text="${useful_links_eighth_link}"  class="useful-links__link" href="http://testportal.org.ua/"><b>08. Тест-портал "Справедливе оцінювання"</b></a>
+                <a th:text="${useful_links_ninth_link}"  class="useful-links__link" href="https://kyivtest.org.ua/"><b>09. Київський регіональний центр оцінювання якості освіти</b></a>
+            </div>
+        </div>
+    </div>
+
 
 
 

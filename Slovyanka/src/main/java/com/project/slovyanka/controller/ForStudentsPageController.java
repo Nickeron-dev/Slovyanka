@@ -40,10 +40,21 @@ public class ForStudentsPageController {
         model.addAttribute("entry_campaign", View.view.getBundleText(TextsPaths.ENTRY_CAMPAIGN));
         model.addAttribute("timetable", View.view.getBundleText(TextsPaths.TIMETABLE));
 
-
-        model.addAttribute("studying_during_quarantine", View.view.getBundleText(TextsPaths.STUDYING_DURING_QUARANTINE));
-
-
+        model.addAttribute("useful_links", View.view.getBundleText(TextsPaths.USEFUL_LINKS));
+        model.addAttribute("useful_links_first_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FIRST_LINK));
+        model.addAttribute("useful_links_first_link_address", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FIRST_LINK_ADDRESS));
+        model.addAttribute("useful_links_second_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_SECOND_LINK));
+        model.addAttribute("useful_links_second_link_address", View.view.getBundleText(TextsPaths.USEFUL_LINKS_SECOND_LINK_ADDRESS));
+        model.addAttribute("useful_links_third_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_THIRD_LINK));
+        model.addAttribute("useful_links_third_link_address", View.view.getBundleText(TextsPaths.USEFUL_LINKS_THIRD_LINK_ADDRESS));
+        model.addAttribute("useful_links_fourth_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FOURTH_LINK));
+        model.addAttribute("useful_links_fourth_link_address", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FOURTH_LINK_ADDRESS));
+        model.addAttribute("useful_links_fifth_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FIFTH_LINK));
+        model.addAttribute("useful_links_fifth_link_address", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FIFTH_LINK_ADDRESS));
+        model.addAttribute("useful_links_sixth_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_SIXTH_LINK));
+        model.addAttribute("useful_links_seventh_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_SEVENTH_LINK));
+        model.addAttribute("useful_links_eighth_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_EIGHTH_LINK));
+        model.addAttribute("useful_links_ninth_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_NINTH_LINK));
 
 
 
