@@ -124,6 +124,18 @@ public abstract class TextsPaths {
     public static final String PARENTS_ANNOUNCER_SUPPORT = "for.parents.parents.announcer.support";
     public static final String PARENTS_ANNOUNCER_BOOKS_ORDER = "for.parents.parents.announcer.books.order";
 
+    // for students
+    public static final String STUDYING_PROCESS_DURING_QUARANTINE = "for.students.studying.process.quarantine";
+    public static final String LOCAL_REGULATORY_BASIS = "for.students.local.regulatory.basis";
+    public static final String TIMETABLE_FOR_SECOND_SEMESTER_5_11 = "for.students.timetable.5.11";
+    public static final String TIMETABLE_FOR_SECOND_SEMESTER_1_4 = "for.students.timetable.1.4";
+    public static final String ZNO = "for.students.zno";
+    public static final String DPA = "for.students.dpa";
+    public static final String AFTER_SCHOOL_CLUBS = "for.students.after.school.clubs";
+    public static final String BELLS_TIMETABLE = "for.students.bells.timetable";
+    public static final String FORMS = "for.students.forms";
+    public static final String E_BOOKS = "for.students.ebooks";
+    public static final String STUDENTS_REQUIREMENTS = "for.students.students.requirements";
 
     public static final String ADDRESS_FIRST_TEXT = "footer.address.first.message";
     public static final String ADDRESS_SECOND_TEXT = "footer.address.second.message";
@@ -135,5 +147,6 @@ public abstract class TextsPaths {
     public static final String MAKE_ADMISSION_REQUEST_MESSAGE = "footer.make.admission.request.message";
     public static final String MAKE_REQUEST = "footer.make.request";
     public static final String CONTACT_US = "footer.contact.us";
+
 
 }

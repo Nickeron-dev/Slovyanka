@@ -40,6 +40,20 @@ public class ForStudentsPageController {
         model.addAttribute("entry_campaign", View.view.getBundleText(TextsPaths.ENTRY_CAMPAIGN));
         model.addAttribute("timetable", View.view.getBundleText(TextsPaths.TIMETABLE));
 
+        model.addAttribute("study_process_during_quarantine", View.view.getBundleText(TextsPaths.STUDYING_PROCESS_DURING_QUARANTINE));
+        model.addAttribute("local_regulatory_basis", View.view.getBundleText(TextsPaths.LOCAL_REGULATORY_BASIS));
+        model.addAttribute("timetable_for_second_semester_5_11", View.view.getBundleText(TextsPaths.TIMETABLE_FOR_SECOND_SEMESTER_5_11));
+        model.addAttribute("timetable_for_second_semester_1_4", View.view.getBundleText(TextsPaths.TIMETABLE_FOR_SECOND_SEMESTER_1_4));
+        model.addAttribute("zno", View.view.getBundleText(TextsPaths.ZNO));
+        model.addAttribute("dpa", View.view.getBundleText(TextsPaths.DPA));
+        model.addAttribute("after_school_clubs", View.view.getBundleText(TextsPaths.AFTER_SCHOOL_CLUBS));
+        model.addAttribute("bells_timetable", View.view.getBundleText(TextsPaths.BELLS_TIMETABLE));
+        model.addAttribute("forms", View.view.getBundleText(TextsPaths.FORMS));
+        model.addAttribute("second_shift", View.view.getBundleText(TextsPaths.SECOND_SHIFT));
+        model.addAttribute("e_books", View.view.getBundleText(TextsPaths.E_BOOKS));
+        model.addAttribute("students_requirements", View.view.getBundleText(TextsPaths.STUDENTS_REQUIREMENTS));
+
+
         model.addAttribute("useful_links", View.view.getBundleText(TextsPaths.USEFUL_LINKS));
         model.addAttribute("useful_links_first_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FIRST_LINK));
         model.addAttribute("useful_links_first_link_address", View.view.getBundleText(TextsPaths.USEFUL_LINKS_FIRST_LINK_ADDRESS));

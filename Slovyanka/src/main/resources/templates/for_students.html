@@ -113,24 +113,25 @@
 
     <div class="rules-of-application-and-right-menu">
         <div class="rules-of-application">
-            <h2>РОЗКЛАД УРОКІВ</h2>
+            <h2 th:text="${timetable}">РОЗКЛАД УРОКІВ</h2>
             <div class="advertisement__inner">
-                <p>Освітній процес, у період карантинних обмежень, здійснюється у відповідності до розміщеного нижче розкладу занять.</p>
-                <h4>Локальна нормативна основа<img alt="sign_of_download" src="images/file_sign.png"></h4>
+                <p th:text="${study_process_during_quarantine}">Освітній процес, у період карантинних обмежень, здійснюється у відповідності до розміщеного нижче розкладу занять.</p>
+                <h4 th:text="${local_regulatory_basis}">Локальна нормативна основа<img alt="sign_of_download" src="images/file_sign.png"></h4>
                 <hr>
-                <h3>розклад на ІІ семестр 5–11 класи
-                    <img alt="sign_of_download" src="images/file_sign.png"></h3>
-                <h3>розклад на ІІ семестр &nbsp;1–4 &nbsp;класи
-                    <img alt="sign_of_download" src="images/file_sign.png"></h3>
+                <span th:text="${timetable_for_second_semester_5_11}">розклад на ІІ семестр 5–11 класи</span>
+                <img alt="sign_of_download" src="images/file_sign.png">
+                <br>
+                <span th:text="${timetable_for_second_semester_1_4}">розклад на ІІ семестр &nbsp;1–4 &nbsp;класи</span>
+                <img alt="sign_of_download" src="images/file_sign.png">
             </div>
             <div class="books_and_requirements">
                 <div class="e-books">
                     <img src="images/e-books.png" alt="E-Books">
-                    <h3>Електронні підручники</h3>
+                    <h3 th:text="${e_books}">Електронні підручники</h3>
                 </div>
                 <div class="requirements">
                     <img src="images/requirements_for_students.png" alt="Requirements for students">
-                    <h3>Єдині вимоги до учнів</h3>
+                    <h3 th:text="${students_requirements}">Єдині вимоги до учнів</h3>
                 </div>
 
             </div>
@@ -139,23 +140,23 @@
         <aside class="aside">
             <nav class="aside-menu">
                 <a th:text="${timetable}">РОЗКЛАД УРОКІВ</a>
-                <a>ЗНО</a>
-                <a>ДПА</a>
-                <a>гуртки та секції</a>
+                <a th:text="${zno}">ЗНО</a>
+                <a th:text="${dpa}">ДПА</a>
+                <a th:text="${after_school_clubs}">гуртки та секції</a>
             </nav>
 
             <fade>
             <div class="bells-timetable">
 
-                <h3>Розклад дзвінків</h3>
+                <h3 th:text="${bells_timetable}">Розклад дзвінків</h3>
                 <hr>
-                <p>1–3 класи<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <span th:text="${'1–3 ' + forms}">1–3 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
                 <hr>
-                <p>2–4 класи<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <span th:text="${'2–4 ' + forms}">2–4 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
                 <hr>
-                <p>5–7, 11 класи<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <span th:text="${'5–7, 11 ' + forms}">5–7, 11 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
                 <hr>
-                <p>8–10 класи (ІІ зміна)<img alt="blue_arrow" src="images/blue_arrow.png"></p>
+                <span th:text="${'8–10 ' + forms + ' (' + second_shift + ')'}">класи (ІІ зміна)</span><img alt="blue_arrow" src="images/blue_arrow.png">
                 <hr>
             </div>
             </fade>

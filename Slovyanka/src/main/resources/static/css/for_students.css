@@ -323,7 +323,7 @@ body {
     font-family: KyivType Titling, serif;
     font-size: 3.3em;
     text-transform: uppercase;
-    margin-left: 25%;
+    margin-left: 22%;
     padding-top: 100px;
     padding-bottom: 40px;
 }
@@ -346,14 +346,15 @@ body {
     font-weight: bold;
 }
 
-.rules-of-application h3 {
+.rules-of-application span {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 8px;
+    line-height: 40px;
 }
 
-.rules-of-application h3:hover {
+.rules-of-application span:hover {
     color: #224D7B;
 }
 
@@ -377,7 +378,7 @@ body {
 
 .advertisement__inner img {
     width: 27px;
-    padding-top: 5px;
+    padding-top: 12px;
     padding-left: 10px;
 }
 
@@ -441,7 +442,7 @@ fade {
     margin-bottom: 20px;
 }
 
-.bells-timetable p {
+.bells-timetable span {
     font-size: 1.1em;
     font-weight: bold;
     text-transform: uppercase;
@@ -452,6 +453,8 @@ fade {
 .bells-timetable hr {
     border-top: thin solid #000000;
     margin-right: 140px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .bells-timetable img {
@@ -569,7 +572,7 @@ fade {
 }
 
 .dpa__examples img {
-    width: 33%;
+    width: 33.1%;
     clear: right;
 }
 
