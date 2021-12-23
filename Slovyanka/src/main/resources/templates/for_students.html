@@ -113,7 +113,7 @@
 
     <div class="rules-of-application-and-right-menu">
         <div class="rules-of-application">
-            <h2 th:text="${timetable}">РОЗКЛАД УРОКІВ</h2>
+            <h2>РОЗКЛАД УРОКІВ</h2>
             <div class="advertisement__inner">
                 <p>Освітній процес, у період карантинних обмежень, здійснюється у відповідності до розміщеного нижче розкладу занять.</p>
                 <h4>Локальна нормативна основа<img alt="sign_of_download" src="images/file_sign.png"></h4>
@@ -162,17 +162,32 @@
         </aside>
     </div>
 
-<!--    <div class="books_and_requirements">-->
-<!--        <div class="e-books">-->
-<!--            <img src="images/e-books.png" alt="E-Books">-->
-<!--            <h2>Електронні підручники</h2>-->
-<!--        </div>-->
-<!--        <div class="requirements">-->
-<!--            <img src="images/requirements_for_students.png" alt="Requirements for students">-->
-<!--            <h2>Єдині вимоги до учнів</h2>-->
-<!--        </div>-->
+    <div class="zno">
+        <h2 class="title">Зовнішнє незалежне оцінювання (зно)</h2>
+        <div class="zno__inner">
 
-<!--    </div>-->
+        </div>
+    </div>
+
+    <div class="dpa">
+        <div class="dpa__img">
+            <img class="dpa__girl__img" src="images/dpa_girl.png" alt="Pass DPA">
+            <div class="dpa__img__right">
+                <p>Проведення ДПА регулюється відповідним нормативним документом: наказ МОН від 07.12.2018 №1369</p>
+                <a href="https://osvita.ua/legislation/Ser_osv/63274/">Про затвердження Порядку проведення державної підсумкової атестації<img class="dpa__sign" alt="sign_of_download" src="images/file_sign_black.png"></a>
+            </div>
+        </div>
+        <div class="dpa__right">
+            <h2 class="title">Державна підсумкова атестація (ДПА)</h2>
+        </div>
+        <h3>Приклади завдань ДПА</h3>
+    </div>
+
+    <div class="dpa__examples">
+        <img src="images/girl_one.png" alt="Girl with Books">
+        <img src="images/girl_two.png" alt="Girl with Books">
+        <img src="images/girl_two.png" alt="Girl with Books">
+    </div>
 
     <div class="useful-links">
         <h3 th:text="${useful_links}" class="title">Корисні посилання</h3>
@@ -205,6 +220,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 

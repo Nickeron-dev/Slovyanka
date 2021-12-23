@@ -323,7 +323,7 @@ body {
     font-family: KyivType Titling, serif;
     font-size: 3.3em;
     text-transform: uppercase;
-    margin-left: 20%;
+    margin-left: 25%;
     padding-top: 100px;
     padding-bottom: 40px;
 }
@@ -492,10 +492,90 @@ fade {
     width: 300px;
 }
 
+.zno {
+    margin-top: 100px;
+}
+
+.zno__inner {
+    width: 100%;
+    height: 650px;
+    background-color: #224D7B;
+    margin-top: 30px;
+}
+
+.dpa h3 {
+    position: absolute;
+    color: #224D7B;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-top: 630px;
+    margin-left: 500px;
+}
+
+.dpa__img {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.dpa__img__right {
+    float: right;
+    width: 430px;
+    font-size: 1.8em;
+    margin-left: 50px;
+    margin-top: 150px;
+}
+
+.dpa__img__right p {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #224D7B;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+.dpa__img__right a {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.dpa__girl__img {
+    width: 500px;
+}
+
+.dpa__sign {
+    width: 20px;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+
+.dpa__right {
+    padding-top: 70px;
+    float: right;
+    width: 1200px;
+    height: 700px;
+    background-color: #E5E5E5;
+}
+
+.dpa__examples {
+    background-color: #224D7B;
+    width: 100%;
+    height: 500px;
+    margin-top: 700px;
+}
+
+.dpa__examples img {
+    width: 33%;
+    clear: right;
+}
 
 .useful-links {
     width: 100%;
-    height: 876px;
+    height: 700px;
     margin-top: 70px;
 }
 
@@ -509,8 +589,7 @@ fade {
 .useful-links__links {
     width: 990px;
     height: 400px;
-    margin: 0 auto;
-    margin-left: 500px;
+    margin: 0 auto 0 500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
