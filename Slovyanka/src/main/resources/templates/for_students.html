@@ -166,7 +166,20 @@
     <div class="zno">
         <h2 class="title">Зовнішнє незалежне оцінювання (зно)</h2>
         <div class="zno__inner">
+            <div class="mySlides">
+                <img src="images/zno1.jpeg">
+            </div>
 
+            <div class="mySlides">
+                <img src="images/zno2.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno3.jpeg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </div>
 
@@ -263,5 +276,98 @@
         </span>
     </footer>
 </div>
+<script>
+    // var slideIndex = [1,1];
+    // var slideId = ["mySlides1", "mySlides2"]
+    // showSlides(1, 0);
+    // showSlides(1, 1);
+    //
+    // function plusSlides(n, no) {
+    //     showSlides(slideIndex[no] += n, no);
+    // }
+    //
+    // function showSlides(n, no) {
+    //     var i;
+    //     var x = document.getElementsByClassName(slideId[no]);
+    //     if (n > x.length) {slideIndex[no] = 1}
+    //     if (n < 1) {slideIndex[no] = x.length}
+    //     for (i = 0; i < x.length; i++) {
+    //         x[i].style.display = "none";
+    //     }
+    //     if (no === 1) {
+    //         x[slideIndex[no]].style.display = "block";
+    //         x[slideIndex[no]].style.float = "right";
+    //         // x[slideIndex[no]+1].style.position = "absolute";
+    //     }
+    //     else {
+    //         x[slideIndex[no]].style.display = "block";
+    //         x[slideIndex[no]].style.float = "right";
+    //     }
+    //     x[slideIndex[no]-1].style.display = "block";
+    //     x[slideIndex[no]-1].style.float = "left";
+    //     x[slideIndex[no]-1].style.position = "absolute";
+    //
+    // }
+
+    let slideIndex = 0;
+    let zero = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        slideIndex += n;
+        // var slides = document.getElementsByClassName("mySlides");
+        // if (slideIndex > slides.length - 1) {
+        //     slideIndex = 0;
+        //     showSlides(slideIndex);
+        // } else {
+        //     showSlides(slideIndex);
+        // }
+        showSlides(slideIndex);
+
+    }
+
+    function change() {
+        slideIndex = 0;
+    }
+
+    function showSlides(n) {
+        window.alert(n);
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length - 1) {
+            slideIndex = 0;
+            window.alert(slideIndex);
+        }
+        // if (n < 1) {slideIndex = slides.length - 1}
+        for (i = 0; i < slides.length; i++) {
+            if (i !== n && i !== n + 1){
+                slides[i].style.display = "none";
+            }
+
+        }
+        slides[slideIndex].style.display = "block";
+        slides[slideIndex].style.float = "left";
+        slides[slideIndex].style.position = "absolute";
+
+        // if (slideIndex >= slides.length - 1) {
+        //     slideIndex = 0;
+
+        // }
+
+        if (n < slides.length - 1) {
+            window.alert("here");
+            slides[slideIndex + 1].style.display = "block";
+            slides[slideIndex + 1].style.float = "right";
+        }
+        if (n >= slides.length - 1) {
+            window.alert("here111");
+            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex - 1].style.float = "right";
+            change();
+        }
+
+    }
+</script>
 </body>
 </html>
