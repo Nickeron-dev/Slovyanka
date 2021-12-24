@@ -495,7 +495,19 @@ fade {
     width: 300px;
 }
 
-.zno img {
+.zno {
+    margin-top: 70px;
+}
+
+.slider_arrow {
+    width: 30px;
+}
+
+.second_slider_arrow {
+    transform: rotateY(180deg);
+}
+
+.mySlides img {
     margin-right: 230px;
     margin-left: 14%;
     margin-top: 70px;
@@ -507,7 +519,7 @@ fade {
     width: 100%;
     height: 600px;
     background-color: #224D7B;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 /*.mySlides1, .mySlides2 {display: none}*/
@@ -515,7 +527,6 @@ fade {
 /* Slideshow container */
 .zno__inner {
     position: relative;
-    margin: auto;
 }
 
 /* Next & previous buttons */
