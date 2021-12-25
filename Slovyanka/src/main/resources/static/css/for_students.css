@@ -522,14 +522,10 @@ fade {
     margin-top: 40px;
 }
 
-/*.mySlides1, .mySlides2 {display: none}*/
-
-/* Slideshow container */
 .zno__inner {
     position: relative;
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -545,16 +541,24 @@ fade {
     user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a grey background color */
 .prev:hover, .next:hover {
     background-color: #f1f1f1;
     color: black;
+}
+
+#current_slide {
+    position: absolute;
+    top: 550px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    margin-left: 650px;
+    color: #fce90a;
+    font-size: 1.8em;
 }
 
 

@@ -167,19 +167,133 @@
         <h2 class="title">Зовнішнє незалежне оцінювання (зно)</h2>
         <div class="zno__inner">
             <div class="mySlides">
-                <img src="images/zno1.jpeg">
+                <img src="images/zno01.jpeg">
             </div>
 
             <div class="mySlides">
-                <img src="images/zno2.jpeg">
+                <img src="images/zno02.jpeg">
             </div>
 
             <div class="mySlides">
-                <img src="images/zno3.jpeg">
+                <img src="images/zno03.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno04.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno05.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno06.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno07.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno08.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno09.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno10.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno11.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno12.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno13.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno14.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno15.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno16.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno17.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno18.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno19.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno20.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno21.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno22.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno23.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno24.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno25.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno26.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno27.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno28.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno29.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno30.jpeg">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/zno31.jpeg">
             </div>
 
             <a class="prev" onclick="plusSlides(-1)"><img class="slider_arrow second_slider_arrow" src="images/yellow_arrow.png" alt="Yellow arrow"></a>
             <a class="next" onclick="plusSlides(1)"><img class="slider_arrow" src="images/yellow_arrow.png" alt="Yellow arrow"></a>
+
+            <div id="current_slide"></div>
         </div>
     </div>
 
@@ -284,7 +398,7 @@
         slideIndex += n;
         const slides = document.getElementsByClassName("mySlides");
         if (slideIndex === -1) {
-            slideIndex = Math.abs(slideIndex) + 1;
+            slideIndex = slides.length - 1;
         }
         if (slideIndex < -1) {
             slideIndex = slides.length + slideIndex;
@@ -293,8 +407,10 @@
     }
 
     function showSlides(n) {
-        let i;
+        let indexLeft;
+        let indexRight;
         const slides = document.getElementsByClassName("mySlides");
+        const currentSlideMessage = document.getElementById("current_slide");
 
         if (n > slides.length - 1) {
             slideIndex = 0;
@@ -302,7 +418,7 @@
         if (n < 0) {
             slideIndex = slides.length - 1;
         }
-        for (i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
             slides[i].style.position = "relative";
         }
@@ -310,11 +426,15 @@
         slides[Math.abs(slideIndex)].style.float = "left";
         slides[Math.abs(slideIndex)].style.position = "absolute";
 
+        indexLeft = Math.abs(slideIndex) + 1;
+
         if (n >= slides.length - 1) {
             slideIndex = -1;
         }
-        slides[slideIndex + 1].style.display = "block";
-        slides[slideIndex + 1].style.float = "right";
+        slides[(slideIndex + 1) === slides.length ? 0 : slideIndex + 1].style.display = "block";
+        slides[(slideIndex + 1) === slides.length ? 0 : slideIndex + 1].style.float = "right";
+        indexRight = (slideIndex + 2);
+        currentSlideMessage.innerHTML = "< " + indexLeft + "-" + indexRight + " >  з " + slides.length + " стор";
     }
 </script>
 </body>
