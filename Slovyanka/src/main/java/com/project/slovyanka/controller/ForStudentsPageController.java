@@ -44,6 +44,14 @@ public class ForStudentsPageController {
         model.addAttribute("slavonic_gymnasium", View.view.getBundleText(TextsPaths.SLAVONIC_GYMNASIUM));
         model.addAttribute("entry_campaign", View.view.getBundleText(TextsPaths.ENTRY_CAMPAIGN));
         model.addAttribute("timetable", View.view.getBundleText(TextsPaths.TIMETABLE));
+        model.addAttribute("first_lesson", View.view.getBundleText(TextsPaths.FIRST_LESSON));
+        model.addAttribute("second_lesson", View.view.getBundleText(TextsPaths.SECOND_LESSON));
+        model.addAttribute("third_lesson", View.view.getBundleText(TextsPaths.THIRD_LESSON));
+        model.addAttribute("fourth_lesson", View.view.getBundleText(TextsPaths.FOURTH_LESSON));
+        model.addAttribute("fifth_lesson", View.view.getBundleText(TextsPaths.FIFTH_LESSON));
+        model.addAttribute("sixth_lesson", View.view.getBundleText(TextsPaths.SIXTH_LESSON));
+        model.addAttribute("first_shift", View.view.getBundleText(TextsPaths.FIRST_SHIFT));
+        model.addAttribute("second_shift", View.view.getBundleText(TextsPaths.SECOND_SHIFT));
 
         model.addAttribute("study_process_during_quarantine", View.view.getBundleText(TextsPaths.STUDYING_PROCESS_DURING_QUARANTINE));
         model.addAttribute("local_regulatory_basis", View.view.getBundleText(TextsPaths.LOCAL_REGULATORY_BASIS));
@@ -60,6 +68,9 @@ public class ForStudentsPageController {
         model.addAttribute("external_evaluation", View.view.getBundleText(TextsPaths.EXTERNAL_EVALUATION));
         model.addAttribute("state_examination", View.view.getBundleText(TextsPaths.STATE_EXAMINATION));
         model.addAttribute("dpa_tasks_examples", View.view.getBundleText(TextsPaths.DPA_TASKS_EXAMPLES));
+        model.addAttribute("dpa_tasks_examples_fourth_form", View.view.getBundleText(TextsPaths.DPA_TASKS_EXAMPLES_FOURTH_FORM));
+        model.addAttribute("dpa_tasks_examples_ninth_form", View.view.getBundleText(TextsPaths.DPA_TASKS_EXAMPLES_NINTH_FORM));
+        model.addAttribute("dpa_tasks_examples_eleventh_form", View.view.getBundleText(TextsPaths.DPA_TASKS_EXAMPLES_ELEVENTH_FORM));
         model.addAttribute("state_final_examination", View.view.getBundleText(TextsPaths.STATE_FINAL_EXAMINATION));
         model.addAttribute("dpa_basis_document", View.view.getBundleText(TextsPaths.DPA_BASIS_DOCUMENT));
         model.addAttribute("about_order_statement", View.view.getBundleText(TextsPaths.ABOUT_ORDER_STATEMENT));

@@ -139,6 +139,9 @@ public abstract class TextsPaths {
     public static final String EXTERNAL_EVALUATION = "for.students.external.evaluation";
     public static final String STATE_EXAMINATION = "for.students.state.examination";
     public static final String DPA_TASKS_EXAMPLES = "for.students.dpa.tasks.examples";
+    public static final String DPA_TASKS_EXAMPLES_FOURTH_FORM = "for.students.dpa.tasks.examples.4.form";
+    public static final String DPA_TASKS_EXAMPLES_NINTH_FORM = "for.students.dpa.tasks.examples.9.form";
+    public static final String DPA_TASKS_EXAMPLES_ELEVENTH_FORM = "for.students.dpa.tasks.examples.11.form";
     public static final String STATE_FINAL_EXAMINATION = "for.students.state.final.examination";
     public static final String DPA_BASIS_DOCUMENT = "for.students.dpa.basis.document";
     public static final String ABOUT_ORDER_STATEMENT = "for.students.about.order.statement";

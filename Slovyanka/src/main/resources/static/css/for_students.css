@@ -464,6 +464,22 @@ fade {
     width: 10px;
 }
 
+.dropbtn {
+    color: black;
+    cursor: pointer;
+}
+
+#timetable_1 {
+    display: none;
+    position: absolute;
+    font-size: 1.1em;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
 .books_and_requirements {
     margin-top: 70px;
     width: 800px;

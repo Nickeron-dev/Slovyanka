@@ -7,24 +7,20 @@
     <link rel="icon" href="/images/logo.png" type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <script>
-        function ScrollToRules(){
+        function ScrollToLessonsTimetable(){
             window.scrollTo(0, 800);
         }
 
-        function ScrollToPsychologicalService(){
-            window.scrollTo(0, 1200);
+        function ScrollToZNO(){
+            window.scrollTo(0, 1550);
         }
 
-        function ScrollToUsefulPosts(){
-            window.scrollTo(0, 3400);
+        function ScrollToDPA(){
+            window.scrollTo(0, 2300);
         }
 
-        function ScrollToMonitoring(){
-            window.scrollTo(0, 4200);
-        }
-
-        function ScrollToParentsAnnouncer(){
-            window.scrollTo(0, 4600);
+        function ScrollToUsefulLinks(){
+            window.scrollTo(0, 3500);
         }
     </script>
 </head>
@@ -139,10 +135,10 @@
 
         <aside class="aside">
             <nav class="aside-menu">
-                <a th:text="${timetable}">РОЗКЛАД УРОКІВ</a>
-                <a th:text="${zno}">ЗНО</a>
-                <a th:text="${dpa}">ДПА</a>
-                <a th:text="${after_school_clubs}">гуртки та секції</a>
+                <a th:text="${timetable}" href="javascript:ScrollToLessonsTimetable();">РОЗКЛАД УРОКІВ</a>
+                <a th:text="${zno}" href="javascript:ScrollToZNO();">ЗНО</a>
+                <a th:text="${dpa}" href="javascript:ScrollToDPA();">ДПА</a>
+                <a th:text="${useful_links}" href="javascript:ScrollToUsefulLinks();">КОРИСНІ ПОСИЛАННЯ</a>
             </nav>
 
             <fade>
@@ -150,8 +146,15 @@
 
                 <h3 th:text="${bells_timetable}">Розклад дзвінків</h3>
                 <hr>
-                <span th:text="${'1–3 ' + forms}">1–3 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
-                <hr>
+                <span onclick="show_remove_1()" class="dropbtn" th:text="${'1 ' + forms}">1 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
+                <div id="timetable_1" class="dropdown-content" style="display: none;">
+                    <p th:text="${first_lesson + ' 8:30 - 9:05'}">1-й 8:30 - 9:05</p>
+                    <p th:text="${second_lesson + ' 9:25 - 10:00'}">2-й 9:25 - 10:00</p>
+                    <p th:text="${third_lesson + ' 10:15 - 10:50'}">3-й 10:15 - 10:50</p>
+                    <p th:text="${fourth_lesson + ' 11:05 - 11:40'}">4-й 11:05 - 11:40</p>
+                    <p th:text="${fifth_lesson + ' 12:00 - 12:35'}">5-й 12:00 - 12:35</p>
+                </div>
+                <hr id="move">
                 <span th:text="${'2–4 ' + forms}">2–4 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
                 <hr>
                 <span th:text="${'5–7, 11 ' + forms}">5–7, 11 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
@@ -321,17 +324,17 @@
 
         <a class="dpa__image_gradient__first" href="https://osvita.ua/school/certification/textbook/39949/">
             <img class="dpa__image_gradient__first" src="images/girl_one.png" alt="Girl with Books">
-            <span class="dpa__examples__text">Збірники завдань ДПА-2014 у початковій школі (4 клас)</span>
+            <span th:text="${dpa_tasks_examples_fourth_form}" class="dpa__examples__text">Збірники завдань ДПА-2014 у початковій школі (4 клас)</span>
         </a>
 
         <a class="dpa__image_gradient__first" href="https://osvita.ua/school/certification/textbook/39950/">
             <img class="dpa__image_gradient" src="images/girl_two.png" alt="Girl with Books">
-            <span class="dpa__examples__text">Збірники завдань ДПА-2014 у основній школі (9 клас)</span>
+            <span th:text="${dpa_tasks_examples_ninth_form}" class="dpa__examples__text">Збірники завдань ДПА-2014 у основній школі (9 клас)</span>
         </a>
 
         <a class="dpa__image_gradient__first" href="https://osvita.ua/school/certification/textbook/39952/">
             <img class="dpa__image_gradient" src="images/girl_two.png" alt="Girl with Books">
-            <span class="dpa__examples__text">Збірники завдань ДПА-2014 у старшій школі (11 клас)</span>
+            <span th:text="${dpa_tasks_examples_eleventh_form}" class="dpa__examples__text">Збірники завдань ДПА-2014 у старшій школі (11 клас)</span>
         </a>
     </div>
 
@@ -453,6 +456,18 @@
         indexRight = (slideIndex + 2);
         document.getElementById("current_slide").innerHTML = "< " + indexLeft + "-" + indexRight + " >  ";
         document.getElementById("total_pages").innerHTML = slides.length.toString();
+    }
+
+    function show_remove_1() {
+        let element = document.getElementById("timetable_1");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+            document.getElementById("move").style.marginTop = "80px";
+        } else {
+            element.style.display = "none";
+            document.getElementById("move").style.marginTop = "10px";
+        }
+
     }
 </script>
 </body>
