@@ -1,6 +1,7 @@
 package com.project.slovyanka.controller;
 
 import com.project.slovyanka.entity.Role;
+import com.project.slovyanka.view.LocaleNames;
 import com.project.slovyanka.view.TextsPaths;
 import com.project.slovyanka.view.View;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
+
+import java.util.Locale;
+import java.util.Optional;
 
 @AllArgsConstructor
 
@@ -116,24 +121,24 @@ public class ForParentsPageController {
         return new ModelAndView("for_parents");
     }
 
-//    /**
-//     * Цей метод змінює мову сайту на українську
-//     * @return переадресовує на головну сторінку
-//     */
-//    @GetMapping(value = "/change-language", params = "ukr")
-//    public RedirectView changeLanguageToUkr() {
-//        View.view.changeLocale(Optional.of(new Locale(LocaleNames.UKR_LANGUAGE)));
-//        return new RedirectView("/");
-//    }
-//
-//    /**
-//     * Цей метод змінює мову сайту на англійську
-//     * @return переадресовує на головну сторінку
-//     */
-//    @GetMapping(value = "/change-language", params = "eng")
-//    public RedirectView changeLanguageToEng() {
-//        View.view.changeLocale(Optional.of(new Locale(LocaleNames.ENG_LANGUAGE)));
-//        return new RedirectView("/");
-//    }
+    /**
+     * Цей метод змінює мову сайту на українську
+     * @return переадресовує на головну сторінку
+     */
+    @GetMapping(value = "/for-parents/change-language", params = "ukr")
+    public RedirectView changeLanguageToUkrForParents() {
+        View.view.changeLocale(Optional.of(new Locale(LocaleNames.UKR_LANGUAGE)));
+        return new RedirectView("/for-parents");
+    }
+
+    /**
+     * Цей метод змінює мову сайту на англійську
+     * @return переадресовує на головну сторінку
+     */
+    @GetMapping(value = "/for-parents/change-language", params = "eng")
+    public RedirectView changeLanguageToEngForParents() {
+        View.view.changeLocale(Optional.of(new Locale(LocaleNames.ENG_LANGUAGE)));
+        return new RedirectView("/for-parents");
+    }
 
 }

@@ -63,7 +63,7 @@
                         <img class="arrow" src="images/arrow.svg">
                         <div class="content__switcher">
 
-                            <form class="change-lang__form" action="/change-language" method="get">
+                            <form class="change-lang__form" action="/for-students/change-language" method="get">
 
                                 <label>
                                     <img class="flag__switcher" src="images/UA-Ukraine-Flag.png">
@@ -164,7 +164,7 @@
     </div>
 
     <div class="zno">
-        <h2 class="title">Зовнішнє незалежне оцінювання (зно)</h2>
+        <h2 th:text="${external_evaluation + ' (' + zno + ')'}" class="title">Зовнішнє незалежне оцінювання (зно)</h2>
         <div class="zno__inner">
             <div class="mySlides">
                 <img src="images/zno01.jpeg">
@@ -293,7 +293,13 @@
             <a class="prev" onclick="plusSlides(-1)"><img class="slider_arrow second_slider_arrow" src="images/yellow_arrow.png" alt="Yellow arrow"></a>
             <a class="next" onclick="plusSlides(1)"><img class="slider_arrow" src="images/yellow_arrow.png" alt="Yellow arrow"></a>
 
-            <div id="current_slide"></div>
+            <div class="current_slide">
+                <span id="current_slide"></span>
+                <span th:text="${from}"></span>
+                <span id="total_pages"></span>
+                <span th:text="${pages}"></span>
+            </div>
+
         </div>
     </div>
 
@@ -301,20 +307,32 @@
         <div class="dpa__img">
             <img class="dpa__girl__img" src="images/dpa_girl.png" alt="Pass DPA">
             <div class="dpa__img__right">
-                <p>Проведення ДПА регулюється відповідним нормативним документом: наказ МОН від 07.12.2018 №1369</p>
-                <a href="https://osvita.ua/legislation/Ser_osv/63274/">Про затвердження Порядку проведення державної підсумкової атестації<img class="dpa__sign" alt="sign_of_download" src="images/file_sign_black.png"></a>
+                <p th:text="${dpa_basis_document}">Проведення ДПА регулюється відповідним нормативним документом: наказ МОН від 07.12.2018 №1369</p>
+                <a th:text="${about_order_statement}" href="https://osvita.ua/legislation/Ser_osv/63274/">Про затвердження порядку проведення державної підсумкової атестації</a><img class="dpa__sign" alt="sign_of_download" src="images/file_sign_black.png">
             </div>
         </div>
         <div class="dpa__right">
-            <h2 class="title">Державна підсумкова атестація (ДПА)</h2>
+            <h2 th:text="${state_final_examination + ' (' + dpa + ')'}" class="title">Державна підсумкова атестація (ДПА)</h2>
         </div>
-        <h3>Приклади завдань ДПА</h3>
+        <h3 th:text="${dpa_tasks_examples}">Приклади завдань ДПА</h3>
     </div>
 
     <div class="dpa__examples">
-        <img src="images/girl_one.png" alt="Girl with Books">
-        <img src="images/girl_two.png" alt="Girl with Books">
-        <img src="images/girl_two.png" alt="Girl with Books">
+
+        <a class="dpa__image_gradient__first" href="https://osvita.ua/school/certification/textbook/39949/">
+            <img class="dpa__image_gradient__first" src="images/girl_one.png" alt="Girl with Books">
+            <span class="dpa__examples__text">Збірники завдань ДПА-2014 у початковій школі (4 клас)</span>
+        </a>
+
+        <a class="dpa__image_gradient__first" href="https://osvita.ua/school/certification/textbook/39950/">
+            <img class="dpa__image_gradient" src="images/girl_two.png" alt="Girl with Books">
+            <span class="dpa__examples__text">Збірники завдань ДПА-2014 у основній школі (9 клас)</span>
+        </a>
+
+        <a class="dpa__image_gradient__first" href="https://osvita.ua/school/certification/textbook/39952/">
+            <img class="dpa__image_gradient" src="images/girl_two.png" alt="Girl with Books">
+            <span class="dpa__examples__text">Збірники завдань ДПА-2014 у старшій школі (11 клас)</span>
+        </a>
     </div>
 
     <div class="useful-links">
@@ -410,7 +428,6 @@
         let indexLeft;
         let indexRight;
         const slides = document.getElementsByClassName("mySlides");
-        const currentSlideMessage = document.getElementById("current_slide");
 
         if (n > slides.length - 1) {
             slideIndex = 0;
@@ -434,7 +451,8 @@
         slides[(slideIndex + 1) === slides.length ? 0 : slideIndex + 1].style.display = "block";
         slides[(slideIndex + 1) === slides.length ? 0 : slideIndex + 1].style.float = "right";
         indexRight = (slideIndex + 2);
-        currentSlideMessage.innerHTML = "< " + indexLeft + "-" + indexRight + " >  з " + slides.length + " стор";
+        document.getElementById("current_slide").innerHTML = "< " + indexLeft + "-" + indexRight + " >  ";
+        document.getElementById("total_pages").innerHTML = slides.length.toString();
     }
 </script>
 </body>

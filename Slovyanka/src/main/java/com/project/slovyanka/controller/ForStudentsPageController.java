@@ -1,6 +1,7 @@
 package com.project.slovyanka.controller;
 
 import com.project.slovyanka.entity.Role;
+import com.project.slovyanka.view.LocaleNames;
 import com.project.slovyanka.view.TextsPaths;
 import com.project.slovyanka.view.View;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
+
+import java.util.Locale;
+import java.util.Optional;
 
 @AllArgsConstructor
 
@@ -52,6 +57,15 @@ public class ForStudentsPageController {
         model.addAttribute("second_shift", View.view.getBundleText(TextsPaths.SECOND_SHIFT));
         model.addAttribute("e_books", View.view.getBundleText(TextsPaths.E_BOOKS));
         model.addAttribute("students_requirements", View.view.getBundleText(TextsPaths.STUDENTS_REQUIREMENTS));
+        model.addAttribute("external_evaluation", View.view.getBundleText(TextsPaths.EXTERNAL_EVALUATION));
+        model.addAttribute("state_examination", View.view.getBundleText(TextsPaths.STATE_EXAMINATION));
+        model.addAttribute("dpa_tasks_examples", View.view.getBundleText(TextsPaths.DPA_TASKS_EXAMPLES));
+        model.addAttribute("state_final_examination", View.view.getBundleText(TextsPaths.STATE_FINAL_EXAMINATION));
+        model.addAttribute("dpa_basis_document", View.view.getBundleText(TextsPaths.DPA_BASIS_DOCUMENT));
+        model.addAttribute("about_order_statement", View.view.getBundleText(TextsPaths.ABOUT_ORDER_STATEMENT));
+        model.addAttribute("from", View.view.getBundleText(TextsPaths.FROM));
+        model.addAttribute("pages", View.view.getBundleText(TextsPaths.PAGES));
+
 
 
         model.addAttribute("useful_links", View.view.getBundleText(TextsPaths.USEFUL_LINKS));
@@ -89,24 +103,24 @@ public class ForStudentsPageController {
         return new ModelAndView("for_students");
     }
 
-//    /**
-//     * Цей метод змінює мову сайту на українську
-//     * @return переадресовує на головну сторінку
-//     */
-//    @GetMapping(value = "/change-language", params = "ukr")
-//    public RedirectView changeLanguageToUkr() {
-//        View.view.changeLocale(Optional.of(new Locale(LocaleNames.UKR_LANGUAGE)));
-//        return new RedirectView("/");
-//    }
-//
-//    /**
-//     * Цей метод змінює мову сайту на англійську
-//     * @return переадресовує на головну сторінку
-//     */
-//    @GetMapping(value = "/change-language", params = "eng")
-//    public RedirectView changeLanguageToEng() {
-//        View.view.changeLocale(Optional.of(new Locale(LocaleNames.ENG_LANGUAGE)));
-//        return new RedirectView("/");
-//    }
+    /**
+     * Цей метод змінює мову сайту на українську
+     * @return переадресовує на головну сторінку
+     */
+    @GetMapping(value = "/for-students/change-language", params = "ukr")
+    public RedirectView changeLanguageToUkr() {
+        View.view.changeLocale(Optional.of(new Locale(LocaleNames.UKR_LANGUAGE)));
+        return new RedirectView("/for-students");
+    }
+
+    /**
+     * Цей метод змінює мову сайту на англійську
+     * @return переадресовує на головну сторінку
+     */
+    @GetMapping(value = "/for-students/change-language", params = "eng")
+    public RedirectView changeLanguageToEng() {
+        View.view.changeLocale(Optional.of(new Locale(LocaleNames.ENG_LANGUAGE)));
+        return new RedirectView("/for-students");
+    }
 
 }

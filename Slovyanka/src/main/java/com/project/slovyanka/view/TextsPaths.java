@@ -136,6 +136,14 @@ public abstract class TextsPaths {
     public static final String FORMS = "for.students.forms";
     public static final String E_BOOKS = "for.students.ebooks";
     public static final String STUDENTS_REQUIREMENTS = "for.students.students.requirements";
+    public static final String EXTERNAL_EVALUATION = "for.students.external.evaluation";
+    public static final String STATE_EXAMINATION = "for.students.state.examination";
+    public static final String DPA_TASKS_EXAMPLES = "for.students.dpa.tasks.examples";
+    public static final String STATE_FINAL_EXAMINATION = "for.students.state.final.examination";
+    public static final String DPA_BASIS_DOCUMENT = "for.students.dpa.basis.document";
+    public static final String ABOUT_ORDER_STATEMENT = "for.students.about.order.statement";
+    public static final String FROM = "for.students.from";
+    public static final String PAGES = "for.students.pages";
 
     public static final String ADDRESS_FIRST_TEXT = "footer.address.first.message";
     public static final String ADDRESS_SECOND_TEXT = "footer.address.second.message";

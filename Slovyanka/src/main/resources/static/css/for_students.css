@@ -551,7 +551,7 @@ fade {
     color: black;
 }
 
-#current_slide {
+.current_slide {
     position: absolute;
     top: 550px;
     font-family: "Roboto Condensed", sans-serif;
@@ -628,9 +628,56 @@ fade {
     margin-top: 700px;
 }
 
+.dpa__image_gradient__first {
+    float: left;
+    width: 33.3%;
+    height: 450px;
+}
+
+.dpa__image_gradient__second {
+    float: left;
+    width: 33.4%;
+    height: 450px;
+}
+
+.dpa__image_gradient__third {
+    float: right;
+    width: 33.3%;
+    height: 450px;
+}
+
+.dpa__image_gradient__first:hover:after, .dpa__image_gradient__second:hover:after, .dpa__image_gradient__third:hover:after {
+    content:'';
+    position: absolute;
+    width: 478px; height: 450px;
+    margin-left: -478px;
+    opacity: 55%;
+    background: -moz-linear-gradient(to bottom, #224D7B 70%, #FFFFFF 0%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#224D7B), color-stop(70%,#DCDCDC)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(to bottom, #224D7B 0%,#FFFFFF 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(to bottom, #224D7B 0%, #FFFFFF 70%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(to bottom, #224D7B 0%, #FFFFFF 70%); /* IE10+ */
+    background: linear-gradient(top, #224D7B 70%, #ffffff 0%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#224D7B', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
 .dpa__examples img {
-    width: 33.1%;
+    width: 100%;
+    height: 450px;
     clear: right;
+}
+
+.dpa__examples__text {
+    position: absolute;
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 380px;
+    line-height: 1.3em;
+    font-size: 2.5em;
+    margin-top: 280px;
+    margin-left: -440px;
 }
 
 .useful-links {
