@@ -148,8 +148,8 @@
                 <hr>
                 <span onclick="show_remove_1()" class="dropbtn" th:text="${'1 ' + forms}">1 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
                 <div id="timetable_1" class="dropdown-content" style="display: none;">
-                    <p th:text="${first_lesson + ' 8:30 - 9:05'}">1-й 8:30 - 9:05</p>
-                    <p th:text="${second_lesson + ' 9:25 - 10:00'}">2-й 9:25 - 10:00</p>
+                    <p th:text="${first_lesson + ' 08:30 - 09:05'}">1-й 08:30 - 09:05</p>
+                    <p th:text="${second_lesson + ' 09:25 - 10:00'}">2-й 09:25 - 10:00</p>
                     <p th:text="${third_lesson + ' 10:15 - 10:50'}">3-й 10:15 - 10:50</p>
                     <p th:text="${fourth_lesson + ' 11:05 - 11:40'}">4-й 11:05 - 11:40</p>
                     <p th:text="${fifth_lesson + ' 12:00 - 12:35'}">5-й 12:00 - 12:35</p>
@@ -462,7 +462,7 @@
         let element = document.getElementById("timetable_1");
         if (element.style.display === "none") {
             element.style.display = "block";
-            document.getElementById("move").style.marginTop = "80px";
+            document.getElementById("move").style.marginTop = "120px";
         } else {
             element.style.display = "none";
             document.getElementById("move").style.marginTop = "10px";
