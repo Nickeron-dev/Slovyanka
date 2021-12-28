@@ -65,6 +65,7 @@ public abstract class TextsPaths {
     public static final String FOURTH_LESSON = "main.page.fourth.lesson";
     public static final String FIFTH_LESSON = "main.page.fifth.lesson";
     public static final String SIXTH_LESSON = "main.page.sixth.lesson";
+    public static final String SEVENTH_LESSON = "main.page.seventh.lesson";
     public static final String FIRST_SHIFT = "main.page.first.shift";
     public static final String SECOND_SHIFT = "main.page.second.shift";
 

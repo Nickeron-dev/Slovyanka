@@ -89,7 +89,7 @@ b {
     font-family: KyivType Titling, serif;
 }
 
-.rules-of-application-and-right-menu, .useful-posts__and__image, .second-header-menu, .first-header-menu__first-row, .first-header-menu {
+.lessons-timetable-and-right-menu, .useful-posts__and__image, .second-header-menu, .first-header-menu__first-row, .first-header-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -271,7 +271,7 @@ body {
 
 .logo__image {
     position: absolute;
-    margin-top: -215px;
+    margin-top: -200px;
     margin-left: 40px;
 }
 
@@ -283,6 +283,7 @@ body {
     text-transform: uppercase;
     font-family: "Roboto Condensed", sans-serif;
     border-radius: 3px;
+    padding: 12px;
 }
 
 .header-main__button {
@@ -313,12 +314,11 @@ body {
 
 
 
-.rules-of-application-and-right-menu {
+.lessons-timetable-and-right-menu {
     width: 100%;
-    /*margin-top: 380px;*/
 }
 
-.rules-of-application-and-right-menu h2 {
+.lessons-timetable-and-right-menu h2 {
     color: #224D7B;
     font-family: KyivType Titling, serif;
     font-size: 3.3em;
@@ -328,25 +328,26 @@ body {
     padding-bottom: 40px;
 }
 
-.rules-of-application {
+.lessons-timetable {
     width: 748px;
     margin-left: 60px;
 }
 
-.rules-of-application p {
+.lessons-timetable p {
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 10px;
     font-family: "Roboto Condensed", sans-serif;
 }
 
-.rules-of-application h4 {
+.lessons-timetable h4 {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.2em;
     font-weight: bold;
 }
 
-.rules-of-application span {
+.lessons-timetable a {
+    color: #292F3D;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.5em;
     font-weight: bold;
@@ -354,17 +355,18 @@ body {
     line-height: 40px;
 }
 
-.rules-of-application span:hover {
+.lessons-timetable a:hover {
     color: #224D7B;
+    cursor: pointer;
 }
 
-.rules-of-application hr {
+.lessons-timetable hr {
     height: 0.1em;
     background-color: black;
     margin: 33px 220px;
 }
 
-.advertisement__inner {
+.lessons-timetable__inner {
     width: 100%;
     height: 300px;
     border: 1px #00366c solid;
@@ -376,7 +378,7 @@ body {
     line-height: 30px;
 }
 
-.advertisement__inner img {
+.lessons-timetable__inner img {
     width: 27px;
     padding-top: 12px;
     padding-left: 10px;
@@ -387,7 +389,7 @@ fade {
     margin-top: 200px;
     display: block;
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-image: linear-gradient(to bottom,
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 1)
@@ -442,7 +444,7 @@ fade {
     margin-bottom: 20px;
 }
 
-.bells-timetable span {
+.form__timetable {
     font-size: 1.1em;
     font-weight: bold;
     text-transform: uppercase;
@@ -465,11 +467,10 @@ fade {
 }
 
 .dropbtn {
-    color: black;
     cursor: pointer;
 }
 
-#timetable_1 {
+#timetable_1, #timetable_2_4, #timetable_5_7_11, #timetable_8_10 {
     display: none;
     position: absolute;
     margin-top: 3px;
@@ -480,6 +481,10 @@ fade {
     overflow: auto;
     line-height: 1.5em;
     z-index: 1;
+}
+
+.colored__number {
+    color: #966054;
 }
 
 
@@ -515,7 +520,7 @@ fade {
 }
 
 .zno {
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .slider_arrow {

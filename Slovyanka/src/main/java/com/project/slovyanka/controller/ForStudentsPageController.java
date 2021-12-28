@@ -50,6 +50,7 @@ public class ForStudentsPageController {
         model.addAttribute("fourth_lesson", View.view.getBundleText(TextsPaths.FOURTH_LESSON));
         model.addAttribute("fifth_lesson", View.view.getBundleText(TextsPaths.FIFTH_LESSON));
         model.addAttribute("sixth_lesson", View.view.getBundleText(TextsPaths.SIXTH_LESSON));
+        model.addAttribute("seventh_lesson", View.view.getBundleText(TextsPaths.SEVENTH_LESSON));
         model.addAttribute("first_shift", View.view.getBundleText(TextsPaths.FIRST_SHIFT));
         model.addAttribute("second_shift", View.view.getBundleText(TextsPaths.SECOND_SHIFT));
 

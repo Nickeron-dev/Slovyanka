@@ -100,24 +100,24 @@
                 </nav>
             </div>
             <img class="header-main__background-image" src="/images/for_students_main.png">-->
-            <button th:text="${timetable}" class="button header-main__button">Розклад уроків</button>
+            <a download="rozklad_5-11.pdf" href="/files_to_download/rozklad_5-11.pdf" th:text="${timetable}" class="button header-main__button">Розклад уроків</a>
             <h2 class="header-main__title" th:text="${for_students}"><b>ДЛЯ УЧНІВ</b></h2>
         </div>
         <a class="logo__image" href="/"><img  src="/images/logo.png" alt="logo"></a>
     </header>
     <div class="header__blue-line-down"></div>
 
-    <div class="rules-of-application-and-right-menu">
-        <div class="rules-of-application">
+    <div class="lessons-timetable-and-right-menu">
+        <div class="lessons-timetable">
             <h2 th:text="${timetable}">РОЗКЛАД УРОКІВ</h2>
-            <div class="advertisement__inner">
+            <div class="lessons-timetable__inner">
                 <p th:text="${study_process_during_quarantine}">Освітній процес, у період карантинних обмежень, здійснюється у відповідності до розміщеного нижче розкладу занять.</p>
                 <h4 th:text="${local_regulatory_basis}">Локальна нормативна основа<img alt="sign_of_download" src="images/file_sign.png"></h4>
                 <hr>
-                <span th:text="${timetable_for_second_semester_5_11}">розклад на ІІ семестр 5–11 класи</span>
+                <a download="rozklad_5-11.pdf" href="/files_to_download/rozklad_5-11.pdf" th:text="${timetable_for_second_semester_5_11}">розклад на ІІ семестр 5–11 класи</a>
                 <img alt="sign_of_download" src="images/file_sign.png">
                 <br>
-                <span th:text="${timetable_for_second_semester_1_4}">розклад на ІІ семестр &nbsp;1–4 &nbsp;класи</span>
+                <a download="1-4.pdf" href="/files_to_download/1-4.pdf" th:text="${timetable_for_second_semester_1_4}">розклад на ІІ семестр &nbsp;1–4 &nbsp;класи</a>
                 <img alt="sign_of_download" src="images/file_sign.png">
             </div>
             <div class="books_and_requirements">
@@ -146,21 +146,68 @@
 
                 <h3 th:text="${bells_timetable}">Розклад дзвінків</h3>
                 <hr>
-                <span onclick="show_remove_1()" class="dropbtn" th:text="${'1 ' + forms}">1 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
+                <span class="form__timetable dropbtn" onclick="show_remove_1()" th:text="${'1 ' + forms}">1 класи</span><img onclick="show_remove_1()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
                 <div id="timetable_1" class="dropdown-content" style="display: none;">
-                    <p th:text="${first_lesson + ' 08:30 - 09:05'}">1-й 08:30 - 09:05</p>
-                    <p th:text="${second_lesson + ' 09:25 - 10:00'}">2-й 09:25 - 10:00</p>
-                    <p th:text="${third_lesson + ' 10:15 - 10:50'}">3-й 10:15 - 10:50</p>
-                    <p th:text="${fourth_lesson + ' 11:05 - 11:40'}">4-й 11:05 - 11:40</p>
-                    <p th:text="${fifth_lesson + ' 12:00 - 12:35'}">5-й 12:00 - 12:35</p>
+                    <span class="colored__number" th:text="${first_lesson}">1-й</span><span> 08:30 - 09:05</span>
+                    <br>
+                    <span class="colored__number" th:text="${second_lesson}">2-й</span><span> 09:25 - 10:00</span>
+                    <br>
+                    <span class="colored__number" th:text="${third_lesson}">3-й</span><span> 10:15 - 10:50</span>
+                    <br>
+                    <span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 11:05 - 11:40</span>
+                    <br>
+                    <span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 12:00 - 12:35</span>
                 </div>
-                <hr id="move">
-                <span th:text="${'2–4 ' + forms}">2–4 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
-                <hr>
-                <span th:text="${'5–7, 11 ' + forms}">5–7, 11 класи</span><img alt="blue_arrow" src="images/blue_arrow.png">
-                <hr>
-                <span th:text="${'8–10 ' + forms + ' (' + second_shift + ')'}">класи (ІІ зміна)</span><img alt="blue_arrow" src="images/blue_arrow.png">
-                <hr>
+                <hr id="move_1">
+                <span onclick="show_remove_2_4()" class="form__timetable dropbtn" th:text="${'2–4 ' + forms}">2–4 класи</span><img onclick="show_remove_2_4()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
+                <div id="timetable_2_4" class="dropdown-content" style="display: none;">
+                    <span class="colored__number" th:text="${first_lesson}">1-й</span><span> 08:30 - 09:10</span>
+                    <br>
+                    <span class="colored__number" th:text="${second_lesson}">2-й</span><span> 09:25 - 10:05</span>
+                    <br>
+                    <span class="colored__number" th:text="${third_lesson}">3-й</span><span> 10:15 - 10:55</span>
+                    <br>
+                    <span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 11:05 - 11:45</span>
+                    <br>
+                    <span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 12:00 - 12:40</span>
+                    <br>
+                    <span class="colored__number" th:text="${sixth_lesson}">6-й</span><span> 12:55 - 13:35</span>
+                </div>
+                <hr id="move_2_4">
+                <span onclick="show_remove_5_7_11()" class="form__timetable dropbtn" th:text="${'5–7, 11 ' + forms}">5–7, 11 класи</span><img onclick="show_remove_5_7_11()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
+                <div id="timetable_5_7_11" class="dropdown-content" style="display: none;">
+                    <span class="colored__number" th:text="${first_lesson}">1-й</span><span> 08:00 - 08:45</span>
+                    <br>
+                    <span class="colored__number" th:text="${second_lesson}">2-й</span><span> 08:55 - 09:40</span>
+                    <br>
+                    <span class="colored__number" th:text="${third_lesson}">3-й</span><span> 09:50 - 10:35</span>
+                    <br>
+                    <span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 10:50 - 11:35</span>
+                    <br>
+                    <span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 11:45 - 12:30</span>
+                    <br>
+                    <span class="colored__number" th:text="${sixth_lesson}">6-й</span><span> 12:45 - 13:30</span>
+                    <br>
+                    <span class="colored__number" th:text="${seventh_lesson}">7-й</span><span> 13:40 - 14:25</span>
+                </div>
+                <hr id="move_5_7_11">
+                <span onclick="show_remove_8_10()" class="form__timetable dropbtn" th:text="${'8–10 ' + forms + ' (' + second_shift + ')'}">класи (ІІ зміна)</span><img onclick="show_remove_8_10()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
+                <div id="timetable_8_10" class="dropdown-content" style="display: none;">
+                    <span class="colored__number" th:text="${first_lesson}">1-й</span><span> 12:45 - 13:30</span>
+                    <br>
+                    <span class="colored__number" th:text="${second_lesson}">2-й</span><span> 13:40 - 14:25</span>
+                    <br>
+                    <span class="colored__number" th:text="${third_lesson}">3-й</span><span> 14:35 - 15:20</span>
+                    <br>
+                    <span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 15:30 - 16:15</span>
+                    <br>
+                    <span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 16:25 - 17:10</span>
+                    <br>
+                    <span class="colored__number" th:text="${seventh_lesson}">6-й</span><span> 17:20 - 18:05</span>
+                    <br>
+                    <span class="colored__number" th:text="${sixth_lesson}">7-й</span><span> 18:15 - 19:00</span>
+                </div>
+                <hr id="move_8_10">
             </div>
             </fade>
         </aside>
@@ -460,14 +507,78 @@
 
     function show_remove_1() {
         let element = document.getElementById("timetable_1");
+        remove_2_4();
+        remove_5_7_11();
+        remove_8_10();
         if (element.style.display === "none") {
             element.style.display = "block";
-            document.getElementById("move").style.marginTop = "120px";
+            document.getElementById("move_1").style.marginTop = "120px";
         } else {
             element.style.display = "none";
-            document.getElementById("move").style.marginTop = "10px";
+            document.getElementById("move_1").style.marginTop = "10px";
         }
+    }
 
+    function show_remove_2_4() {
+        let element = document.getElementById("timetable_2_4");
+        remove_1();
+        remove_5_7_11();
+        remove_8_10();
+        if (element.style.display === "none") {
+            element.style.display = "block";
+            document.getElementById("move_2_4").style.marginTop = "140px";
+        } else {
+            element.style.display = "none";
+            document.getElementById("move_2_4").style.marginTop = "10px";
+        }
+    }
+
+    function show_remove_5_7_11() {
+        let element = document.getElementById("timetable_5_7_11");
+        remove_1()
+        remove_2_4();
+        remove_8_10();
+        if (element.style.display === "none") {
+            element.style.display = "block";
+            document.getElementById("move_5_7_11").style.marginTop = "165px";
+        } else {
+            element.style.display = "none";
+            document.getElementById("move_5_7_11").style.marginTop = "10px";
+        }
+    }
+
+    function show_remove_8_10() {
+        let element = document.getElementById("timetable_8_10");
+        remove_1()
+        remove_2_4();
+        remove_5_7_11();
+        if (element.style.display === "none") {
+            element.style.display = "block";
+            document.getElementById("move_8_10").style.marginTop = "165px";
+        } else {
+            element.style.display = "none";
+            document.getElementById("move_8_10").style.marginTop = "10px";
+        }
+    }
+
+    function remove_1() {
+        document.getElementById("timetable_1").style.display = "none";
+        document.getElementById("move_1").style.marginTop = "10px";
+    }
+
+    function remove_2_4() {
+        document.getElementById("timetable_2_4").style.display = "none";
+        document.getElementById("move_2_4").style.marginTop = "10px";
+    }
+
+    function remove_5_7_11() {
+        document.getElementById("timetable_5_7_11").style.display = "none";
+        document.getElementById("move_5_7_11").style.marginTop = "10px";
+    }
+
+    function remove_8_10() {
+        document.getElementById("timetable_8_10").style.display = "none";
+        document.getElementById("move_8_10").style.marginTop = "10px";
     }
 </script>
 </body>
