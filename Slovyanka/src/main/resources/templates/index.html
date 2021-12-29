@@ -93,7 +93,7 @@
 
 	<div class="advertisement-and-schedule-and-last-news-container">
 		<div class="advertisement">
-			<h3 th:text="${announcement}" class="title advertisement__title">Оголошення</h3>
+			<h3 th:text="${announcement}" class="title">Оголошення</h3>
 			<div class="advertisement__inner">
 				<h5 th:text="${covid}"><b>Covid 19:</b></h5>
 				<span th:text="${studying_during_quarantine}">Освітній процес у період карантинних обмежень</span>
@@ -114,37 +114,74 @@
 				<a th:text="${useful_links}">Корисні посилання</a>
 				<a th:text="${contacts}">контакти</a>
 			</nav>
-			<div class="schedule">
-				<h4 th:text="${timetable}" class="schedule__title">Розклад уроків</h4>
-				<div class="schedule__inner">
-					<div class="schedule__column schedule__first-column">
-						<span th:text="${first_lesson}"><b>1-й</b></span>
-						<span th:text="${second_lesson}"><b>2-й</b></span>
-						<span th:text="${third_lesson}"><b>3-й</b></span>
-						<span th:text="${fourth_lesson}"><b>4-й</b></span>
-						<span th:text="${fifth_lesson}"><b>5-й</b></span>
-						<span th:text="${sixth_lesson}"><b>6-й</b></span>
+			<fade>
+				<div class="bells-timetable">
+					<h3 th:text="${bells_timetable}">Розклад дзвінків</h3>
+					<hr>
+					<span class="form__timetable dropbtn" onclick="show_remove_1()" th:text="${'1 ' + forms}">1 класи</span><img onclick="show_remove_1()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
+					<div id="timetable_1" class="dropdown-content" style="display: none;">
+						<span class="colored__number" th:text="${first_lesson}">1-й</span><span> 08:30 - 09:05</span>
+						<br>
+						<span class="colored__number" th:text="${second_lesson}">2-й</span><span> 09:25 - 10:00</span>
+						<br>
+						<span class="colored__number" th:text="${third_lesson}">3-й</span><span> 10:15 - 10:50</span>
+						<br>
+						<span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 11:05 - 11:40</span>
+						<br>
+						<span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 12:00 - 12:35</span>
 					</div>
-					<div class="schedule__column">
-						<h6 th:text="${first_shift}" class="schedule__subtitle"><b>I зміна</b></h6>
-						<span><b>08:30–09:15</b></span>
-						<span><b>09:20–10:05</b></span>
-						<span><b>10:15–11:00</b></span>
-						<span><b>10:15–11:00</b></span>
-						<span><b>10:15–11:00</b></span>
-						<span><b>10:15–11:00</b></span>
+					<hr id="move_1">
+					<span onclick="show_remove_2_4()" class="form__timetable dropbtn" th:text="${'2–4 ' + forms}">2–4 класи</span><img onclick="show_remove_2_4()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
+					<div id="timetable_2_4" class="dropdown-content" style="display: none;">
+						<span class="colored__number" th:text="${first_lesson}">1-й</span><span> 08:30 - 09:10</span>
+						<br>
+						<span class="colored__number" th:text="${second_lesson}">2-й</span><span> 09:25 - 10:05</span>
+						<br>
+						<span class="colored__number" th:text="${third_lesson}">3-й</span><span> 10:15 - 10:55</span>
+						<br>
+						<span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 11:05 - 11:45</span>
+						<br>
+						<span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 12:00 - 12:40</span>
+						<br>
+						<span class="colored__number" th:text="${sixth_lesson}">6-й</span><span> 12:55 - 13:35</span>
 					</div>
-					<div class="schedule__column">
-						<h6 th:text="${second_shift}" class="schedule__subtitle"><b>II зміна</b></h6>
-						<span><b>08:30–09:15</b></span>
-						<span><b>09:20–10:05</b></span>
-						<span><b>10:15–11:00</b></span>
-						<span><b>10:15–11:00</b></span>
-						<span><b>10:15–11:00</b></span>
-						<span><b>10:15–11:00</b></span>
+					<hr id="move_2_4">
+					<span onclick="show_remove_5_7_11()" class="form__timetable dropbtn" th:text="${'5–7, 11 ' + forms}">5–7, 11 класи</span><img onclick="show_remove_5_7_11()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
+					<div id="timetable_5_7_11" class="dropdown-content" style="display: none;">
+						<span class="colored__number" th:text="${first_lesson}">1-й</span><span> 08:00 - 08:45</span>
+						<br>
+						<span class="colored__number" th:text="${second_lesson}">2-й</span><span> 08:55 - 09:40</span>
+						<br>
+						<span class="colored__number" th:text="${third_lesson}">3-й</span><span> 09:50 - 10:35</span>
+						<br>
+						<span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 10:50 - 11:35</span>
+						<br>
+						<span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 11:45 - 12:30</span>
+						<br>
+						<span class="colored__number" th:text="${sixth_lesson}">6-й</span><span> 12:45 - 13:30</span>
+						<br>
+						<span class="colored__number" th:text="${seventh_lesson}">7-й</span><span> 13:40 - 14:25</span>
 					</div>
+					<hr id="move_5_7_11">
+					<span onclick="show_remove_8_10()" class="form__timetable dropbtn" th:text="${'8–10 ' + forms + ' (' + second_shift + ')'}">класи (ІІ зміна)</span><img onclick="show_remove_8_10()" class="dropbtn" alt="blue_arrow" src="images/blue_arrow.png">
+					<div id="timetable_8_10" class="dropdown-content" style="display: none;">
+						<span class="colored__number" th:text="${first_lesson}">1-й</span><span> 12:45 - 13:30</span>
+						<br>
+						<span class="colored__number" th:text="${second_lesson}">2-й</span><span> 13:40 - 14:25</span>
+						<br>
+						<span class="colored__number" th:text="${third_lesson}">3-й</span><span> 14:35 - 15:20</span>
+						<br>
+						<span class="colored__number" th:text="${fourth_lesson}">4-й</span><span> 15:30 - 16:15</span>
+						<br>
+						<span class="colored__number" th:text="${fifth_lesson}">5-й</span><span> 16:25 - 17:10</span>
+						<br>
+						<span class="colored__number" th:text="${seventh_lesson}">6-й</span><span> 17:20 - 18:05</span>
+						<br>
+						<span class="colored__number" th:text="${sixth_lesson}">7-й</span><span> 18:15 - 19:00</span>
+					</div>
+					<hr id="move_8_10">
 				</div>
-			</div>
+			</fade>
 		</aside>
 	</div>
 	<div class="last-news">
@@ -279,26 +316,40 @@
 			<div class="public-info-documents__inner">
 				<img class="public-info-documents__image" src="images/public-info-documents.png">
 				<div class="public-info-documents__text">
-					<h5 th:text="${documents_by_reference}" class="public-info__title">Документи за посиланням</h5>
+					<h5 th:text="${documents_by_reference}" class="public-info__title">Документи за посиланнями</h5>
 					<div class="public-info__links">
-						<a th:text="${documents_by_reference_statute}" class="public-info__link_bold" href=""><b>Статут гімназії</b></a>
-						<a th:text="${documents_by_reference_development_strategy}" class="public-info__link_bold" href=""><b>СТРАТЕГІЯ РОЗВИТКУ СЗЗ «Слов’янська гімназія» на 2020-2025</b></a>
-						<a th:text="${documents_by_reference_system_provision}" class="public-info__link_bold" href=""><b>ПОЛОЖЕННЯ про внутрішню систему забезпечення якості освіти</b></a>
-						<a th:text="${documents_by_reference_academical_provision}" class="public-info__link_bold" href=""><b>ПОЛОЖЕННЯ про академічну доброчесність учасників освітнього процесу</b></a>
-						<a th:text="${documents_by_reference_evaluation}" class="public-info__link_bold" href=""><b>Оцінювання навчальних досягнень учнів</b></a>
+						<a href=""><b class="public-info__link_bold" th:text="${documents_by_reference_statute}">Статут гімназії</b><img alt="sign_of_download" src="images/file_sign.png"></a>
+						<a href=""><b class="public-info__link_bold" th:text="${documents_by_reference_development_strategy}">СТРАТЕГІЯ РОЗВИТКУ СЗЗ «Слов’янська гімназія» на 2020-2025</b><img alt="sign_of_download" src="images/file_sign.png"></a>
+						<a href=""><b class="public-info__link_bold" th:text="${documents_by_reference_system_provision}">ПОЛОЖЕННЯ про внутрішню систему забезпечення якості освіти</b><img alt="sign_of_download" src="images/file_sign.png"></a>
+						<a href=""><b class="public-info__link_bold" th:text="${documents_by_reference_academical_provision}">ПОЛОЖЕННЯ про академічну доброчесність учасників освітнього процесу</b><img alt="sign_of_download" src="images/file_sign.png"></a>
+						<a href=""><b class="public-info__link_bold" th:text="${documents_by_reference_evaluation}">Оцінювання навчальних досягнень учнів</b><img alt="sign_of_download" src="images/file_sign.png"></a>
 					</div>
 				</div>
 				<h5 th:text="${educational_programs}" class="public-info__title public-info__title_margin">Освітні програми на  2021-2022 навчальний рік</h5>
 			</div>
 		</div>
-		<div class="education-programs">
-			<div class="education-programs__1-2">1-2 класи
-			</div>
-			<div class="education-programs__3-4">3-4 класи</div>
-			<div class="education-programs__5-9">5-9 клас</div>
-			<div class="education-programs__10-11">10-11 класи</div>
-		</div>
 	</div>
+	<div class="educational-programs">
+		<a class="educational-programs__image-gradient">
+			<img src="images/1-2.png" alt="Primary school girl 1">
+			<span th:text="${'1-2 ' + forms}" class="educational-programs__text">Збірники завдань ДПА-2014 у початковій школі (4 клас)</span>
+		</a>
+
+		<a class="educational-programs__image-gradient">
+			<img src="images/3-4.png" alt="Primary school girl 2">
+			<span th:text="${'3-4 ' + forms}" class="educational-programs__text">Збірники завдань ДПА-2014 у основній школі (9 клас)</span>
+		</a>
+
+		<a class="educational-programs__image-gradient">
+			<img src="images/5-9.png" alt="Secondary school boy">
+			<span th:text="${'5-9 ' + forms}" class="educational-programs__text">Збірники завдань ДПА-2014 у старшій школі (11 клас)</span>
+		</a>
+		<a class="educational-programs__image-gradient" >
+			<img src="images/10-11.png" alt="High school girl">
+			<span th:text="${'10-11 ' + forms}" class="educational-programs__text">Збірники завдань ДПА-2014 у старшій школі (11 клас)</span>
+		</a>
+	</div>
+
 	<div class="useful-links">
 		<h3 th:text="${useful_links}" class="title">Корисні посилання</h3>
 		<div class="useful-links__inner">
@@ -337,8 +388,10 @@
 		</div>
 	</div>
 	<div class="contacts">
-		<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.5060835657205!2d30.629456215696482!3d50.41304187947025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c507d63e3087%3A0xbd9411f887e665bd!2z0KHQu9Cw0LLRj9C90YHQutCw0Y8g0LPQuNC80L3QsNC30LjRjw!5e0!3m2!1sru!2sua!4v1637918877754!5m2!1sru!2sua" width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		<h3 th:text="${contacts}" class="title contacts__main__title">Контакти</h3>
+		<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.5060835657273!2d30.629456215730016!3d50.413041879470235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c507d63e3087%3A0xbd9411f887e665bd!2z0KHQu9C-0LIn0Y_QvdGB0YzQutCwINCz0ZbQvNC90LDQt9GW0Y8!5e0!3m2!1suk!2sua!4v1640794943091!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 		<div class="contacts__background">
+			<div class="contacts__white-triangle"></div>
 			<div class="contacts__inner">
 				<h4><b class="contacts__title">
 					<p th:text="${address_first + ' ' +  address_second}">02068, м.Київ, вул.Драгоманова, 10в</p>
@@ -388,7 +441,8 @@
 		</span>
 	</footer>
 </div>
-<script type="text/javascript" src="slider.js"></script>
+<script type="text/javascript" src="js/bells_timetable.js"></script>
+<script type="text/javascript" src="js/for_parents.js"></script>
 </body>
 </html>
 

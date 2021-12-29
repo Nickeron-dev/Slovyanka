@@ -91,12 +91,15 @@ public class MainController {
         model.addAttribute("useful_links_eighth_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_EIGHTH_LINK));
         model.addAttribute("useful_links_ninth_link", View.view.getBundleText(TextsPaths.USEFUL_LINKS_NINTH_LINK));
         model.addAttribute("contacts", View.view.getBundleText(TextsPaths.CONTACTS));
+        model.addAttribute("bells_timetable", View.view.getBundleText(TextsPaths.BELLS_TIMETABLE));
+        model.addAttribute("forms", View.view.getBundleText(TextsPaths.FORMS));
         model.addAttribute("first_lesson", View.view.getBundleText(TextsPaths.FIRST_LESSON));
         model.addAttribute("second_lesson", View.view.getBundleText(TextsPaths.SECOND_LESSON));
         model.addAttribute("third_lesson", View.view.getBundleText(TextsPaths.THIRD_LESSON));
         model.addAttribute("fourth_lesson", View.view.getBundleText(TextsPaths.FOURTH_LESSON));
         model.addAttribute("fifth_lesson", View.view.getBundleText(TextsPaths.FIFTH_LESSON));
         model.addAttribute("sixth_lesson", View.view.getBundleText(TextsPaths.SIXTH_LESSON));
+        model.addAttribute("seventh_lesson", View.view.getBundleText(TextsPaths.SEVENTH_LESSON));
         model.addAttribute("first_shift", View.view.getBundleText(TextsPaths.FIRST_SHIFT));
         model.addAttribute("second_shift", View.view.getBundleText(TextsPaths.SECOND_SHIFT));
 
