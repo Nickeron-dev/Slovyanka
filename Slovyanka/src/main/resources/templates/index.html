@@ -91,20 +91,20 @@
 	<div class="header__blue-line-down"></div>
 
 
-	<div class="advertisement-and-schedule-and-last-news-container">
-		<div class="advertisement">
+	<div class="announcement-and-schedule-and-last-news-container">
+		<div class="announcement">
 			<h3 th:text="${announcement}" class="title">Оголошення</h3>
-			<div class="advertisement__inner">
-				<h5 th:text="${covid}"><b>Covid 19:</b></h5>
+			<div class="announcement__inner">
+				<h5 th:text="${covid}"><strong>Covid 19:</strong></h5>
 				<span th:text="${studying_during_quarantine}">Освітній процес у період карантинних обмежень</span>
-				<div class="advertisement__line advertisement__first-line"></div>
-				<p class="advertisement__paragraph">
+				<hr class="announcement__line">
+				<p class="announcement__paragraph">
 					<span th:text="${get_student_id_first}">Послуга «Замовлення електронного учнівського</span>
 					<span th:text="${get_student_id_second}">квитка» доступна за посиланням:</span>
-					<a th:text="${web_portal_reference}" class="advertisement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
+					<a th:text="${web_portal_reference}" class="announcement__first-link" href="#">ВЕБ-ПОРТАЛ НАДАННЯ ЕЛЕКТРОННИХ ПОСЛУГ</a>
 				</p>
-				<div class="advertisement__line advertisement__second-line"></div>
-				<a th:text="${online_zno}" class="advertisement__second-link"><b>Онлайн зно</b></a>
+				<hr class="announcement__line">
+				<a th:text="${online_zno}" class="announcement__second-link"><b>Онлайн зно</b></a>
 			</div>
 		</div>
 		<aside class="aside">
@@ -307,10 +307,25 @@
 				<span>сховати текст</span>
 			</div>
 		</div>
-		<div class="slider">
-			<div class="slider__element"></div>
-			<img id="rightButton" src="">
-			<img id="leftButton" src="">
+		<div class="public-info__slider">
+			<div class="public-info__slides">
+				<img src="images/main_slider_img_1.png" alt="">
+			</div>
+
+			<div class="public-info__slides">
+				<img src="images/main_slider_img_2.png">
+			</div>
+
+			<div class="public-info__slides">
+				<img src="images/main_slider_img_3.jpeg">
+			</div>
+
+			<div class="public-info__slides">
+				<img src="images/main_slider_img_4.jpeg">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)"><img class="slider_arrow second_slider_arrow" src="images/double_arrow.png" alt="Yellow arrow"></a>
+			<a class="next" onclick="plusSlides(1)"><img class="slider_arrow" src="images/double_arrow.png" alt="Yellow arrow"></a>
 		</div>
 		<div class="public-info-documents">
 			<div class="public-info-documents__inner">
@@ -442,7 +457,7 @@
 	</footer>
 </div>
 <script type="text/javascript" src="js/bells_timetable.js"></script>
-<script type="text/javascript" src="js/for_parents.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
 
