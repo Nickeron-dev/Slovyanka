@@ -654,16 +654,16 @@ fade {
 
 
 .public-info__slider {
-  overflow: hidden;
+  /*overflow: hidden;*/
   width: 100%;
   height: 560px;
   background-color: #224d7b;
   padding-top: 65px;
 }
 
-.slider_arrow {
-  width: 50px;
-}
+/*.slider_arrow {*/
+/*  width: 50px;*/
+/*}*/
 
 .second_slider_arrow {
   transform: rotateY(180deg);
@@ -676,9 +676,11 @@ fade {
 }
 
 .prev, .next {
+  position: absolute;
   cursor: pointer;
-  margin-top: 3760px;
-  /*width: auto;*/
+  margin-left: 230px;
+  margin-top: 420px;
+  width: auto;
   padding: 10px 10px 50px;
 }
 
