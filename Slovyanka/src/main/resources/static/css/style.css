@@ -661,9 +661,9 @@ fade {
   padding-top: 65px;
 }
 
-/*.slider_arrow {*/
-/*  width: 50px;*/
-/*}*/
+.slider_arrow {
+  width: 30px;
+}
 
 .second_slider_arrow {
   transform: rotateY(180deg);
@@ -671,17 +671,24 @@ fade {
 
 .public-info__slides img {
   margin-top: 30px;
+  margin-left: -300px;
   box-sizing: border-box;
-  width: 540px;
+  width: 460px;
 }
 
 .prev, .next {
   position: absolute;
   cursor: pointer;
-  margin-left: 230px;
   margin-top: 420px;
-  width: auto;
   padding: 10px 10px 50px;
+}
+
+.prev {
+  margin-left: -20px;
+}
+
+.next {
+  margin-left: 25px;
 }
 
 
