@@ -32,22 +32,18 @@ function showSlides(n) {
     // slides[Math.abs(slideIndex)].style.float = "left";
     slides[Math.abs(slideIndex)].style.position = "absolute";
     slides[Math.abs(slideIndex)].style.marginLeft = "0px";
-    // slides[Math.abs(slideIndex)].style.margin = "0px";
     slides[Math.abs(slideIndex)].style.clip = "rect(0px, 460px, 460px, 0px)";
     let next = Math.abs(slideIndex + 1) >= slides.length ? 0 : Math.abs(slideIndex + 1);
     slides[next].style.display = "block";
-    // slides[Math.abs(slideIndex + 1)].style.float = "left";
     slides[next].style.position = "absolute";
     slides[next].style.marginLeft = "460px";
 
     let next2 = Math.abs(slideIndex + 2) >= slides.length ? 1 : Math.abs(slideIndex + 2);
     slides[next2].style.display = "block";
-    // slides[Math.abs(slideIndex) + 2].style.float = "right";
     slides[next2].style.position = "absolute";
     slides[next2].style.marginLeft = "920px";
     let next3 = Math.abs(slideIndex + 3) >= slides.length ? 2 : Math.abs(slideIndex + 3);
     slides[next3].style.display = "block";
-    // slides[Math.abs(slideIndex) + 3].style.float = "right";
     slides[next3].style.position = "absolute";
     slides[next3].style.marginLeft = "1380px";
     slides[next3].style.clip = "rect(0px, 58px, 400px, -345px)";
