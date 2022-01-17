@@ -210,7 +210,7 @@
 	<div class="articles-container">
 		<div class="articles__row articles__first-row">
 			<article class="article">
-				<img th:src="${news_list.get(1).getImageReference()}" class="article__image" src="images/articles-image.png">
+				<img th:src="${news_list.get(1).getImageReference()}" class="article__image">
 				<div class="articles__inner">
 					<span th:text="${news_list.get(1).getDate()}" class="article__date">12:06 20/09/2021</span>
 					<h5 th:text="${current_language} == 'ukr' ? ${news_list.get(1).getTitleUkr()} : ${news_list.get(1).getTitleEng()}"  class="article__title">
@@ -220,8 +220,8 @@
 					<p th:text="${current_language} == 'ukr' ? ${news_list.get(1).getIntroductionUkr()} : ${news_list.get(1).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною sdgsfdgfdsgsdfgsfdgfdfgsdfgsdfgsdfgdfsgdsfgfsdgsdfgsdfgsdfggdfgsdfgdfgs	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
+				<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 			</article>
 			<article class="article">
 				<img class="article__image" src="images/articles-image.png">
@@ -234,8 +234,8 @@
 					<p th:text="${current_language} == 'ukr' ? ${news_list.get(2).getIntroductionUkr()} : ${news_list.get(2).getIntroductionEng()}" class="article__paragraph">
 						Учен блискавичних шахів серед дівчаток!
 					</p>
-					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
+				<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 			</article>
 			<article class="article">
 				<img th:src="${news_list.get(3).getImageReference()}" class="article__image" src="images/articles-image.png">
@@ -248,8 +248,8 @@
 					<p th:text="${current_language} == 'ukr' ? ${news_list.get(3).getIntroductionUkr()} : ${news_list.get(3).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
+				<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 			</article>
 		</div>
 		<div class="articles__row">
@@ -264,8 +264,8 @@
 					<p th:text="${current_language} == 'ukr' ? ${news_list.get(4).getIntroductionUkr()} : ${news_list.get(4).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
+				<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 			</article>
 			<article class="article">
 				<img th:src="${news_list.get(5).getImageReference()}" class="article__image" src="images/articles-image.png">
@@ -278,8 +278,8 @@
 					<p th:text="${current_language} == 'ukr' ? ${news_list.get(5).getIntroductionUkr()} : ${news_list.get(5).getIntroductionEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
+				<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 			</article>
 			<article class="article">
 				<img th:src="${news_list.get(6).getImageReference()}" class="article__image" src="images/articles-image.png">
@@ -292,8 +292,8 @@
 					<p th:text="${current_language} == 'ukr' ? ${news_list.get(6).getTextUkr()} : ${news_list.get(6).getTextEng()}" class="article__paragraph">
 						Учениця молодшої школи Катя Оніпко стала срібною 	призеркою Чемпіонату України з блискавичних шахів серед дівчаток!
 					</p>
-					<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 				</div>
+				<a th:text="${more}" class="article__link" href=""><b>Більше</b></a>
 			</article>
 		</div>
 	</div>
